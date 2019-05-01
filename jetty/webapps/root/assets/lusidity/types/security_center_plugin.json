@@ -1,0 +1,436 @@
+{
+  "name": "Security Center Plugins",
+  "zones": [
+    {
+      "layout": "zone",
+      "zone": ".menu-bar",
+      "styles": ["/assets/lusidity/css/entity.css"],
+      "plugins": [
+        "/assets/lusidity/plugins/jquery.semanticType.js",
+        "/assets/lusidity/plugins/jquery.image.js",
+        "/assets/lusidity/plugins/jquery.nrt.metrics.js",
+        "/assets/lusidity/plugins/jquery.dataList.js",
+        "/assets/lusidity/plugins/jquery.baseMetrics.js",
+        "/assets/lusidity/plugins/jquery.treeViewCommon.js"
+      ],
+      "schemas": [
+      ]
+    },
+    {
+      "layout": "zone",
+      "zone": ".panel-left",
+      "css": {"padding": "0 5px 0 5px"},
+      "schemas": [
+        {
+          "layout": "html",
+          "type": "div",
+          "schemas": [
+            {
+              "layout": "data",
+              "property": "pluginId",
+              "type": "h5",
+              "css": { "display": "block", "text-align": "center" }
+            }
+          ]
+        },
+        {
+          "layout": "plugin",
+          "property": "/",
+          "type": "div",
+          "cls": "cover-art center",
+          "name": "image",
+          "plugin":{
+            "image": "/assets/img/types/plugin2.png",
+            "cls": "med",
+            "cssFiles": [
+              "/assets/lusidity/plugins/css/image.css"
+            ]
+          }
+        },
+        {
+          "layout": "plugin",
+          "property": "instanceOf",
+          "type": "div",
+          "name": "semanticType",
+          "css": { "display": "block", "text-align": "center" },
+          "plugin":{
+            "image": false,
+            "cssFiles": [
+              "/assets/lusidity/plugins/css/semanticType.css"
+            ]
+          }
+        },
+        {
+          "layout": "html",
+          "type": "div",
+          "schemas": [
+            {
+              "layout": "html",
+              "html": "<div class=\"data-label\">Plugin Family:</div>"
+            },
+            {
+              "layout": "data",
+              "property": "pluginFamily",
+              "maxItems": 1,
+              "cls": "data-value"
+            }
+          ]
+        },
+        {
+          "layout": "html",
+          "type": "div",
+          "schemas": [
+            {
+              "layout": "html",
+              "html": "<div class=\"data-label\">Version:</div>"
+            },
+            {
+              "layout": "data",
+              "property": "version",
+              "maxItems": 1,
+              "cls": "data-value"
+            }
+          ]
+        },
+        {
+          "layout": "html",
+          "type": "div",
+          "schemas": [
+            {
+              "layout": "html",
+              "html": "<div class=\"data-label\">Plugin ID:</div>"
+            },
+            {
+              "layout": "data",
+              "property": "vulnId",
+              "maxItems": 1,
+              "cls": "data-value"
+            }
+          ]
+        },
+        {
+          "layout": "html",
+          "type": "div",
+          "schemas": [
+            {
+              "layout": "html",
+              "html": "<div class=\"data-label\">Severity:</div>"
+            },
+            {
+              "layout": "data",
+              "property": "severity",
+              "maxItems": 1,
+              "cls": "data-value"
+            }
+          ]
+        },
+        {
+          "layout": "html",
+          "type": "div",
+          "schemas": [
+            {
+              "layout": "html",
+              "html": "<div class=\"data-label\">Published:</div>"
+            },
+            {
+              "layout": "data",
+              "property": "published",
+              "dataType": "date",
+              "format": "j\\-M\\-Y\\, g\\:i a",
+              "type": "div",
+              "maxItems": 1,
+              "cls": "data-value"
+            }
+          ]
+        },
+        {
+          "layout": "html",
+          "type": "div",
+          "schemas": [
+            {
+              "layout": "html",
+              "html": "<div class=\"data-label\">Modified:</div>"
+            },
+            {
+              "layout": "data",
+              "property": "lastModified",
+              "dataType": "date",
+              "format": "j\\-M\\-Y\\, g\\:i a",
+              "type": "div",
+              "maxItems": 1,
+              "cls": "data-value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "zone",
+      "zone": ".panel-middle",
+      "cls": "no-border full-min",
+      "attr": {"data-oh": 7},
+      "schemas": [
+        {
+          "layout": "html",
+          "type": "div",
+          "schemas":[
+            {
+              "layout": "html",
+              "type": "ul",
+              "cls": "nav nav-tabs",
+              "schemas":[
+                {
+                  "layout": "html",
+                  "type": "li",
+                  "cls": "active",
+                  "schemas":[
+                    {
+                      "layout": "html",
+                      "type": "a",
+                      "text": "Details",
+                      "cls": "no-radius",
+                      "attr": {"data-toggle": "tab", "href": "#tab-1"}
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "li",
+                  "schemas":[
+                    {
+                      "layout": "html",
+                      "type": "a",
+                      "text": "Solution",
+                      "cls": "no-radius",
+                      "attr": {"data-toggle": "tab", "href": "#tab-2"}
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "li",
+                  "schemas":[
+                    {
+                      "layout": "html",
+                      "type": "a",
+                      "text": "Related IAVMs",
+                      "cls": "no-radius",
+                      "attr": {"data-toggle": "tab", "href": "#tab-3"}
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "li",
+                  "schemas":[
+                    {
+                      "layout": "html",
+                      "type": "a",
+                      "text": "Related CVEs",
+                      "cls": "no-radius",
+                      "attr": {"data-toggle": "tab", "href": "#tab-4"}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "layout": "html",
+              "type": "div",
+              "cls": "tab-content",
+              "schemas":[
+                {
+                  "layout": "html",
+                  "type": "div",
+                  "cls": "tab-pane active",
+                  "attr": {"id": "tab-1"},
+                  "css": { "padding": "10px"},
+                  "schemas":[
+                    {
+                      "layout": "html",
+                      "type": "div",
+                      "css": {"padding": "10px", "fontWeight": "bold"},
+                      "schemas": [
+                        {
+                          "layout": "data",
+                          "property": "title",
+                          "type": "div",
+                          "cls": "data-value"
+                        }
+                      ]
+                    },
+                    {
+                      "layout": "data",
+                      "property": "/",
+                      "type": "div",
+                      "css": {"padding": "10px"},
+                      "schemas":[
+                        {
+                          "property": "/system/primitives/raw_string/descriptions.results",
+                          "schemas":[
+                            {
+                              "layout": "data",
+                              "type": "p",
+                              "property": "value"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "layout": "html",
+                      "type": "div",
+                      "schemas": [
+                        {
+                          "layout": "html",
+                          "html": "<div class=\"data-label\">CVSS Vector:</div>"
+                        },
+                        {
+                          "layout": "data",
+                          "property": "cvssVector",
+                          "maxItems": 1,
+                          "cls": "data-value"
+                        },
+                        {
+                          "common":[
+                            {
+                              "property": "/technology/security/vulnerabilities/cve/cvss_metric/baseMetrics.base",
+                              "label": "Base Score:"
+                            },
+                            {
+                              "property": "/technology/security/vulnerabilities/cve/cvss_metric/baseMetrics.accessComplexity",
+                              "label": "Access Complexity:"
+                            },
+                            {
+                              "property": "/technology/security/vulnerabilities/cve/cvss_metric/baseMetrics.accessVector",
+                              "label": "Access Vector:"
+                            },
+                            {
+                              "property": "/technology/security/vulnerabilities/cve/cvss_metric/baseMetrics.authentication",
+                              "label": "Authentication:"
+                            },
+                            {
+                              "property": "/technology/security/vulnerabilities/cve/cvss_metric/baseMetrics.availabilityImpact",
+                              "label": "Availability Impact:"
+                            },
+                            {
+                              "property": "/technology/security/vulnerabilities/cve/cvss_metric/baseMetrics.confidentialityImpact",
+                              "label": "Confidentiality Impact:"
+                            },
+                            {
+                              "property": "/technology/security/vulnerabilities/cve/cvss_metric/baseMetrics.integrityImpact",
+                              "label": "Integrity Impact:"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "div",
+                  "cls": "tab-pane tabbable sizable",
+                  "attr": {"id": "tab-2"},
+                  "css": { "padding": "10px"},
+                  "schemas": [
+                    {
+                      "layout": "html",
+                      "type": "div",
+                      "schemas": [
+                        {
+                          "layout": "html",
+                          "html": "<div class=\"data-label\">Solution:</div>"
+                        },
+                        {
+                          "layout": "data",
+                          "property": "solution",
+                          "maxItems": 1,
+                          "cls": "data-value"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "div",
+                  "cls": "tab-pane",
+                  "attr": {"id": "tab-3"},
+                  "schemas": [
+                    {
+                      "layout": "plugin",
+                      "property": "/",
+                      "type": "div",
+                      "name": "dataList",
+                      "css": { "display": "block"},
+                      "plugin":{
+                        "glyph": "glyphicons glyphicons-info-sign",
+                        "title": "Security Center Plugins",
+                        "property": "/technology/security/iavm/iavms",
+                        "limit": 50,
+                        "properties":[
+                          {
+                            "property": "iavmNoticeNumber",
+                            "linked": true
+                          },
+                          {
+                            "property": "title"
+                          },
+                          {
+                            "property": "releaseDate",
+                            "label": "Released:",
+                            "dataType": "date",
+                            "format": "j\\-M\\-Y\\, g\\:i a"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "div",
+                  "cls": "tab-pane tabbable sizable",
+                  "attr": {"id": "tab-4"},
+                  "css": { "padding": "10px"},
+                  "schemas": [
+                    {
+                      "layout": "plugin",
+                      "property": "/",
+                      "type": "div",
+                      "name": "dataList",
+                      "css": { "display": "block"},
+                      "plugin":{
+                        "fill": true,
+                        "hasHeader": true,
+                        "hasItemCounter": true,
+                        "adjustHeight": 68,
+                        "glyph": "glyphicons glyphicons-info-sign",
+                        "title": "CVEs",
+                        "property": "/technology/security/vulnerabilities/cve/cve/cves",
+                        "limit": 100,
+                        "properties":[
+                          {
+                            "property": "vulnId",
+                            "linked": true
+                          },
+                          {
+                            "property": "published",
+                            "label": "Published:",
+                            "dataType": "date",
+                            "format": "j\\-M\\-Y\\, g\\:i a"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

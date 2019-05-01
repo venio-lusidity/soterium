@@ -1,0 +1,109 @@
+{
+    "author": "Tiera Thompson",
+    "releasedOn": "2017-12-04T08:00:00.000-05:00",
+    "title": "Sprint 10.0 release notes",
+    "results": [
+        {
+            "label": "Issues",
+            "content": [
+                {
+                    "text": "(FB 582) Resolved an issue where linked edges where not being deleted with items. Edge Validator cleans up invalid asset edges."
+                },
+                {
+                    "text": "(FB 574) Updated asset view to show most recent ACAS import. RMK now tracks vulnerability dates and assets dates separately."
+                },
+                {
+                    "text": "(FB 596) RMK did not update network adapters with data from ACAS because assets could not be verified with the current data. RMK now acknowledges Asset information in spite of not matching 3 areas of identification."
+                },
+                {
+                    "text": "(FB 594) Resolved an issue where the Asset Details View didn't scale properly. RMK now scales the Asset Details View appropriately for large displays."
+                },
+                {
+                    "text": "(FB 590) RMK classified NullPointer Exceptions as  Severe. RMK now classifies them as Fine Level messages."
+                },
+                {
+                    "text": "(FB 585) Resolved issue where the IAVM to Asset report showed an incorrect SecurityCenter source.  Data integrity was confirmed."
+                },
+                {
+                    "text": "(FB 604) Resolved an issue where tool tips had pastel colors. RMK Updated the Enclave Asset Details View with different colors and added Tool Tips to the Enclave Asset Details View."
+                },
+                {
+                    "text": "(FB 595) Resolved issue where the Hierarchy Tree did not indicate the last level in a branch. RMK now hides the expand/collapse icon once the last level is reached."
+                },
+                {
+                    "text": "(FB 571) Resolved an issue where RMK had generic identifiers. RMK now provides specific ACAS API identifiers to identify the asset."
+                },
+                {
+                    "text": "(FB 637) Resolved an issue the Asset page was not correctly plotting the score in the Risk matrix."
+                },
+                {
+                    "text": "(FB 629) Resolved issue where Last Seen Date was not updating in Last Seen Tab. Now RMK produces a Last Seen Date that corresponds to the Managed Asset End Time."
+                }
+            ]
+        },
+        {
+            "label": "Features",
+            "content": [
+                {
+                    "text": "(FB 606) Added ability to filter using grouping."
+                },
+                {
+                    "text": "(FB 621) Removed device failures from SCP and SV reference pages."
+                },
+                {
+                    "text": "(FB 612) Added ability to group by the operating system in the enclave assets detail page."
+                },
+                {
+                    "text": "(FB 581) Create AcasInvalidAsset class for assets that do not meet the minimum requirement of being an asset."
+                },
+                {
+                    "text": "(FB 615) Made HBSS the authoritative source for the applying hostname to an asset."
+                },
+                {
+                    "text": "(FB 611) Kept the asset sort numbers on the Enclave Asset Details Page."
+                },
+                {
+                    "text": "(FB 579) Created a Severe Alert tag to develop an audit trail for important events."
+                },
+                {
+                    "text": "(FB 610) Added labels to distinguish between DITPR or COAMS."
+                },
+                {
+                    "text": "(FB 608) Added the Severity Category to Top Findings Tool Tip."
+                },
+                {
+                    "text": "(FB 555) Added ability to export Vulnerability Breakdown Report to CSV."
+                },
+                {
+                    "text": "(FB 602) Added ability to sort hierarchy tree by System ID or System Name."
+                },
+                {
+                    "text": "(FB 617) Added ability to sort the Findings Column on the Enclave Asset Details Page."
+                },
+                {
+                    "text": "(FB 609) Created a Top Finding Legend. Removed the Top Finding Tool Tip."
+                },
+                {
+                    "text": "(FB 607) Added quantity subtotals specific to the hierarchy selected in the Hierarchy Tree."
+                },
+                {
+                    "text": "(FB 603) Added ability to search by DITPR IDs."
+                },
+                {
+                    "text": "(FB 616) Removed the Build a List feature from the Enclave Assets Details Page."
+                },
+                {
+                    "text": "(FB 622) Changed the HBSS last seen date to the file name date on Assets page."
+                }
+            ]
+        },
+        {
+            "label": "DBC",
+            "content": [
+                {
+                    "text": "(FB 578) Requirement to create DBC views is no longer applicable."
+                }
+            ]
+        }
+    ]
+}

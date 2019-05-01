@@ -1,0 +1,15 @@
+{
+  "title": "Department of Defense",
+  "organizations":[
+    {"title":"Department of the Army", "acronym": "DOA","type":"department"},
+    {"title":"Department of the Navy", "acronym": "DISA","type":"department"},
+    {"title":"Department of the Air Force", "acronym": "DISA","type":"department"},
+    {
+      "title":"Office of the Secretary of Defense",
+      "type": "office",
+      "organizations": [
+        {"title":"Defense Information Security Agency", "acronym": "DISA", "type": "agency"}
+      ]
+    }
+  ]
+}

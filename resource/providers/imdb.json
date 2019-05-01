@@ -1,0 +1,35 @@
+{
+    "provider": {
+        "name": "IMDB",
+        "source": "http://www.imdb.com",
+        "authoritativeSpecifications": [
+            {
+                "type": "/film/film",
+                "pattern": "^(?:https|http)://(?:.+\\.)?imdb\\.com/(title)/(.*)$",
+                "namespace": "authority/imdb/title",
+                "uriFormat": "http://imdb.com/title/%s"
+            },
+            {
+                "type": "/film/actor/film",
+                "pattern": "^(?:https|http)://(?:.+\\.)?imdb\\.com/(name)/(.*)$",
+                "namespace": "/authority/imdb/name",
+                "uriFormat": "http://imdb.com/title/name/%s"
+            }
+        ],
+        "limit": 0,
+        "rateLimit": 10000,
+        "api": {
+            "user": "",
+            "key": "",
+            "params": ""
+        },
+        "search": {
+        },
+        "get": {
+        },
+        "actions": [
+        ],
+        "transformers": {
+        }
+    }
+}

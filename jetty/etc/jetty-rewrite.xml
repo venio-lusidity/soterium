@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure_9_0.dtd">
+
+<!-- =============================================================== -->
+<!-- Mixin the RewriteHandler                                        -->
+<!-- =============================================================== -->
+
+
+<Configure id="Server" class="org.eclipse.jetty.server.Server">
+
+    <!-- =========================================================== -->
+    <!-- configure rewrite handler                                   -->
+    <!-- =========================================================== -->
+    <Get id="oldhandler" name="handler"/>
+    <Set name="handler">
+        <New id="Rewrite" class="org.eclipse.jetty.rewrite.handler.RewriteHandler">
+            <Set name="handler"><Ref refid="oldhandler"/></Set>
+            <Set name="rewriteRequestURI">true</Set>
+            <Set name="rewritePathInfo">false</Set>
+            <Set name="originalPathAttribute">requestedPath</Set>
+
+            <!-- Add rule to protect against IE ssl bug -->
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.MsieSslRule"/>
+                </Arg>
+            </Call>
+
+            <!-- redirect from the welcome page to a specific page
+            <Call name="addRule">
+              <Arg>
+                <New class="org.eclipse.jetty.rewrite.handler.RewritePatternRule">
+                  <Set name="pattern">/test/rewrite/</Set>
+                  <Set name="replacement">/test/rewrite/info.html</Set>
+                </New>
+              </Arg>
+            </Call>-->
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/iavms/compliance/iavm</Set>
+                        <Set name="replacement">/pages/iavms/iavm/index.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/iavms/compliance</Set>
+                        <Set name="replacement">/pages/iavms/index.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/accounts/acl</Set>
+                        <Set name="replacement">/pages/accounts/acl/acl.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/accounts/register</Set>
+                        <Set name="replacement">/pages/accounts/register/register.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/dashboard</Set>
+                        <Set name="replacement">/pages/dashboard/dashboard.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/browser</Set>
+                        <Set name="replacement">/browser.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/discover</Set>
+                        <Set name="replacement">/pages/discover/discover.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/enclaves</Set>
+                        <Set name="replacement">/pages/enclaves/index.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/notification</Set>
+                        <Set name="replacement">/pages/notifications/notification.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/notifications</Set>
+                        <Set name="replacement">/pages/notifications/user/notifications.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/deduplicate</Set>
+                        <Set name="replacement">/pages/qa/asset/matches.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+	    <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/notes</Set>
+                        <Set name="replacement">/pages/notes/releases.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/index</Set>
+                        <Set name="replacement">/index.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/</Set>
+                        <Set name="replacement">/index.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/accounts/organizations</Set>
+                        <Set name="replacement">/pages/accounts/organization/organization.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/accounts/ditpr</Set>
+                        <Set name="replacement">/pages/accounts/ditpr/ditpr.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/accounts/enclave</Set>
+                        <Set name="replacement">/pages/accounts/enclave/enclave.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/domains/(.*?)/([a-zA-Z0-9]{32}).*?</Set>
+                        <Set name="replacement">/pages/vertices/vertices.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <!--
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/vertices/([a-zA-Z0-9]{32}).*?</Set>
+                        <Set name="replacement">/pages/vertices/vertices.html</Set>
+                    </New>
+                </Arg>
+            </Call>  -->
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/worker/rmk/importer</Set>
+                        <Set name="replacement">/pages/worker/rmk/importer/importer.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/worker/rmk/importer/history</Set>
+                        <Set name="replacement">/pages/worker/rmk/importer/history/history.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/server/test/stress/load</Set>
+                        <Set name="replacement">/pages/server/test/stress/load.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/server/logs</Set>
+                        <Set name="replacement">/pages/server/logs/logs.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/server/data</Set>
+                        <Set name="replacement">/pages/server/data/data.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/server/indices</Set>
+                        <Set name="replacement">/pages/server/indices/indices.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/server/workers</Set>
+                        <Set name="replacement">/pages/server/workers/workers.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+            <Call name="addRule">
+                <Arg>
+                    <New class="org.eclipse.jetty.rewrite.handler.RewriteRegexRule">
+                        <Set name="regex">(.*?)/workflow/templates</Set>
+                        <Set name="replacement">/pages/workflow/templates/templates.html</Set>
+                    </New>
+                </Arg>
+            </Call>
+	   <Call name="addRule">
+              <Arg>
+                <New class="org.eclipse.jetty.rewrite.handler.HeaderPatternRule">
+                  <Set name="pattern">*</Set>
+                  <Set name="name">Strict-Transport-Security</Set>
+                  <Set name="value">Max-Age=600000,public</Set>
+                  <Set name="terminating">true</Set>
+                </New>
+              </Arg>
+            </Call>
+            <Call name="addRule">
+              <Arg>
+                <New class="org.eclipse.jetty.rewrite.handler.HeaderPatternRule">
+                  <Set name="pattern">*</Set>
+                  <Set name="name">Cache-control</Set>
+                  <Set name="value">no-store</Set>
+                </New>
+              </Arg>
+            </Call>
+	    <Call name="addRule">
+              <Arg>
+                <New class="org.eclipse.jetty.rewrite.handler.HeaderPatternRule">
+                  <Set name="pattern">*</Set>
+                  <Set name="name">Pragma</Set>
+                  <Set name="value">no-cache</Set>
+                </New>
+              </Arg>
+            </Call>
+            <Call name="addRule">
+              <Arg>
+                <New class="org.eclipse.jetty.rewrite.handler.HeaderPatternRule">
+                  <Set name="pattern">*</Set>
+                  <Set name="name">X-FRame-Options</Set>
+                  <Set name="value">deny</Set>
+                </New>
+              </Arg>
+            </Call>
+        </New>
+    </Set>
+</Configure>

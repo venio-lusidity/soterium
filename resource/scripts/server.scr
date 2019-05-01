@@ -1,0 +1,5 @@
+assistant -worker EnrichWorker -start -delay 2000 -idleThreshold 50
+assistant -worker ImageWorker -start -delay 10 -idleThreshold 50
+server -action start -keystore resource/keys/lusidity.jks -password "t7r9B0ux" -trusted resource/keys/trusted.jks -trustedPwd "t7r9B0ux" -port 8443 -protocol https
+
+

@@ -1,0 +1,28 @@
+{
+  "Name": {
+    "Domain": {
+      "Domain": "CONUS-SECURITY.DISANET.DISA-U.MIL",
+      "Manufacturer": {
+        "Manufacturer": "Dell Inc.",
+        "Model": {
+          "Model": "OptiPlex 7010",
+          "Serial_Number": {
+            "Operating_System_Version": {
+              "DISA_Barcode": {
+                "Last_System_Logon": {
+                  "IP_Addresses": "209.22.83.14",
+                  "InstalledSoftware": "ActivClient CAC x86     -    version: 6.2&#13;&#10;AMD APP SDK Runtime     -    version: 10.0.831.4&#13;&#10;AMD Catalyst Install Manager     -    version: 3.0.855.0&#13;&#10;CARDKEY P2000     -    version: 3.10&#13;&#10;Catalyst Control Center     -    version: 2011.1207.217.3953&#13;&#10;Catalyst Control Center - Branding     -    version: 1.00.0000&#13;&#10;Catalyst Control Center Graphics Previews Common     -    version: 2011.1207.217.3953&#13;&#10;Catalyst Control Center InstallProxy     -    version: 2011.1207.217.3953&#13;&#10;Catalyst Control Center Localization All     -    version: 2011.1207.217.3953&#13;&#10;Catalyst Control Center Profiles Desktop     -    version: 2011.1207.217.3953&#13;&#10;CCC Help Chinese Standard     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help Chinese Traditional     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help Czech     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help Danish     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help Dutch     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help English     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help Finnish     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help French     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help German     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help Greek     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help Hungarian     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help Italian     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help Japanese     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help Korean     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help Norwegian     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help Polish     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help Portuguese     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help Russian     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help Spanish     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help Swedish     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help Thai     -    version: 2011.1207.0216.3953&#13;&#10;CCC Help Turkish     -    version: 2011.1207.0216.3953&#13;&#10;ccc-utility     -    version: 2011.1207.217.3953&#13;&#10;Configuration Manager Client     -    version: 5.00.7958.1000&#13;&#10;EMET 4.1     -    version: 4.1&#13;&#10;Intel(R) Network Connections Drivers     -    version: 16.8&#13;&#10;McAfee Agent     -    version: 4.8.3002&#13;&#10;McAfee Asset Baseline Monitor Agent     -    version: 3.5.0&#13;&#10;McAfee DLP Endpoint     -    version: 9.3.500.23&#13;&#10;McAfee DLP HotFix (Compatibility 14.4.0.387)     -    version: 14.4.0.387&#13;&#10;McAfee Host Intrusion Prevention     -    version: 8.00.0600&#13;&#10;McAfee Policy Auditor Agent     -    version: 6.2.0&#13;&#10;McAfee Rogue System Detection Sensor     -    version: 4.7.1&#13;&#10;McAfee VirusScan Enterprise     -    version: 8.8.06000&#13;&#10;Microsoft .NET Framework 4.5.2     -    version: 4.5.51209&#13;&#10;Microsoft Policy Platform     -    version: 1.2.3602.0&#13;&#10;Microsoft Silverlight     -    version: 5.1.30514.0&#13;&#10;Microsoft SQL Server 2005 Backward compatibility     -    version: 8.05.2309&#13;&#10;Microsoft Visual C++ 2005 Redistributable     -    version: 8.0.61001&#13;&#10;Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.17     -    version: 9.0.30729&#13;&#10;Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.6161     -    version: 9.0.30729.6161&#13;&#10;Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219     -    version: 10.0.40219&#13;&#10;Realtek High Definition Audio Driver     -    version: 6.0.1.5985&#13;&#10;SCAP Compliance Checker     -    version: 3.1.1.1&#13;&#10;Tumbleweed Desktop Validator     -    version: 4.11&#13;&#10;USAF ACCM     -    version: 2.2.0.59",
+                  "Last_System_Logon": "2015-12-11T06:06:36",
+                  "MAC": "B8:CA:3A:A9:DE:B1"
+                }
+              },
+              "Operating_System_Version": "Microsoft Windows 7 Professional"
+            },
+            "Serial_Number": "9N9S9Y1"
+          }
+        }
+      }
+    },
+    "Name": "CONUS-SECURITY"
+  }
+}

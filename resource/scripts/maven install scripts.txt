@@ -1,0 +1,29 @@
+mvn install:install-file -Dfile=JSON-java.jar -DgroupId=org.json -DartifactId=JSON-java -Dversion=trunk -Dpackaging=jar
+
+mvn install:install-file -Dfile=freebase-java.jar -DgroupId=com.freebase -DartifactId=freebase-java -Dversion=1.0 -Dpackaging=jar
+
+mvn install:install-file -Dfile=org.restlet.jar -DgroupId=org.restlet.jse -DartifactId=restlet -Dversion=2.1.2 -Dpackaging=jar
+
+mvn install:install-file -Dfile=org.restlet.ext.jetty.jar -DgroupId=org.restlet.jse -DartifactId=restlet-ext-jetty -Dversion=2.1.2 -Dpackaging=jar
+
+mvn install:install-file -Dfile=org.restlet.ext.ssl-2.2-M6.jar -DgroupId=org.restlet.jse -DartifactId=restlet-ext-ssl -Dversion=2.2-M6 -Dpackaging=jar
+
+mvn install:install-file -Dfile=org.restlet.ext.json.jar -DgroupId=org.restlet.jse -DartifactId=restlet-ext-json -Dversion=2.1.2 -Dpackaging=jar
+
+mvn install:install-file -Dfile=bliki-core.jar -DgroupId=info.bliki.wiki -DartifactId=bliki-core -Dversion=3.0.19 -Dpackaging=jar
+
+mvn install:install-file -Dfile=wikixmlj.jar -DgroupId=edu.jhu.nlp -DartifactId=wikixmlj -Dversion=r43 -Dpackaging=jar
+
+mvn install:install-file -Dfile=jcprogress-0.3.1.jar -DgroupId=net.sf.jcprogress -DartifactId=jcprogress -Dversion=0.3.1 -Dpackaging=jar
+
+mvn install:install-file -Dfile=wikipedia-miner.jar -DgroupId=org.wikipedia.miner -DartifactId=wikipedia-miner -Dversion=trunk -Dpackaging=jar
+
+mvn install:install-file -Dfile=boilerpipe-1.2.0.jar -DgroupId=com.google.code.boilerpipe -DartifactId=boilerpipe -Dversion=1.2.0 -Dpackaging=jar
+
+mvn install:install-file -Dfile=wikipedia-miner-trunk.jar -DgroupId=nz.ac.waikato.cms -DartifactId=wikipedia-miner -Dversion=trunk -Dpackaging=jar
+
+mvn install:install-file -Dfile=sqljdbc4.jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc4 -Dversion=4.0 -Dpackaging=jar
+
+mvn install:install-file -Dfile=sdk-cxf-4.2-all.jar -DgroupId=mil.ges.messaging -DartifactId=sdk-cxf -Dversion=4.2 -Dpackaging=jar
+
+org.jetbrains.annotations

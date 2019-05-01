@@ -1,0 +1,528 @@
+{
+  "deltaUpdateEnabled":{
+    "desc": "Does the datastore support delta updates.",
+    "example": "true or false, default if missing is true",
+    "value": false
+  },
+  "securityClassification":{
+    "desc": "The classification used to append to documents when exporting data.  This value will also be used for the disclaimer.",
+    "example": "Unclassified//FOUO",
+    "value": "Unclassified//FOUO"
+  },
+  "license":{
+    "desc": "The paths to the license files.",
+    "privateKeyPath":{
+      "desc": "A RSA DER private key file.",
+      "example": "Absolute path to file.",
+      "value": "/mnt/xdata/work/projects/soterium/resource/keys/licensing/privateKey.der"
+    },
+    "licenseFile":{
+      "desc": "An encrypted license file.",
+      "example": "Absolute path to file.",
+      "value": "/mnt/xdata/work/projects/soterium/resource/keys/licensing/issued/license/soterium_dev.lic"
+    }
+  },
+  "acsCacheExpireInDays":{
+    "desc": "How long the ACS cache lives before forcing a complete refresh.",
+    "example": "numeric",
+    "value": 30
+  },
+  "maxIteratorSize":{
+    "desc": "Vertex Iterator paging limit.",
+    "example": "numeric",
+    "value": 500
+  },
+  "xml_dtd_disabled":{
+    "desc": "Disable DTD",
+    "example": "true or false",
+    "value": true
+  },
+  "serverName":{
+    "desc": "A unique id to identify this server.",
+    "example": "athena-1",
+    "value": "athena-1"
+  },
+    "serverBaseUrl":{
+    "desc": "A unique id to identify this server.",
+    "example": "https://my.server.com, include port if required, ex. :8443.",
+    "value": "https://svc.soterium-dev.com:8443"
+  },
+  "blobBaseUrl": {
+    "desc": "Fully qualified path to blob static content.",
+    "example": "file://.../html_or_other_content",
+    "value": "https://svc.soterium-dev.com:8443"
+  },
+  "applicationName":{
+    "desc": "The name of the application using Soterium.  This name will be used in things like UI notifications and/or emails.",
+    "example": "none",
+    "value": "Risk Management Knowledgebase (RMK)"
+  },
+  "emailLogLevel": {
+    "desc": "Set the minimum logging level to send email notifications. NA SEVERE WARNING INFO CONFIG FINE FINER FINEST",
+    "example": "",
+    "value": "SEVERE"
+  },
+  "loggingMethods":{
+    "desc": "Log user actions based on web request methods.",
+    "example": "[get, put, post, delete, login]",
+    "value":[
+      "login",
+      "post",
+      "delete"
+    ]
+  },
+  "keyStoreConfigPath":{
+    "desc": "The path to the keystore config file.",
+    "example": "/config/client.json",
+    "value": "/config/client.json"
+  },
+  "keyStoreConfigPathApollo":{
+    "desc": "The path to the keystore config file.",
+    "example": "/config/client_apollo.json",
+    "value": "/config/client_apollo.json"
+  },
+  "userDaysInactive":{
+    "desc": "If the value plus last logged in is less than the value of today, the identity will become inactive.",
+    "example": "30",
+    "value": 30
+  },
+  "userIdentityDaysInactive":{
+    "desc": "If the value plus last logged in is less than the value of today, the identity will be deleted.",
+    "example": "30",
+    "value": 60
+  },
+  "userDaysLeft":{
+    "desc": "If the value plus last logged in is less than the value of today, an waring email will be sent before disabling.",
+    "example": "5 default, 0 no warning.",
+    "value": 10
+  },
+  "userLogInterval":{
+    "desc": "Log user every N minutes.",
+    "example": "60",
+    "value": 60
+  },
+  "batchMode": {
+    "desc": "Use this value to put the data store into batch mode.",
+    "example": "Environment.getInstance().isBatchMode()",
+    "value": false
+  },
+  "commands": {
+    "desc": "Console commands used during startup.  The value contains an array of commands with their parameters.",
+    "example": "assistant -worker WorkerName -start -delay 10000 -idleThreshold 300",
+    "examples":[
+    ],
+    "value": [
+    ]
+  },
+  "testing_enabled": {
+    "desc": "Use this property to define custom code while unit testing.",
+    "example": "true or false",
+    "value": false
+  },
+  "debugMode": {
+    "desc": "Can be used to run debug only processes.",
+    "example": "Environment.getInstance().isDebugMode()",
+    "value": false
+  },
+  "devOnly": {
+    "desc": "Can be used to run dev only processes.",
+    "example": "Environment.getInstance().isDevOnly()",
+    "value": true
+  },
+  "obfuscated": {
+    "desc": "Can be used to run dev only processes.",
+    "example": "Obfuscate the data",
+    "value": false
+  },
+  "keyCode": {
+    "desc": "Code used to encode text.",
+    "example": "0-25 expected",
+    "value": 4
+  },
+  "initialize": {
+    "desc": "Run all classes that implement the Initializer class. Specify the execution order using getInitializeOrdinal.",
+    "example": "none",
+    "value": true
+  },
+  "initializeDomains": {
+    "desc": "Run all classes that implement the Initializer class. Specify the execution order using getInitializeOrdinal.",
+    "example": "none",
+    "value": true
+  },
+  "logLevel": {
+    "desc": "Set the logging level. SEVERE WARNING INFO CONFIG FINE FINER FINEST",
+    "example": "",
+    "value": "FINE"
+  },
+  "log_enabled":{
+    "desc": "Enable or disable writing to the log.",
+    "example": "true or false",
+    "value": true
+  },
+  "logTime": {
+    "desc": "Like debugMode, can be used to turn on and off coded time logging.  The time infor is passed in the params and the \"timed\" method makes the check to this config setting.",
+    "example": "Environment.getInstance().getReportHandler().timed(format, params);",
+    "value": false
+  },
+  "maxThreads": {
+    "desc": "If using multi-threaded code you can use this setting combined with your code to enforce the maximum allowed threads to be running.",
+    "example": "Environment.getInstance().getConfig().getMaxThreads()",
+    "value": 4
+  },
+  "reportMaxThreads": {
+    "desc": "If using multi-threaded code you can use this setting combined with your code to enforce the maximum allowed threads to be running.",
+    "example": "Environment.getInstance().getConfig().getReportMaxThreads()",
+    "value": 1
+  },
+  "outputToConsole": {
+    "desc": "Output log information to the console win .  In most cases this should be set to false unless you are debugging.",
+    "example": "",
+    "value": false
+  },
+  "sandboxMode": {
+    "desc": "Like debugMode, can be used to run alternate code.",
+    "example": "Environment.getInstance().isSandboxMode()",
+    "value": false
+  },
+  "workerDebugMode": {
+    "desc": "A flag specific for workers, extremely useful for debugging.",
+    "example": "Environment.getInstance().getConfig().isWorkerDebugMode()",
+    "value": false
+  },
+  "resourcePath": {
+    "desc": "The relative or absolute path to where all the application resources are.  These are usually the configuration and other supporting files.",
+    "example": "/mnt/myDrive/resource or relative from application",
+    "value": "/mnt/xdata/work/projects/soterium/resource"
+  },
+  "exceptionReportPath": {
+    "desc": "The absolute path used to save exception reports to.",
+    "example": "/path/to/files",
+    "value": "/mnt/xdata/work/projects/soterium/resource/web/files"
+  },
+  "docsPath": {
+    "desc": "The absolute path used to save exception reports to.",
+    "example": "/path/to/files",
+    "value": "/mnt/xdata/work/projects/soterium/resource/web/docs"
+  },
+  "tempDir": {
+    "desc": "The relative or absolute path used for handling files within the application.",
+    "example": "/mnt/myDrive/temp or relative from application",
+    "value": "/mnt/xdata/temp"
+  },
+  "notesDir": {
+    "desc": "The relative or absolute path used for Release Notes.",
+    "example": "/mnt/myDrive/notes or relative from application",
+    "value": "/mnt/xdata/work/projects/rmk/resource/data/release"
+  },
+  "interval": {
+    "desc": "",
+    "example": "",
+    "value": 300000
+  },
+  "referer": {
+    "desc": "When sending an http request the URI to use within the request.",
+    "example": "www.mySite.com",
+    "value": "dev.soterium-dev.com"
+  },
+  "warmUpEnabled": {
+    "desc": "If set to true and caching is enabled, the defined domains will be preloaded into memory.",
+    "example": "none",
+    "value": false
+  },
+  "offlineRetries": {
+    "desc": "In the event that the data store becomes unreachable, how many times to try before coming into offline mode.",
+    "example": "",
+    "value": 120
+  },
+  "offlineWaitInterval": {
+    "desc": "While in offline mode how long to wait in seconds before retrying connectivity.",
+    "example": "",
+    "value": 500
+  },
+  "configurations": {
+    "desc": "Other configuration files to load during startup.",
+    "example": "none",
+    "value": [
+      {
+        "configCls": "com.lusidity.configuration.ServerEventConfiguration",
+        "path": "/config/server_event_config.json"
+      },
+      {
+        "configCls": "com.lusidity.email.EmailConfiguration",
+        "path": "/config/email_servers.json"
+      },
+      {
+        "configCls": "com.lusidity.configuration.TableViewConfiguration",
+        "path": "/config/table_view_config.json"
+      },
+      {
+        "configCls": "com.lusidity.configuration.JobConfigurations",
+        "path": "/config/jobs_config.json"
+      },
+      {
+        "configCls": "com.lusidity.configuration.RiskCalcConfiguration",
+        "path": "/config/risk_calc_config.json"
+      },
+      {
+        "configCls": "com.lusidity.configuration.ReportConfiguration",
+        "path": "/config/report_config.json"
+      },
+      {
+        "configCls": "com.lusidity.configuration.ScopedConfiguration",
+        "path": "/config/scoping_config.json"
+      },
+      {
+        "configCls": "com.lusidity.configuration.SplunkLoggingConfiguration",
+        "path": "/config/splunk_config.json"
+      }
+    ]
+  },
+  "permissions": {
+    "desc": "",
+    "example": "",
+    "value": [
+      {
+        "id": 1.0,
+        "title": "deny",
+        "description": "Overrides all other permissions and denies access."
+      },
+      {
+        "id": 2.0,
+        "title": "edit",
+        "description": "Can create or modify vertices."
+      },
+      {
+        "id": 3.0,
+        "title": "delete",
+        "description": "Can delete vertices."
+      },
+      {
+        "id": 4.0,
+        "title": "view",
+        "description": "Can display vertices."
+      },
+      {
+        "id": 5.0,
+        "title": "comment",
+        "description": "Can comment on vertices"
+      },
+      {
+        "id": 101.0,
+        "title": "admin",
+        "description": "Represents an administrator."
+      }
+    ]
+  },
+  "defaultGroups": {
+    "desc": "Default groups to put any new user in.",
+    "example": "none",
+    "value": [
+      2.0
+    ]
+  },
+  "groups": {
+    "desc": "",
+    "example": "",
+    "value": [
+      {
+        "id": 1.0,
+        "title": "admin",
+        "description": "Allowed to perform all user actions and some special actions.",
+        "permissions": [
+          101.0
+        ]
+      },
+      {
+        "id": 2.0,
+        "title": "contributor",
+        "description": "Can view, write, delete and make comments.",
+        "permissions": [
+          2.0,
+          3.0,
+          4.0,
+          5.0
+        ]
+      },
+      {
+        "id": 3.0,
+        "title": "reviewer",
+        "description": "Can view comment and approve/disapprove workflows.",
+        "permissions": [
+          4.0
+        ]
+      },
+      {
+        "id": 4.0,
+        "title": "workflow",
+        "description": "Can create or modify workflows."
+      },
+      {
+        "id": 5.0,
+        "title": "blocked",
+        "description": "Block all access."
+      }
+    ]
+  },
+  "rules": {
+    "desc": "",
+    "example": "",
+    "value": {
+      "read": {
+        "groups": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "permissions": [
+          1.0,
+          2.0,
+          4.0,
+          5.0
+        ]
+      },
+      "write": {
+        "groups": [
+          1.0,
+          2.0
+        ],
+        "permissions": [
+          1.0,
+          2.0
+        ]
+      },
+      "delete": {
+        "groups": [
+          1.0
+        ],
+        "permissions": [
+          1.0,
+          2.0,
+          3.0
+        ]
+      },
+      "comment": {
+        "groups": [
+          2.0
+        ],
+        "permissions": [
+          5.0
+        ]
+      },
+      "deny": {
+        "groups": [
+          5.0
+        ],
+        "permissions": [
+          1.0
+        ]
+      },
+      "admin": {
+        "groups": [
+          1.0
+        ],
+        "permissions": [
+          101.0
+        ]
+      }
+    }
+  },
+  "users": {
+    "desc": "",
+    "example": "",
+    "value": [
+      {
+        "provider": "x509",
+        "identifier": "example",
+        "firstName": "",
+        "middleName": "",
+        "lastName": "",
+        "categories": [
+          {
+            "category": "work_email",
+            "value": "somone@somewhere.com"
+          },
+          {
+            "category": "work_phone",
+            "value": "555.555.5555",
+            "ext": "555"
+          }
+        ],
+        "acl": {
+          "groups": [
+            1.0
+          ],
+          "permissions": []
+        }
+      },
+      {"provider": "x509", "identifier": "3333333333", "firstName": "John", "middleName": "L", "lastName": "Smith", "categories": [{"category": "work_email", "value": "john.l.smith@fake.com"}], "acl":{"groups":[1.0], "permissions":[]}},
+      {"provider": "x509", "identifier": "4444444444", "firstName": "Bob", "middleName": "L", "lastName": "Evans", "categories": [{"category": "work_email", "value": "bob.l.evans@fake.com"}], "acl":{"groups":[1.0], "permissions":[]}},
+      {"provider": "x509", "identifier": "5555555555", "firstName": "Buck", "middleName": "L", "lastName": "Rogers", "categories": [{"category": "work_email", "value": "buck.l.rogers@fake.com"}], "acl":{"groups":[3.0], "permissions":[]}}
+    ]
+  },
+  "settings": {
+    "desc": "",
+    "example": "",
+    "value": {
+      "google_api_key": "Get an API key for this to work",
+      "cookie_key": "69ceae27-efbf-4d0d-898b-4ba58305bb24",
+      "encryption_key": "69ceaet7-efbf-4d0d-8t8b-4ba58t05bb24"
+    }
+  },
+  "timeCheckServers":{
+    "desc": "How often to check the servers for availability as an integer in minutes.",
+    "example": "5",
+    "value": 1
+  },
+  "athenaServers": {
+    "desc": "A list of athena servers with host name. The relativePath to a json file that responds with {ping: pong}",
+    "example": "{title: myServer, host: svc-1.server.com, relativePath: /path/ping.json }",
+    "value": [
+      {"title": "DEV Web", "host": "dev.soterium-dev.com:9443", "relativePath": "/ping.json" },
+      {"title": "DEV Services", "host": "svc.soterium-dev.com:8443", "relativePath": "/svc/ping" }
+    ]
+  },
+  "servers": {
+    "desc": "",
+    "example": "",
+    "value": [
+      {
+        "role": "web",
+        "configCls": "com.lusidity.services.server.WebServerConfig",
+        "storeCls": "com.lusidity.services.server.WebServices",
+        "configFilePath": "resource/config/web_config.json"
+      },
+      {
+        "role": "cache",
+        "configCls": "com.lusidity.cache.CacheConfig",
+        "storeCls": "com.lusidity.apollo.cache.EnhancedCache",
+        "configFilePath": "resource/config/cache_config.json"
+      },
+      {
+        "role": "data",
+        "configCls": "com.lusidity.apollo.elasticSearch.EsConfiguration",
+        "storeCls": "com.lusidity.apollo.elasticSearch.EsDataStore",
+        "dataPath": "/mnt/xdata/datastores/elasticsearch-2.4.1/data",
+        "configFilePath": "resource/config/data_config.json"
+      },
+      {
+        "role": "na",
+        "configCls": "com.lusidity.apollo.orientdb.OdbConfig",
+        "storeCls": "com.lusidity.apollo.orientdb.OdbDataStore",
+        "configFilePath": "resource/config/orientdb_config.json"
+      },
+      {
+        "role": "report",
+        "configCls": "com.lusidity.apollo.filestore.ApolloConfig",
+        "storeCls": "com.lusidity.apollo.filestore.ApolloDataStore",
+        "configFilePath": "resource/config/apollo_data_config.json"
+      },
+      {
+        "role": "index",
+        "configCls": "com.lusidity.apollo.elasticSearch.EsConfiguration",
+        "storeCls": "com.lusidity.apollo.elasticSearch.EsIndexStore",
+        "dataPath": "/mnt/xdata/datastores/elasticsearch-2.4.1/data",
+        "configFilePath": "resource/config/data_config.json"
+      }
+    ]
+  }
+}

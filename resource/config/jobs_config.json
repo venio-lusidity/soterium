@@ -1,0 +1,1665 @@
+{
+     "jobs": {
+          "com.lusidity.jobs.data.SoftwareOnceDeleteJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "RMK"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.SoftwareCacheFixJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "RMK"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.JobIdentifiersCleanup": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "removals": {
+                              "value": ["lid://bios/guid/4c4c4544004a30108048c8c04f524432"],
+                              "desc": "Comma delimited list of either identifiers or volatile identifiers specified for removal.",
+                              "example": "[]"
+                         },
+                         "group": "Data"
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.duplicates.AssetMatchDiscoveryJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "RMK"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.FilesCleanupJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "directories": [
+                              {
+                                   "file": "/mnt/xdata/work/projects/soterium/resource/web/files/hierarchy",
+                                   "days": 1,
+                                   "recursive": false
+                              }
+                         ],
+                         "group": "Data"
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "10000",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.acs.ManageCbacJob": {
+               "automated": {
+                    "value": true,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Security"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "10000",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "0",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "23:59"
+               }
+          },
+          "com.lusidity.jobs.data.AssetsSourceJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Materialized View"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.IavmCleanupJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.FailedFindingsValidationJob": {
+               "automated": {
+                    "value": true,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "group": "Materialized View",
+                         "ordinal": 2000
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.AssetCoamsJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "group": "Materialized View",
+                         "ordinal": 7000
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.LocationCleanupJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.StigDefaultSeverityJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.server.ServerEventJob": {
+               "automated": {
+                    "value": true,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Running"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "60000",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "0",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.server.ServerStatusJob": {
+               "automated": {
+                    "value": true,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Running"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "30000",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "0",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.Asset30DayExpiredJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Export"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "maxThreads": {
+                    "value": 1,
+                    "desc": "The maximum number of threads to use.",
+                    "example": "Expected range 1 to 4."
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:00",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.AssetNoVulnsJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.AssetHbssMulitplesJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.AssetDeprecationJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "assetDate": "scannedOn",
+                         "vulnEdgeDate": "scannedOn",
+                         "dryRun": false,
+                         "days": 29,
+                         "group": "Materialized View",
+                         "ordinal": 3000
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "10000",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:50",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "23:30"
+               }
+          },
+          "com.lusidity.jobs.vulnerability.AuditVulnerabilitiesJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "dryRun": false,
+                         "test": {"max": 0},
+                         "group": "Materialized View",
+                         "ordinal": 5000
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "08:30",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.vulnerability.VulnerabilityBreakdownJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "dryRun": false,
+                         "cached": true,
+                         "group": "Materialized View",
+                         "ordinal": 14000
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "maxThreads": {
+                    "value": 4,
+                    "desc": "The maximum number of threads to use.",
+                    "example": "Expected range 1 to 4."
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:00",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.NetworkAdapterUpdateJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "RMK"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.vulnerability.IavmToAssetJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "dryRun": false,
+                         "group": "Materialized View",
+                         "ordinal": 12000
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "maxThreads": {
+                    "value": 4,
+                    "desc": "The maximum number of threads to use.",
+                    "example": "Expected range 1 to 4."
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:00",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.McAfeeBiosJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.AssetComplianceAuditorJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "group": "Materialized View",
+                         "ordinal":4000
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.server.ServerStatisticsJob": {
+               "automated": {
+                    "value": true,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Running"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "60000",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "0",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.AssetVulnTestJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "removals": {
+                              "value": ["lid://bios/guid/4c4c4544004a30108048c8c04f524432"],
+                              "desc": "Comma delimited list of either identifiers or volatile identifiers specified for removal.",
+                              "example": "[]"
+                         },
+                         "group": "Test"
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.vulnerability.PoamJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "daysOpenVulnerabilities": 35,
+                         "group": "Workflow"
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.CompliancePolicyCleanupJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.AssetHierarchyJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "dryRun": false,
+                         "test": {"max": 0},
+                         "group": "Materialized View",
+                         "ordinal": 8000
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "10:42",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.EdgeCleanupJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.acs.SplunkUserLogging": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "maxDeleteThreads": 1,
+                         "group": "Log"
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.FixMaterializedViewsJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.OrganizationCleanupJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "group": "Materialized View",
+                         "ordinal": 6000
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.AcasAssetJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "10000",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:35",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.AssetDeprecatedEdgesCleanupJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.AssetVulnSeverityFixJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "10000",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.importer.ImporterPreprocessorJob": {
+               "automated": {
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false",
+                    "value": false
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Running"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "60000",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "0",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.EnclaveCleanupJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "RMK"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.AssetExpiredScansReportJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Export"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "10000",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.vulnerability.JobStigRepair": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "RMK"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.VulnerabilityEdgeValidator": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "10000",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.AssetComplianceReportJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "10000",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.AssetIdentifiersAuditor": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Export"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.AssetAcasMulitplesJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "16:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.SystemCoamsJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.acs.DitprScopingJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Security"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "23:50"
+               }
+          },
+          "com.lusidity.apollo.elasticSearch.jobs.ReindexJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "version": "v2",
+                         "group": "Data"
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "maxThreads": {
+                    "value": 1,
+                    "desc": "The maximum number of threads to use.",
+                    "example": "Expected range 1 to 4."
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.duplicates.AssetSoftwareJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "14:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "23:59"
+               }
+          },
+          "com.lusidity.jobs.vulnerability.AggregatorEnclaveJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "dryRun": false,
+                         "group": "Materialized View",
+                         "ordinal": 13000
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.acs.UserActivityJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Security"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.vulnerability.IavmsCompliancyJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "dryRun": false,
+                         "group": "Materialized View",
+                         "ordinal": 11000
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "maxThreads": {
+                    "value": 4,
+                    "desc": "The maximum number of threads to use.",
+                    "example": "Expected range 1 to 4."
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:00",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.vulnerability.AggregateCommonDataJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "dryRun": false,
+                         "cached": true,
+                         "group": "Materialized View",
+                         "ordinal": 9000
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "maxThreads": {
+                    "value": 1,
+                    "desc": "The maximum number of threads to use.",
+                    "example": "Expected range 1 to 4."
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:00",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.vulnerability.AssetVulnDetailsJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {
+                         "dryRun": false,
+                         "group": "Materialized View",
+                         "ordinal": 10000
+                    },
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.AssetVulnHistoryJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "10000",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.ValidateIndexJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.SoftwareEdgeLabelJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          },
+          "com.lusidity.jobs.data.SoftwareValidationJob": {
+               "automated": {
+                    "value": false,
+                    "desc": "Does this job start up when the server starts?",
+                    "example": "true or false"
+               },
+               "delay": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds before starting the listener.",
+                    "example": "In milliseconds 1000 = 1 second"
+               },
+               "data": {
+                    "value": {"group": "Data"},
+                    "desc": "Any additional data that the job requires",
+                    "example": "JSON [] or {}"
+               },
+               "idleThreshold": {
+                    "value": "500",
+                    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+                    "example": "In milliseconds 60000 = 1 minute"
+               },
+               "timeOfDay": {
+                    "value": "23:59",
+                    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+                    "example": "15:30"
+               }
+          }
+     },
+     "defaultTimeOfDay": {
+          "value": "23:59",
+          "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+          "example": "15:30"
+     }
+}

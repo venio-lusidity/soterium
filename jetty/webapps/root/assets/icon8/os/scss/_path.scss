@@ -1,0 +1,21 @@
+// Font paths
+// -------------------------
+
+@font-face {
+  font-family: "Icons8";
+  src: url("../fonts/Icons8_724bb22ef34739c3556490186257788c.eot");
+  src: url("../fonts/Icons8_724bb22ef34739c3556490186257788c.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Icons8_724bb22ef34739c3556490186257788c.woff2") format("woff2"),
+       url("../fonts/Icons8_724bb22ef34739c3556490186257788c.woff") format("woff"),
+       url("../fonts/Icons8_724bb22ef34739c3556490186257788c.ttf") format("truetype"),
+       url("../fonts/Icons8_724bb22ef34739c3556490186257788c.svg#Icons8") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Icons8";
+    src: url("../fonts/Icons8_724bb22ef34739c3556490186257788c.svg#Icons8") format("svg");
+  }
+}

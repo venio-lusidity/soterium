@@ -1,0 +1,16 @@
+[title]
+--------------------------------------------------------------------------------------------------------------------------------
+[description]
+
+The workflow process has completed.
+To review the workflow process click the link or copy and paste the url below into your browser:
+
+[content]
+
+Initiated by:
+
+[initiator]
+
+
+
+

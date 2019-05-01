@@ -1,0 +1,13 @@
+{
+  "domains": [
+    "/electronic/system/enclave/network",
+    "/electronic/system/enclave/system",
+    "/electronic/system/enclave/virtual"
+  ],
+  "ids": ["#10:0"],
+  "filters":[
+    {"operator": "must", "propertyName": "label", "type": "raw", "value": "", "valueType": "String.class"}
+  ],
+  "sort":[{"propertyName": "", "direction": "asc"}]
+}
+

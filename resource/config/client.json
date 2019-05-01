@@ -1,0 +1,14 @@
+{
+  "baseServerUrl":"https://svc.soterium-dev.com:8443",
+  "trustStorePwd":"huA9gTffCdnuwaXxZlY1Pw==",
+  "apiKey":"1G5QuuX7w2VtdQTzR9TFVw/S/TAEraT1q+bgAR9f/h8=",
+  "seed":"o0L8oJu5MwcYMOTHsB8MSvCA/5yi6iL6+dRG3rouE9jQ33Uicnl1Yw==",
+  "endpointGetAuthenticate":"/svc/pki/login",
+  "endpointPostRmkImporterFile":"/svc/fileupload/importer",
+  "endpointPostRegister":"/svc/register",
+  "disableCertificateValidation":true,
+  "trustStore":"resource/keys/trusted.jks",
+  "keystorePwd":"UecwKn66WF5ThiDHIVccbA==",
+  "keystore":"resource/keys/SOTERIUM_RPC.p12",
+  "obfuscated":true,"principalUri":""
+}

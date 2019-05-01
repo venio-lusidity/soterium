@@ -1,0 +1,31 @@
+.ui-state-suggested{
+    border: 1px solid #fbcb09;
+    background-color: #fdf5ce;
+    font-weight: bold;
+    color: #c77405;
+}
+.form-wizard{
+    position: relative;
+    clear: both;
+    width: 100%;
+    height: calc(100% - 60px);
+    margin-bottom: 40px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.form-wizard .node-step{
+    clear: both;
+}
+
+.fw-btn-bar {
+    z-index: 999999;
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    width: 100%;
+    margin: 0 0 0 0;
+}
+.fw-btn-bar > button{
+    margin-right: 5px;
+}

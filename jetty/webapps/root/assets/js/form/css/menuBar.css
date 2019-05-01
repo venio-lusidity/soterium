@@ -1,0 +1,6 @@
+.ls-menu-bar > li{
+    margin-left: 5px;
+}
+.ls-menu-bar > li:first-child{
+    margin-left: 0;
+}

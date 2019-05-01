@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Iavm Compliance</title>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <style>
+        #draggable, #draggable2, #draggable3 { border: solid 1px #000; width: 100px; height: 100px; padding: 0.5em; float: left; margin: 0 10px 10px 0; }
+        .page-content{
+        }
+    </style>
+    <script type="text/javascript" src="/assets/jquery/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/assets/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/lusidity/preloader.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('pageLoaderReady', function () {
+            var s = [
+                '/assets/lusidity/plugins/pIavmAssets.js',
+                '/assets/js/jFilterBar_v8.js',
+                '/assets/lusidity/plugins/jquery.osIcon.js',
+                '/assets/lusidity/plugins/pGrid_v2.js',
+                '/pages/iavms/iavm/js/jIavmFactory.js',
+                '/assets/lusidity/plugins/pAuthorizedLink.js',
+                '/pages/iavms/iavm/js/jquery.icrIavm.js'
+            ];
+            var c = [
+                '/assets/lusidity/plugins/css/tableView_v2.css',
+                '/assets/css/filterBarPanel.css',
+                '/pages/iavms/css/icr.css'
+            ];
+            pageLoader.init(s, c, '/pages/iavms/iavm');
+
+        });
+    </script>
+</head>
+<body>
+<div class="container-fluid page" style="display: none;">
+    <div class="page-content">
+        <div class="alert-zone">
+            <div class="alert alert-success alert-block">
+                <button type="button" class="close" data-dismiss="alert"><span class="glyphicon glyphicon-remove"></span></button>
+                <div class="alert-inner"></div>
+            </div>
+        </div>
+        <div class="row main-content">
+            <div class="col-md-12">
+                <div class="page-panel panel-middle" style="border: none !important;"></div>
+            </div>
+        </div>
+        <div class="top-menu">
+            <nav class="navbar navbar-default no-radius">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/enclaves">
+                            <img alt="Brand" src="/assets/img/disa.png" style="height: 42px;">
+                            <div class="nav-title">Risk Management Knowledgebase (RMK)</div>
+                        </a>
+                    </div>
+                    <div id="settings" id="settings" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right nav-list">
+                            <li><a href="/enclaves"><span class="glyphicon glyphicon-home"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<div id="scriplet"></div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+package com.lusidity.framework.internet;
+
+import java.net.URI;
+import java.net.URISyntaxException;
+
+/**
+ * URI Builder
+ * <p>
+ * from https://gist.github.com/enginer/230e2dc2f1d213a825d5
+ * <p>
+ * by Sllouyssgort Smaay-Grriyss
+ */
+
+public class UriBuilderX extends org.apache.http.client.utils.URIBuilder
+{
+
+	// Constructors
+	public UriBuilderX()
+	{
+		super();
+	}
+
+	public UriBuilderX(String string)
+		throws URISyntaxException
+	{
+		super(string);
+	}
+
+	public UriBuilderX(URI uri)
+	{
+		super(uri);
+	}
+
+	public org.apache.http.client.utils.URIBuilder addPath(String subPath)
+	{
+		if ((subPath==null) || subPath.isEmpty() || "/".equals(subPath))
+		{
+			return this;
+		}
+		return this.setPath(this.appendSegmentToPath(this.getPath(), subPath));
+	}
+
+	private String appendSegmentToPath(String path, String segment)
+	{
+		if ((path==null) || path.isEmpty())
+		{
+			path="/";
+		}
+
+		if ((path.charAt(path.length()-1)=='/') || segment.startsWith("/"))
+		{
+			return path+segment;
+		}
+
+		return path+"/"+segment;
+	}
+}

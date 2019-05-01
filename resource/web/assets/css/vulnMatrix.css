@@ -1,0 +1,32 @@
+#content{
+   margin: 100px auto;
+}
+
+table.vulnMatrix{
+    border: solid 1px #c3c3c3;
+    padding: 0;
+    text-align: center;
+}
+
+.vulnMatrix td{
+    padding: 2px;
+    border: solid 1px #c3c3c3;
+}
+.vulnMatrix .head{
+    background-color: #45a9e4;
+}
+
+.vulnMatrix .axis{
+    background-color: #85c9ee;
+    font-size: 10px;
+}
+.severity{
+    font-size: 8px;
+}
+.vulnMatrix .head:first-child{
+    border-bottom-color: #45a9e4 !important;
+}
+.vulnMatrix .axis.first{
+    border-top-color: #45a9e4 !important;
+    background-color: #45a9e4 !important;
+}

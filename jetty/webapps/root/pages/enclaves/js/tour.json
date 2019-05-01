@@ -1,0 +1,25 @@
+{
+  "properties":[
+    {
+      "name": "Enclave Tour",
+      "storage":false
+    }
+  ],
+  "steps": [
+    {
+      "element": "#dd1",
+      "title": "Select Enclave view",
+      "content": "Select filter to change view."
+    },
+    {
+      "element": "#favs",
+      "title": "Favorites",
+      "content": "Selected favorites will be displayed here."
+    },
+    {
+      "element": "#top_findings",
+      "title": "Top Findings",
+      "content": "These are findings that are currently affecting your overall score the most and may indicate a higher likelihood of vulnerability."
+    }
+  ]
+}

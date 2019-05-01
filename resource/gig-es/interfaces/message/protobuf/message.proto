@@ -1,0 +1,57 @@
+package nces.messaging;
+
+option java_package         = "com.solers.es.soafmsg.message.binary";
+option java_outer_classname = "NCESMessage";
+option optimize_for         = SPEED;
+
+/*
+	Need to be careful about marking fields as required -
+	we may want to change some (or all?) of them to be optional
+	@see http://code.google.com/apis/protocolbuffers/docs/proto.html) 
+*/
+
+message Envelope {
+	optional Header header = 1;
+	optional bytes  body   = 2;
+	
+	message Header {
+		required uint64     version_number  = 1;
+		optional uint64     sequence_number = 2;
+		optional uint64     timestamp       = 3;
+		optional Addressing addressing      = 4;
+		optional SLA        sla             = 5;
+		optional string     correlation_id  = 6;
+		optional string     output_format   = 7;
+		optional bytes      producer_ref    = 8;
+		optional string     id              = 9;
+		optional string     topic           = 10;
+		optional string     publish_node    = 11;
+		optional uint32     hop_count       = 12;
+		optional string     federated_identity = 13;
+		repeated string	    itinerary_element = 14;
+		
+		extensions 1000 to max;
+
+        message EndpointReference {
+            required string address             = 1;
+            repeated string reference_parameter = 2;
+            repeated string metadata            = 3;
+        }
+        		
+		message Addressing {
+			required string            to          = 1;
+			required string            action      = 2;
+			optional string            messaged_id = 3;
+			optional EndpointReference reply_to    = 4;
+			optional EndpointReference from        = 5;
+			optional EndpointReference fault_to    = 6;
+			repeated string            relates_to  = 7;
+	   }
+		
+		message SLA {
+			optional uint32 time_to_live_millis = 1 [default = 5000];
+			optional bool   discardable         = 2 [default = true];
+			optional uint32		priority	= 3;
+		}
+	}
+}

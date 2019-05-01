@@ -1,0 +1,99 @@
+Adding cer/pem global install.
+
+https://www.happyassassin.net/2015/01/14/trusting-additional-cas-in-fedora-rhel-centos-dont-append-to-etcpkitlscertsca-bundle-crt-or-etcpkitlscert-pem/
+
+./keytool -noprompt -storepass t7r9B0ux -import -alias DoD_Root_CA_3__0x01__DoD_Root_CA_3 -keystore dod.jks -trustcacerts -file $TEMPC/certs/DoD_Root_CA_3__0x01__DoD_Root_CA_3.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_CA-25__0x4E__DoD_Root_CA_2 -keystore dod.jks -trustcacerts -file $TEMPC/certs/DoD_Root_CA_2__0x05__DoD_Root_CA_2.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_CA-25__0x4E__DoD_Root_CA_2 -keystore dod.jks -trustcacerts -file $TEMPC/certs/DOD_CA-25__0x4E__DoD_Root_CA_2.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_CA-26__0x50__DoD_Root_CA_2 -keystore dod.jks -trustcacerts -file $TEMPC/certs/DOD_CA-26__0x50__DoD_Root_CA_2.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_CA-27__0x01B2__DoD_Root_CA_2 -keystore dod.jks -trustcacerts -file $TEMPC/certs/DOD_CA-27__0x01B2__DoD_Root_CA_2.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_CA-28__0x01B3__DoD_Root_CA_2 -keystore dod.jks -trustcacerts -file $TEMPC/certs/DOD_CA-28__0x01B3__DoD_Root_CA_2.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_CA-29__0x01B4__DoD_Root_CA_2 -keystore dod.jks -trustcacerts -file $TEMPC/certs/DOD_CA-29__0x01B4__DoD_Root_CA_2.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_CA-30__0x01B5__DoD_Root_CA_2 -keystore dod.jks -trustcacerts -file $TEMPC/certs/DOD_CA-30__0x01B5__DoD_Root_CA_2.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_CA-31__0x039D__DoD_Root_CA_2 -keystore dod.jks -trustcacerts -file $TEMPC/certs/DOD_CA-31__0x039D__DoD_Root_CA_2.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_CA-32__0x03A1__DoD_Root_CA_2 -keystore dod.jks -trustcacerts -file $TEMPC/certs/DOD_CA-32__0x03A1__DoD_Root_CA_2.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_EMAIL_CA-25__0x4F__DoD_Root_CA_2 -keystore dod.jks -trustcacerts -file $TEMPC/certs/DOD_EMAIL_CA-25__0x4F__DoD_Root_CA_2.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_EMAIL_CA-26__0x51__DoD_Root_CA_2 -keystore dod.jks -trustcacerts -file $TEMPC/certs/DOD_EMAIL_CA-26__0x51__DoD_Root_CA_2.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_EMAIL_CA-27__0x01B6__DoD_Root_CA_2 -keystore dod.jks -trustcacerts -file $TEMPC/certs/DOD_EMAIL_CA-27__0x01B6__DoD_Root_CA_2.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_EMAIL_CA-28__0x01B7__DoD_Root_CA_2 -keystore dod.jks -trustcacerts -file $TEMPC/certs/DOD_EMAIL_CA-28__0x01B7__DoD_Root_CA_2.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_EMAIL_CA-29__0x01B8__DoD_Root_CA_2 -keystore dod.jks -trustcacerts -file $TEMPC/certs/DOD_EMAIL_CA-29__0x01B8__DoD_Root_CA_2.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_EMAIL_CA-30__0x01B9__DoD_Root_CA_2 -keystore dod.jks -trustcacerts -file $TEMPC/certs/DOD_EMAIL_CA-30__0x01B9__DoD_Root_CA_2.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_EMAIL_CA-31__0x039F__DoD_Root_CA_2 -keystore dod.jks -trustcacerts -file $TEMPC/certs/DOD_EMAIL_CA-31__0x039F__DoD_Root_CA_2.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_EMAIL_CA-32__0x03A2__DoD_Root_CA_2 -keystore dod.jks -trustcacerts -file $TEMPC/certs/DOD_EMAIL_CA-32__0x03A2__DoD_Root_CA_2.cer
+
+cd /usr/java/latest/bin
+export TEMPC=/mnt/xdata/certs
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_ID_SW_CA-38 -keystore /mnt/xdata/certs/trusted.jks -trustcacerts -file /mnt/xdata/certs/new_cer/DOD_ID_SW_CA-38.cer
+
+./keytool -noprompt -storepass t7r9B0ux -import -alias DoD_Root_CA_3 -keystore /mnt/xdata/certs/trusted.jks -trustcacerts -file /mnt/xdata/certs/new_cer/DoD_Root_CA_3.cer
+
+./keytool -noprompt -storepass t7r9B0ux -import -alias gcds-messaging-ca38 -keystore /mnt/xdata/certs/trusted.jks -trustcacerts -file /mnt/xdata/certs/new_cer/gcds-messaging-ca38.cer
+
+./keytool -noprompt -storepass t7r9B0ux -import -alias messaging-ca38 -keystore /mnt/xdata/certs/trusted.jks -trustcacerts -file /mnt/xdata/certs/new_cer/messaging-ca38.cer
+
+# 1) Run open ssl to pull the key (my server is the east coast server, yours may be different)
+# openssl s_client -connect email-smtp.us-east-1.amazonaws.com:465
+# 2) Grab the server certificate that will look something like this
+# get amazon aws smtp cert...
+# openssl s_client -connect email-smtp.us-east-1.amazonaws.com:465
+./keytool -import -alias AWS -keystore /user/java/latest/jre/lib/security/cacerts -file /mnt/hgfs/share/aws.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias AWS -keystore /mnt/xdata/work/projects/soterium/resource/keys/trusted.jks -trustcacerts -file /mnt/hgfs/share/aws.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias AWS -keystore /mnt/xdata/certs/trusted.jks -trustcacerts -file /mnt/hgfs/share/aws.cer
+
+# 3) Create a file called aws.crt and save the cert in it (include the BEGIN and END lines)
+# 4) Then import that cert (replace $JAVA_HOME with the path to your correct java instance)
+# keytool -import -alias AWS -keystore /user/java/latest/jre/lib/security/cacerts -file /mnt/hgfs/share/aws.crt
+# mine was
+# keytool -import -alias aws -keystore /opt/app/jdk1.6.0_18/jre/lib/security/cacerts -file aws.crt
+# 5) It will prompt you for a password, it is probably changeit or changeme
+# 6) enter yes when it asks you if you are sure
+# 7) restart your server
+# 8) test it out
+
+./keytool -noprompt -storepass t7r9B0ux -import -alias SVC_RMK_DISA_MIL -keystore $TEMPC/trusted.jks -trustcacerts -file $TEMPC/svc.rmk.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias RMK_DISA_MIL -keystore $TEMPC/trusted.jks -trustcacerts -file $TEMPC/rmk.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias DOD_CA_1 -keystore $TEMPC/trusted.jks -trustcacerts -file $TEMPC/dod_ca_1.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias FEDERAL_COMMON -keystore $TEMPC/trusted.jks -trustcacerts -file $TEMPC/federal_common.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias SHA_1 -keystore $TEMPC/trusted.jks -trustcacerts -file $TEMPC/sha_1.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias EM_SEVERICE -keystore $TEMPC/trusted.jks -trustcacerts -file $TEMPC/messaging-sb.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias E_MESSAGING_SEVERICE -keystore $TEMPC/trusted.jks -trustcacerts -file $TEMPC/messaging.ges.mil.cer
+
+
+./keytool -noprompt -storepass t7r9B0ux -import -alias APOLLO-D-1 -keystore $TEMPC/trusted.jks -trustcacerts -file $TEMPC/apollo-d-1.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias APOLLO-I-1 -keystore $TEMPC/trusted.jks -trustcacerts -file $TEMPC/apollo-i-1.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias ASSISTANT-1 -keystore $TEMPC/trusted.jks -trustcacerts -file $TEMPC/assistant.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias SOTERIUM_DEV_CA -keystore /mnt/xdata/work/projects/soterium/resource/keys/trusted.jks -trustcacerts -file /mnt/xdata/work/projects/soterium/resource/keys/certs/SOTERIUM_DEV_CA.cer
+
+./keytool -delete -alias RMK_DISA_MIL -keystore /mnt/xdata/certs/trusted.jks -noprompt -storepass t7r9B0ux
+./keytool -delete -alias SOTERIUM_DEV_CA -keystore /mnt/xdata/work/projects/soterium/resource/keys/trusted.jks -noprompt -storepass t7r9B0ux
+
+./keytool -delete -alias AW -keystore /mnt/xdata/certs/trusted.jks -noprompt -storepass t7r9B0ux
+./keytool -delete -alias AW -keystore /mnt/xdata/work/projects/soterium/resource/keys/trusted.jks -noprompt -storepass t7r9B0ux
+
+
+/usr/java/latest/bin/keytool -list -v -keystore /mnt/xdata/work/projects/soterium/resource/keys/certs/test_client.p12
+
+java -cp jetty-util-9.0.3.v20130506.jar  org.eclipse.jetty.util.security.Password t7r9B0ux t7r9B0ux t7r9B0ux
+
+./keytool -noprompt -storepass t7r9B0ux -import -alias LUSIDITY -keystore /mnt/xdata/work/projects/soterium/resource/keys/trusted.jks -trustcacerts -file /mnt/xdata/work/projects/soterium/resource/keys/lusidity.cer
+./keytool -noprompt -storepass t7r9B0ux -import -alias ES_1 -keystore /mnt/xdata/work/projects/soterium/resource/keys/trusted.jks -trustcacerts -file /mnt/xdata/work/projects/soterium/resource/keys/certs/es_1.crt
+
+
+keytool -delete -alias ES_1 -keystore /mnt/xdata/certs/trusted.jks -noprompt -storepass t7r9B0ux
+
+keytool -list -v -keystore /mnt/xdata/work/projects/soterium/resource/keys/trusted.jks > trusted.txt
+
+keytool -noprompt -storepass t7r9B0ux -import -alias SOTERIUM_DEV_CA -keystore /mnt/xdata/work/projects/soterium/resource/keys/trusted.jks -trustcacerts -file /mnt/xdata/work/projects/soterium/resource/keys/certs/SOTERIUM_DEV_CA.crt
+keytool -noprompt -storepass t7r9B0ux -import -alias ES_DS_1 -keystore /mnt/xdata/work/projects/soterium/resource/keys/trusted.jks -trustcacerts -file /mnt/xdata/work/projects/soterium/resource/keys/certs/ES_DS_1.crt
+keytool -noprompt -storepass t7r9B0ux -import -alias SOTERIUM_WEB -keystore /mnt/xdata/work/projects/soterium/resource/keys/trusted.jks -trustcacerts -file /mnt/xdata/work/projects/soterium/resource/keys/certs/SOTERIUM_WEB.crt
+keytool -noprompt -storepass t7r9B0ux -import -alias SOTERIUM_RPC -keystore /mnt/xdata/work/projects/soterium/resource/keys/trusted.jks -trustcacerts -file /mnt/xdata/work/projects/soterium/resource/keys/certs/SOTERIUM_RPC.crt
+keytool -noprompt -storepass t7r9B0ux -import -alias SOTERIUM_REST -keystore /mnt/xdata/work/projects/soterium/resource/keys/trusted.jks -trustcacerts -file /mnt/xdata/work/projects/soterium/resource/keys/certs/SOTERIUM_REST.crt
+
+
+keytool -importkeystore -srckeystore /mnt/xdata/work/projects/soterium/resource/keys/SOTERIUM_REST.p12 -srcstoretype pkcs12 -srcalias SOTERIUM_REST -destkeystore /mnt/xdata/work/projects/soterium/resource/keys/SOTERIUM_REST.jks -deststoretype jks -deststorepass \!soterium1 -destalias SOTERIUM_REST_JKS
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+.panel-left .panel, .panel-left .panel-body{
+    clear: both;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.panel-middle{
+    border: none !important;
+}
+
+.panel-right > div{
+    clear: both;
+    display: block;
+}
+
+#edit-node{
+    margin-top: -20px;
+}
+
+/* Styling for DataTables group header rows */
+tr.group, tr.group:hover {
+    background-color: #ddd !important;
+}
+
+.viewer-node{
+    height: calc(100% - 2px);
+}

@@ -1,0 +1,20 @@
+{
+  "properties":[
+    {
+      "name": "Enclave Tour",
+      "storage":false
+    }
+  ],
+  "steps": [
+    {
+      "element": "#dd1",
+      "title": "Select Enclave view",
+      "content": "Select filter to change view."
+    },
+    {
+      "element": "#favs",
+      "title": "Favorites",
+      "content": "Selected favorites will be displayed here"
+    }
+  ]
+}

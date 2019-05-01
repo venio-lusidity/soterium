@@ -1,0 +1,57 @@
+{
+  "username": {
+    "desc": "The SPLUNK Username associated with the Splunk token",
+    "example": "Splunk",
+    "value": "Splunk"
+  },
+  "token": {
+    "desc": "The Authorization Token, retrieved from Splunk,required that authorizes and directs the content to a particular index",
+    "example": "626C0F5C-5FB9-4A80-924E-AD37036AFE40",
+    "value": "626C0F5C-5FB9-4A80-924E-AD37036AFE40"
+  },
+  "post_endpoint": {
+    "desc": "The specification of the SPLUNK API function to which the retrieved data will be subjected to.",
+    "example": "batch_save",
+    "value": "batch_save"
+  } ,
+  "host": {
+    "desc": "The Splunk Server qualified name that is accessible over the internet.",
+    "example": "localhost.",
+    "value": "splunk.lusidity.com"
+  },
+  "port": {
+    "desc": "The SPLUNK port designated to accept REST API calls.",
+    "example": "8089",
+    "value": 8088
+  },
+  "protocol": {
+    "desc": "http or https",
+    "example": "http",
+    "value": "https"
+  },
+  "sourcetype": {
+    "desc": "Type of information being sent to Splunk.",
+    "example": "_json",
+    "value": "_json"
+  },
+  "interval": {
+    "desc": "The interval of time in which logs are sent to Splunk sever; specified in minutes. ",
+    "example": "1",
+    "value": 15
+  } ,
+  "batch_size": {
+    "desc": "The number of logs sent to Splunk at one time.",
+    "example": "50",
+    "value": 50
+  },
+  "delete_es": {
+    "desc": "Remove Entries from Elastic Search",
+    "example": "true/false",
+    "value": true
+  } ,
+  "debug": {
+    "desc": "Always process regardless of time",
+    "example": "true/false",
+    "value": true
+  }
+}

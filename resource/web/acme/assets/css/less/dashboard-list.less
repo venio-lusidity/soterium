@@ -1,0 +1,85 @@
+/*
+ * Copyright 2018 lusidity inc.
+ *
+ *    Licensed under the Apache License, Version 2.0 (the "License");
+ *    you may not use this file except in compliance with the License.
+ *    You may obtain a copy of the License at
+ *
+ *        http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing, software
+ *    distributed under the License is distributed on an "AS IS" BASIS,
+ *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *    See the License for the specific language governing permissions and
+ *    limitations under the License.
+ *
+ */
+
+/* Dashboard Lists ex.
+=================================================================== */
+ul.dashboard-list {
+    margin:0 0 0 -40px;
+
+    a:hover {
+        text-decoration:none;
+    }
+
+    li:last-child {
+        border-bottom: none;
+    }
+
+    li:first-child {
+        border-top: none;
+        border-bottom: 1px solid @borderGrey;
+    }
+
+    li {
+        padding: 5px 0;
+        list-style:none;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid @borderGrey;
+        font-size: 12px;
+
+        a {
+	
+            span {
+                display: inline-block;
+                font-size: 18px;
+                font-weight: bold;
+                margin-right: 10px;
+                text-align: right;
+                width: 50px;
+                zoom: 1;
+            }
+        }
+
+        .avatar {
+            height: 50px;
+            width: 50px;
+            padding: 1px;
+            float: left;
+            margin-top: 3px;
+            margin-right: 15px;
+            border: 1px solid @borderGrey;
+            img {
+                height: 40px;
+                width: 40px;
+                padding: 1px;
+                float: left;
+                margin-top: 3px;
+                margin-right: 15px;
+                border: 1px solid @borderGrey;
+            }
+        }
+
+        i {
+            font-size: 18px;
+            opacity: .7;
+            filter: alpha(opacity=70);
+            -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+			width: 20px;
+			display: inline-block;
+			text-align: center;
+        }
+    }
+}

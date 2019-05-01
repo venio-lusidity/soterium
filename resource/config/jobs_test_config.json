@@ -1,0 +1,41 @@
+{
+  "defaultTimeOfDay": {
+    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+    "example": "15:30",
+    "value": "23:59"
+  },
+  "jobs": {
+    "com.lusidity.jobs.data.AssetDeprecationJob": {
+      "delay": {
+        "desc": "The amount of time in milliseconds before starting the listener.",
+        "example": "In milliseconds 1000 = 1 second",
+        "value": "500"
+      },
+      "idleThreshold": {
+        "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+        "example": "In milliseconds 60000 = 1 minute",
+        "value": "10000"
+      },
+      "automated": {
+        "desc": "Does this job start up when the server starts?",
+        "example": "true or false",
+        "value": false
+      },
+      "timeOfDay": {
+        "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00.",
+        "example": "15:30",
+        "value": "23:59"
+      },
+      "data": {
+        "desc": "Any additional data that the job requires",
+        "example": "JSON [] or {}",
+        "value": {
+          "assetDate":"scannedOn",
+          "vulnEdgeDate":"scannedOn",
+          "group": "Data",
+          "days": 29
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://messaging.ges.mil/2011/4.0"
+            xmlns:tns="http://messaging.ges.mil/2011/4.0"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="BatchSize" type="tns:BatchSizeType"/>
+    <xsd:complexType name="BatchSizeType">
+        <xsd:simpleContent>
+            <xsd:annotation>
+                <xsd:documentation>
+                    Defines the Subscription Policy element for the Base WSN Notification. Batch size
+                    indicates the maximum size in bytes that the batch should be.
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:extension base="xsd:long"/>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:element name="ttl" type="tns:ttlType"/>
+    <xsd:complexType name="ttlType">
+        <xsd:simpleContent>
+            <xsd:annotation>
+                <xsd:documentation>
+                    The Time To Live value for a published Notification. This is the number of milliseconds
+                    from the time the that the message was published after which the message should expire.
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:extension base="xsd:nonNegativeInteger"/>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    
+    <xsd:element name="federated" type="tns:federatedType"/>
+    <xsd:complexType name="federatedType">
+        <xsd:simpleContent>
+            <xsd:annotation>
+                <xsd:documentation>
+                    Defines the federated Subscription Policy element for the Base WSN Notification. Federated 
+                    indicates that the subscription endpoint is another installation of EM4x messaging.
+                </xsd:documentation>
+            </xsd:annotation>
+            <xsd:extension base="xsd:boolean"/>
+        </xsd:simpleContent>
+    </xsd:complexType>    
+</xsd:schema>

@@ -1,0 +1,27 @@
+{
+  "author": "Thomas Paris",
+  "title": "Sprint 3.5 release notes",
+  "releasedOn": "2017-04-17T08:00:00.000-04:00",
+  "results": [
+    {
+      "label": "Bug Fixes",
+      "content": [
+        {"text": "\"Severity\" property was being removed when saving a vulnerability vertext (BaseVulnerability.java)."},
+        {"text": "Compliance: When asset software is imported, the \"required\" property for the software was being set to true in some instances where the software was not required by the device compliance policy (changes made in CompliancePolicyHelper.java, CompliancePolicyHelper.java, and SoftwareCompliancyServerResource.java)"},
+        {"text": "Critical and high vulnerabilities were not being shown in the vulnerability breakdown reports.  This was caused by using the risk calculated score for severity instead of the raw base score.  (FB 468)"}]
+    },
+    {
+      "label": "New Features",
+      "content": [
+        {"text": "Release Notes Page: This page shows a rollup of project release notes, read from files (.json). New files for this feature include ReleaseNotesServerResource.java, jquery.releaseNotes.js, releaseNotes.css, and releases.html. (FB 451)"},
+        {"text": "When displaying the summary for the break down reports the totals are now displayed as asset unique, vulnerability unique and enumerated vulnerabilities in parenthesis.  File changes include jquery.iavmDetails.js, jquery.vulnDetails.js, jquery.ibr.js, and jquery.vbr.js. (FB 404)"},
+        {"text": "Users can now be scoped by DITPR hierarchy, not turned on.  (FB 440)"}]
+    },
+    {
+      "label": "Other",
+      "content": [
+        {"text": "Testing complete for Security Center (ACAS) import history. (FB 453)"}
+      ]
+    }
+  ]
+}

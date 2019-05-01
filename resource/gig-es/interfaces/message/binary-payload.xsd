@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:xmime="http://www.w3.org/2005/05/xmlmime"
+           targetNamespace="urn:messaging:amqp">
+
+
+    <xs:complexType name="MessagePayloadType">
+        <xs:annotation>
+            <xs:documentation>MessagePayloadType is XML represented as base64 binary data which can be used to represent the actual message. </xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="xs:base64Binary"/>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:schema>

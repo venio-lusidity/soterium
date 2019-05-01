@@ -1,0 +1,64 @@
+{
+  "common": {
+    "mapping": {
+      "settings": {
+        "index": {
+          "analysis": {
+            "analyzer": {
+              "startsWith": {
+                "tokenizer": "keyword",
+                "filter": [
+                  "icu_normalizer",
+                  "standard",
+                  "asciifolding",
+                  "lowercase"
+                ]
+              },
+              "folding": {
+                "tokenizer": "keyword",
+                "filter": [
+                  "icu_normalizer",
+                  "standard",
+                  "asciifolding",
+                  "lowercase"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "dynamic": {
+      "dynamic_templates": [
+        {
+          "strings": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "string",
+              "fields": {
+                "raw": {
+                  "type": "string",
+                  "index": "not_analyzed",
+                  "ignore_above": 256
+                },
+                "folded": {
+                  "type": "string",
+                  "analyzer": "folding",
+                  "ignore_above": 256
+                },
+                "starts_with": {
+                  "type": "string",
+                  "analyzer": "startsWith",
+                  "ignore_above": 256
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "allowedTypes": [
+    "com.lusidity.data.ApolloVertex"
+  ]
+}

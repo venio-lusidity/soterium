@@ -1,0 +1,85 @@
+{
+  "groups" : [
+    {
+      "entities" : [
+        {
+          "title" : [
+            "The Road"
+          ],
+          "image" : [
+            {
+              "uri" : "http://upload.wikimedia.org/wikipedia/commons/2/27/The-road.jpg",
+              "recommendedUsage" : "thumbnail",
+              "caption" : "First edition hardcover"
+            }
+          ],
+          "uri" : "http://mind.lusidity.com/entities/123",
+          "description" : [
+            "The Road is a 2006 novel by American writer Cormac McCarthy. It is a post-apocalyptic tale of a journey of a father and his young son over a period of several months, across a landscape blasted by an unspecified cataclysm that has destroyed most of civilization and, in the intervening years, almost all life on Earth. The novel was awarded the 2007 Pulitzer Prize for Fiction and the James Tait Black Memorial Prize for Fiction in 2006."
+          ],
+          "type" : [
+            {
+              "image" : [
+                {
+                  "recommendedUsage" : "thumbnail",
+                  "uri" : "http://openclipart.org/people/barretr/barretr_Book.svg"
+                }
+              ],
+              "name" : "Book",
+              "uri" : "http://mind.lusidicty.com/types/domains/literature/Book"
+            }
+          ]
+        }
+      ],
+      "type" : {
+        "image" : [
+          {
+            "recommendedUsage" : "thumbnail",
+            "uri" : "http://openclipart.org/people/barretr/barretr_Book.svg"
+          }
+        ],
+        "uri" : "http://mind.lusidicty.com/types/domains/literature/Book",
+        "name" : "Book"
+      }
+    },
+    {
+      "type" : {
+        "image" : [
+          {
+            "recommendedUsage" : "thumbnail",
+            "uri" : "http://openclipart.org/people/rg1024/movie_reel.svg"
+          }
+        ],
+        "uri" : "http://mind.lusidicty.com/types/domains/film/Movie",
+        "name" : "Movie"
+      },
+      "entities" : [
+        {
+          "title" : [
+            "The Road"
+          ],
+          "image" : [
+            {
+              "uri" : "http://upload.wikimedia.org/wikipedia/en/a/a7/The_Road_movie_poster.jpg",
+              "recommendedUsage" : "thumbnail",
+              "caption" : "First edition hardcover"
+            }
+          ],
+          "uri" : "http://mind.lusidity.com/entities/456",
+          "description" : [
+            "The Road is a 2009 post-apocalyptic drama film directed by John Hillcoat and written by Joe Penhall. Based on the Pulitzer Prize-winning 2006 novel of the same name by American author Cormac McCarthy, the film stars Viggo Mortensen and Kodi Smit-McPhee as a father and his son in a post-apocalyptic wasteland. Filming took place in Pennsylvania, Louisiana, and Oregon. The film received a limited release in North American cinemas from November 25, 2009, and was released in UK cinemas on  January 4, 2010."
+          ],
+          "type" : [
+            {
+              "images" : [
+                
+              ],
+              "name" : "Movie",
+              "uri" : "http://mind.lusidity.com/types/com/venio/mind/domains/film/Movie"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

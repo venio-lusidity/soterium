@@ -1,0 +1,53 @@
+{
+    "common": {
+      "mapping": {
+        "mappings": {
+          "__property_name__": {
+            "properties": {
+              "vertexType": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "propertyName": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "createdWhen": {
+                "type": "long",
+                "analyzer": "standard"
+              },
+              "modifiedWhen": {
+                "type": "long",
+                "analyzer": "standard"
+              },
+              "fromEndpoint": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "toEndpoint": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "label": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "ordinal_from": {
+                "type": "integer",
+                "index": "not_analyzed"
+              },
+              "ordinal_to": {
+                "type": "integer",
+                "index": "not_analyzed"
+              }
+            }
+          }
+        }
+      }
+    },
+    "allowedTypes": [
+        "com.lusidity.collections.Edge",
+        "com.lusidity.collections.CVEEdge"
+    ],
+    "availableImmediately": true
+}

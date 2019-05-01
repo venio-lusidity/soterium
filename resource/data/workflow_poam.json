@@ -1,0 +1,10 @@
+{
+  "class": "com.lusidity.domains.technology.security.vulnerabilities.forms.POAM",
+  "title": "POAM Workflow",
+  "controlPattern" : "sequential",
+  "workflow": {
+    "principals":[
+      { "id": "??", "action": "approval"  }
+    ]
+  }
+}

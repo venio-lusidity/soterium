@@ -1,0 +1,19 @@
+[title]
+--------------------------------------------------------------------------------------------------------------------------------
+[description]
+
+There is a workflow process that requires your attention please click the link or copy and paste the below url into your browser:
+
+[content]
+
+Initiated by:
+
+[initiator]
+
+The following reviewers/approvers have been notified and can also perform this action:
+
+[who]
+
+
+
+

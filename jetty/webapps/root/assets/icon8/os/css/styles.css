@@ -1,0 +1,87 @@
+/*
+ * Icon Font Icons8
+ * Made with love by Icons8 [ https://icons8.com/ ] using FontCustom [ https://github.com/FontCustom/fontcustom ]
+ *
+ * Contacts:
+ *    [ https://icons8.com/contact ]
+ *
+ * Follow Icon8 on
+ *    Twitter [ https://twitter.com/icons_8 ]
+ *    Facebook [ https://www.facebook.com/Icons8 ]
+ *    Google+ [ https://plus.google.com/+Icons8 ]
+ *    GitHub [ https://github.com/icons8 ]
+ */
+
+
+@font-face {
+  font-family: "Icons8";
+  src: url("../fonts/Icons8_724bb22ef34739c3556490186257788c.eot");
+  src: url("../fonts/Icons8_724bb22ef34739c3556490186257788c.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Icons8_724bb22ef34739c3556490186257788c.woff2") format("woff2"),
+       url("../fonts/Icons8_724bb22ef34739c3556490186257788c.woff") format("woff"),
+       url("../fonts/Icons8_724bb22ef34739c3556490186257788c.ttf") format("truetype"),
+       url("../fonts/Icons8_724bb22ef34739c3556490186257788c.svg#Icons8") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Icons8";
+    src: url("../fonts/Icons8_724bb22ef34739c3556490186257788c.svg#Icons8") format("svg");
+  }
+}
+
+[data-icons8]:before { content: attr(data-icons8); }
+
+[data-icons8]:before,
+.icons8-android-os:before,
+.icons8-apple-filled:before,
+.icons8-beos:before,
+.icons8-debian:before,
+.icons8-dos:before,
+.icons8-free-bsd-filled:before,
+.icons8-haiku:before,
+.icons8-linux-filled:before,
+.icons8-mandriva:before,
+.icons8-netscape:before,
+.icons8-os2:before,
+.icons8-red-hat:before,
+.icons8-suse:before,
+.icons8-symbian:before,
+.icons8-ubuntu:before,
+.icons8-unix:before,
+.icons8-windows-xp:before,
+.icons8-windows8:before {
+  display: inline-block;
+  font-family: "Icons8";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.icons8-android-os:before { content: "\f10e"; }
+.icons8-apple-filled:before { content: "\f101"; }
+.icons8-beos:before { content: "\f108"; }
+.icons8-debian:before { content: "\f10d"; }
+.icons8-dos:before { content: "\f105"; }
+.icons8-free-bsd-filled:before { content: "\f103"; }
+.icons8-haiku:before { content: "\f104"; }
+.icons8-linux-filled:before { content: "\f102"; }
+.icons8-mandriva:before { content: "\f10f"; }
+.icons8-netscape:before { content: "\f10a"; }
+.icons8-os2:before { content: "\f107"; }
+.icons8-red-hat:before { content: "\f110"; }
+.icons8-suse:before { content: "\f10b"; }
+.icons8-symbian:before { content: "\f10c"; }
+.icons8-ubuntu:before { content: "\f111"; }
+.icons8-unix:before { content: "\f106"; }
+.icons8-windows-xp:before { content: "\f100"; }
+.icons8-windows8:before { content: "\f109"; }

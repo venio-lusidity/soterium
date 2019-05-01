@@ -1,0 +1,33 @@
+.metric-card{
+    display: block;
+
+}
+
+.metric-card > div {
+    margin: 10px auto;
+    display: block;
+    width: 500px;
+    height: 400px;
+    max-width: 500px;
+    max-height: 400px;
+}
+
+.metric-card > div > table {
+    display: block;
+    width: 500px;
+    height: 400px;
+    min-width: 500px;
+    min-height: 400px;
+}
+
+.jVulnMatrix .axis{
+    font-size: 14px;
+}
+
+.severity{
+    font-size: 12px;
+}
+
+.matrix-score{
+    font-weight: bold;
+}

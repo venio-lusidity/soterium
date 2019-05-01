@@ -1,0 +1,124 @@
+/*
+ * Copyright 2018 lusidity inc.
+ *
+ *    Licensed under the Apache License, Version 2.0 (the "License");
+ *    you may not use this file except in compliance with the License.
+ *    You may obtain a copy of the License at
+ *
+ *        http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing, software
+ *    distributed under the License is distributed on an "AS IS" BASIS,
+ *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *    See the License for the specific language governing permissions and
+ *    limitations under the License.
+ *
+ */
+
+/* Buttons
+=================================================================== */
+.btn {
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	
+	i {
+		margin-top: 2px;
+	}
+	
+}
+
+.btn-primary {
+	color: #ffffff;
+  	.gradient(@blue, darken(@blue,10%));
+	
+		&:hover,
+		&.disabled,
+		&[disabled] {
+	  		background-color: darken(@blue,10%);
+		}
+	
+		&:active,
+		&.active {
+	  		background-color: darken(@blue,12%);
+		}
+}
+
+.btn-warning {
+	color: #ffffff;
+  	.gradient(@lightOrange, darken(@lightOrange,10%));
+	
+		&:hover,
+		&.disabled,
+		&[disabled] {
+	  		background-color: darken(@lightOrange,10%);
+		}
+	
+		&:active,
+		&.active {
+	  		background-color: darken(@lightOrange,12%);
+		}
+}
+
+.btn-danger {
+	color: #ffffff;
+  	.gradient(@red, darken(@red,10%));
+	
+		&:hover,
+		&.disabled,
+		&[disabled] {
+	  		background-color: darken(@red,10%);
+		}
+	
+		&:active,
+		&.active {
+	  		background-color: darken(@red,12%);
+		}
+}
+
+.btn-success {
+	color: #ffffff;
+  	.gradient(@darkGreen, darken(@darkGreen,10%));
+	
+		&:hover,
+		&.disabled,
+		&[disabled] {
+	  		background-color: darken(@darkGreen,10%);
+		}
+	
+		&:active,
+		&.active {
+	  		background-color: darken(@darkGreen,12%);
+		}
+}
+
+
+.btn-info {
+	color: #ffffff;
+  	.gradient(@lightBlue, darken(@lightBlue,10%));
+	
+		&:hover,
+		&.disabled,
+		&[disabled] {
+	  		background-color: darken(@lightBlue,10%);
+		}
+	
+		&:active,
+		&.active {
+	  		background-color: darken(@lightBlue,12%);
+		}
+}
+
+.btn-inverse {
+	color: #ffffff;
+  	.gradient(@inverse, darken(@inverse,10%));
+	
+		&:hover,
+		&.disabled,
+		&[disabled] {
+	  		background-color: darken(@inverse,10%);
+		}
+	
+		&:active,
+		&.active {
+	  		background-color: darken(@inverse,12%);
+		}
+}

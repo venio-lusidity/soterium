@@ -1,0 +1,82 @@
+.tree {
+    white-space: nowrap;
+    padding: 5px !important;
+    font-size: 12px !important;
+}
+ul {
+    padding: 0 !important;
+}
+
+.tree li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.tree li > div {
+    margin-left: 10px;
+    line-height: 20px;
+    padding: 2px;
+}
+
+.tree li > div.title-header.selected{
+    font-weight: bold;
+    color: #0080ff;
+}
+
+.tree li > div.title-header:hover{
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tree li > .root{
+    margin-left: 0;
+}
+
+.tree li.root > .glyphicon {
+    position: absolute;
+    top: 4px;
+    font-size: 16px !important;
+    line-height: 16px !important;
+    cursor: pointer;
+}
+
+.tree li ul {
+    margin-left: 15px;
+    position: relative;
+}
+
+.tree .glyphicon {
+    position: absolute;
+    top: 6px;
+    font-size: 8px !important;
+    line-height: 8px !important;
+    cursor: pointer;
+}
+
+.tree li {
+    list-style-type:none;
+    margin:0;
+    /*padding:10px 5px 0 5px;*/
+    position:relative;
+}
+.tree li::before, .tree li::after {
+    content:'';
+    left:-20px;
+    position:absolute;
+    right:auto;
+}
+.tree li::before {
+    border-left:1px solid #c3c3c3;
+    bottom:50px;
+    height:100%;
+    top:0;
+    width:1px;
+}
+

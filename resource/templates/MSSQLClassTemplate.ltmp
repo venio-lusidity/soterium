@@ -1,0 +1,70 @@
+package PACKAGE_PATH;
+
+
+import com.lusidity.mssql.engine.*;
+import com.lusidity.framework.json.JsonData;
+import com.lusidity.framework.reports.ReportHandler;
+import org.json.JSONObject;
+import java.sql.*;
+import org.joda.time.*;
+import java.math.BigDecimal;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class CLASS_NAME {
+    private static final String KEY_TBL_NAME = "TABLE_NAME";
+    private final JsonData data;
+
+    public CLASS_NAME(JsonData item){
+        super();
+        this.data = item;
+    }
+
+    public JsonData getUnderlying() {
+        return this.data;
+    }
+    /*GETTERS*/
+
+    public static class Queries {
+
+        public static JsonData getResponse(String sql, MSSQLToken token){
+            JsonData result = null;
+            try(MSSQLConnector connector = new MSSQLConnector(token)){
+                result = connector.execute(sql, CLASS_NAME.KEY_TBL_NAME);
+            }
+            catch(Exception ex){
+                Environment.getInstance().getReportHandler().warning(ex);
+            }
+            return result;
+        }
+
+        public static Collection<CLASS_NAME> getAll(MSSQLToken token) {
+            Collection<CLASS_NAME> results = new ArrayList<>();
+            String sql = String.format("SELECT * FROM %s", CLASS_NAME.KEY_TBL_NAME);
+            JsonData response = CLASS_NAME.Queries.getResponse(sql, token);
+            if (null != response) {
+                for (Object o : response) {
+                    if (o instanceof JSONObject) {
+                        JsonData item = new JsonData(o);
+                        CLASS_NAME result = new CLASS_NAME(item);
+                        results.add(result);
+                    }
+                }
+            }
+
+            return results;
+        }
+
+        public static int getCount(MSSQLToken token) {
+            int result = 0;
+            try(MSSQLConnector connector = new MSSQLConnector(token)){
+                result = connector.getCount(CLASS_NAME.KEY_TBL_NAME);
+            }
+            catch(Exception ex){
+                Environment.getInstance().getReportHandler().warning(ex);
+            }
+            return result;
+        }
+    }
+}

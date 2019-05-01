@@ -1,0 +1,309 @@
+{
+  "genre" : [
+    {
+      "name" : [
+        "Drama"
+      ],
+      "uri" : "https://mind.lusidity.com/entities/5001"
+    },
+    {
+      "name" : [
+        "Adventure"
+      ],
+      "uri" : "https://mind.lusidity.com/entities/5002"
+    },
+    {
+      "name" : [
+        "Post-apocalyptic fiction"
+      ],
+      "uri" : "https://mind.lusidity.com/entities/5003"
+    }
+  ],
+  "trailer" : [
+    {
+      "title" : "The Road: DVD Trailer",
+      "url" : "<object width=\"450\" height=\"252\"><param name=\"movie\" value=\"http://www.traileraddict.com/emd/10979\"><param name=\"allowscriptaccess\" value=\"always\"></param><param name=\"wmode\" value=\"transparent\"></param><param name=\"allowfullscreen\" value=\"true\"></param><embed src=\"http://www.traileraddict.com/emd/10979\" type=\"application/x-shockwave-flash\" wmode=\"transparent\" allowfullscreen=\"true\" allowscriptaccess=\"always\" width=\"450\" height=\"252\"></embed></object>"
+    },
+    {
+      "title" : "The Road: International Trailer",
+      "url" : "<object width=\"450\" height=\"238\"><param name=\"movie\" value=\"http://www.traileraddict.com/emd/16637\"></param><param name=\"allowscriptaccess\" value=\"always\"></param><param name=\"wmode\" value=\"transparent\"></param><param name=\"allowfullscreen\" value=\"true\"></param><embed src=\"http://www.traileraddict.com/emd/16637\" type=\"application/x-shockwave-flash\" wmode=\"transparent\" allowfullscreen=\"true\" allowscriptaccess=\"always\" width=\"450\" height=\"238\"></embed></object>"
+    }
+  ],
+  "review" : [
+    {
+      "image" : "http://3.bp.blogspot.com/-lm10fi2vliM/UGNCaI5XglI/AAAAAAAAAeg/g6jXtDzmqMc/s1600/meta.png",
+      "label" : "Metacritic",
+      "url" : "http://www.metacritic.com/movie/the-road-2012",
+      "rating" : 0.71
+    },
+    {
+      "image" : "http://images.rottentomatoescdn.com/images/redesign/icons-v2.png?v=20120910",
+      "label" : "Rotten Tomatoes",
+      "url" : "http://www.rottentomatoes.com/m/10009460-the_road/",
+      "rating" : 0.75
+    }
+  ],
+  "action" : [
+    {
+      "url" : "https://itunes.apple.com/us/movie/the-road/id369853725#",
+      "label" : "Buy on iTunes ($9.99+)",
+      "icon" : "http://scm-l3.technorati.com/10/09/04/17695/itunes10logo.jpg"
+    },
+    {
+      "url" : "http://www.amazon.com/The-Road/dp/B003IWRE3I/ref=sr_1_2?ie=UTF8&qid=1363393192&sr=8-2&keywords=the+road",
+      "label" : "Buy on Amazon Instant Video ($9.99)",
+      "icon" : "http://tabtimes.com/sites/default/files/Amazon%20Instant%20Video.png"
+    },
+    {
+      "url" : "http://www.amazon.com/The-Road-Blu-ray-Viggo-Mortensen/dp/B001FB563E/ref=atv_dvd_twister",
+      "label" : "Buy from Amazon on Blu-ray, $14.99",
+      "icon" : "http://grownupgeek.com/files/u5113/Amazon-icon.png"
+    }
+  ],
+  "language" : [
+    {
+      "name" : [
+        "English"
+      ],
+      "uri" : "http://mind.lusidity.com/entities/1002",
+      "description" : [
+        "English is a West Germanic language that was first spoken in early medieval England and is now the most widely used language in the world. It is spoken as a first language by the majority populations of several sovereign states, including the United Kingdom, the United States, Canada, Australia, Ireland, New Zealand and a number of Caribbean nations. It is the third-most-common native language in the world, after Mandarin Chinese and Spanish. It is widely learned as a second language and is an official language of the European Union, many Commonwealth countries and the United Nations, as well as in many world organisations."
+      ]
+    }
+  ],
+  "country" : [
+    {
+      "name" : [
+        "United States of America"
+      ],
+      "image" : [
+        {
+          "uri" : "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
+          "recommendedUsage" : "thumbnail",
+          "caption" : "The Flag of the United States of America"
+        }
+      ],
+      "uri" : "http://mind.lusidity.com/entities/1001",
+      "description" : [
+        "The United States of America (USA or U.S.A.), commonly called the United States (US or U.S.) and colloquially referred to as America, is a federal republic[10][11] consisting of fifty states and a federal district.[4] The country is situated mostly in central North America, where its forty-eight contiguous states and Washington, D.C., the capital district, lie between the Pacific and Atlantic Oceans, bordered by Canada to the north and Mexico to the south. The state of Alaska is situated in the northwest portion of the continent, with Canada to its east and Russia to its west across the Bering Strait. The state of Hawaii is an archipelago in the mid-Pacific. The country also possesses several territories in the Pacific and Caribbean."
+      ]
+    }
+  ],
+  "runningTime" : [
+    "113 minutes"
+  ],
+  "producer" : [
+    {
+      "name" : [
+        "Nick Wechsler"
+      ]
+    },
+    {
+      "name" : [
+        "Steve Schwartz"
+      ]
+    },
+    {
+      "name" : [
+        "Paula Mae Schwartz"
+      ]
+    }
+  ],
+  "releaseDate" : [
+    "2009-11-25"
+  ],
+  "adaptedFrom" : [
+    {
+      "title" : [
+        "The Road"
+      ],
+      "image" : [
+        {
+          "uri" : "http://upload.wikimedia.org/wikipedia/commons/2/27/The-road.jpg",
+          "recommendedUsage" : "thumbnail",
+          "caption" : "First edition hardcover"
+        }
+      ],
+      "uri" : "http://mind.lusidity.com/entities/123",
+      "description" : [
+        "The Road is a 2006 novel by American writer Cormac McCarthy. It is a post-apocalyptic tale of a journey of a father and his young son over a period of several months, across a landscape blasted by an unspecified cataclysm that has destroyed most of civilization and, in the intervening years, almost all life on Earth. The novel was awarded the 2007 Pulitzer Prize for Fiction and the James Tait Black Memorial Prize for Fiction in 2006."
+      ],
+      "type" : [
+        {
+          "image" : [
+            {
+              "recommendedUsage" : "thumbnail",
+              "uri" : "http://openclipart.org/people/barretr/barretr_Book.svg"
+            }
+          ],
+          "name" : "Book",
+          "uri" : "http://mind.lusidicty.com/types/domains/literature/Book"
+        }
+      ]
+    }
+  ],
+  "director" : [
+    {
+      "description" : [
+        "John Hillcoat (born 1961) is an Australian film director, screenwriter, and music video director."
+      ],
+      "image" : [
+        {
+          "uri" : "http://upload.wikimedia.org/wikipedia/commons/0/04/John_Hillcoat.jpg",
+          "recommendedUsage" : "tile",
+          "caption" : "John Hillcoat at the 2009 Venice Film Festival for the premiere of The Road"
+        }
+      ],
+      "uri" : "http://mind.lusidity.com/entities/9990",
+      "name" : [
+        "John Hillcoat"
+      ]
+    }
+  ],
+  "producer" : [
+    {
+      "description" : [
+        "Nick Wechsler (born October 19, 1949) is an American film producer."
+      ],
+      "uri" : "http://mind.lusidity.com/entities/9991",
+      "name" : [
+        "Nick Wechsler"
+      ]
+    }
+  ],
+  "screenwriter" : [
+    {
+      "description" : [
+        "Joe Penhall (born 1967) is a British playwright and screenwriter from London, best known for his award-winning play Blue/Orange and his screenplays for The Road and Enduring Love."
+      ],
+      "uri" : "http://mind.lusidity.com/entities/9992",
+      "name" : [
+        "Joe Penhall"
+      ],
+      "image" : [
+        {
+          "uri" : "http://upload.wikimedia.org/wikipedia/commons/b/bf/Joe_Penhall.jpg",
+          "recommendedUsage" : "tile",
+          "caption" : "Joe Penhall at the 2009 Venice Film Festival for the premiere of The Road"
+        }
+      ]
+    }
+  ],
+  "distributor" : [
+    {
+      "description" : [
+        "Dimension Films is a major American film production company owned by The Weinstein Company. It was formerly used as Bob Weinstein's label within Miramax Films, to produce and release genre films. The Weinstein Brothers took this label with them when they departed the Disney-owned Miramax in October 2005."
+      ],
+      "uri" : "http://mind.lusidity.com/entities/9996",
+      "name" : [
+        "Dimension Films"
+      ],
+      "image" : [
+        {
+          "uri" : "http://upload.wikimedia.org/wikipedia/commons/5/5d/Dimension_films_logo.gif",
+          "recommendedUsage" : "tile"
+        }
+      ]
+    }
+  ],
+  "studio" : [
+    {
+      "description" : [
+        "2929 Entertainment is an American media company with holdings in film and television production, film distribution, theatrical exhibition, home entertainment, television, and syndication. Billionaires Todd Wagner and Mark Cuban founded and currently own the privately held company. Wagner serves as its CEO, and Kevin Parke as its Executive Vice President."
+      ],
+      "uri" : "http://mind.lusidity.com/entities/9997",
+      "name" : [
+        "2929 Entertainment"
+      ],
+      "image" : [
+        {
+          "uri" : "http://upload.wikimedia.org/wikipedia/en/7/7c/2929logo_new.png",
+          "recommendedUsage" : "tile"
+        }
+      ]
+    }
+  ],
+  "starring" : [
+    {
+      "description" : [
+        "Viggo Peter Mortensen, Jr. (Danish: [viɡ̊o ˈmɒːdnsn]; October 20, 1958) is an American actor, poet, musician, photographer and painter. He made his film debut in Peter Weir's 1985 thriller Witness, and subsequently appeared in many notable films of the 1990s, including The Indian Runner (1991), Carlito's Way (1993), Crimson Tide (1995), Daylight (1996), The Portrait of a Lady (1996), G.I. Jane (1997), A Perfect Murder (1998), A Walk on the Moon (1999) and 28 Days (2000)."
+      ],
+      "uri" : "http://mind.lusidity.com/entities/9993",
+      "name" : [
+        "Vigo Mortensen"
+      ],
+      "image" : [
+        {
+          "uri" : "http://upload.wikimedia.org/wikipedia/commons/8/83/Viggo_Mortensen_2012.jpg",
+          "recommendedUsage" : "tile",
+          "caption" : "Mortensen at the 32nd Genie Awards in March 2012"
+        }
+      ]
+    },
+    {
+      "description" : [
+        "Kodi Smit-McPhee (born 13 June 1996) is an Australian actor known for his roles as The Boy in The Road and Owen in Let Me In. He has also appeared in Australian films Romulus, My Father and Matching Jack."
+      ],
+      "uri" : "http://mind.lusidity.com/entities/9994",
+      "name" : [
+        "Kodi Smit-McPhee"
+      ],
+      "image" : [
+        {
+          "uri" : "http://upload.wikimedia.org/wikipedia/commons/5/5c/Kodi_Smit-McPhee_2%2C_2012.jpg",
+          "recommendedUsage" : "tile",
+          "caption" : "Smit-McPhee at the premiere of Focus Features ParaNorman at Universal CityWalk in August 5, 2012."
+        }
+      ]
+    },
+    {
+      "description" : [
+        "Charlize Theron (born 7 August 1975) is an actress and fashion model. She rose to fame in the late 1990s following roles in The Devil's Advocate (1997), Mighty Joe Young (1998), and The Cider House Rules (1999). Theron won the Academy Award for Best Actress, the Golden Globe Award for Best Actress - Motion Picture Drama, the Silver Bear and many other awards for her portrayal of serial killer Aileen Wuornos in Monster (2003), becoming the first South African to win an Academy Award in a major acting category. In recent years she has also moved into the field of producing, both in television and film."
+      ],
+      "uri" : "http://mind.lusidity.com/entities/9995",
+      "name" : [
+        "Kodi Smit-McPhee"
+      ],
+      "image" : [
+        {
+          "uri" : "http://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Charlize_Theron_WonderCon_2012.jpg/379px-Charlize_Theron_WonderCon_2012.jpg",
+          "recommendedUsage" : "tile",
+          "caption" : "Theron at WonderCon in March 2012 promoting Prometheus."
+        }
+      ]
+    }
+  ],
+  "tagline" : [
+    "In a moment the world changed forever."
+  ],
+  "title" : [
+    "The Road"
+  ],
+  "image" : [
+    {
+      "uri" : "https://d3gtl9l2a4fn1j.cloudfront.net/t/p/original/nzw8YGJhWC2scIrXJmyQMy5iw6v.jpg",
+      "recommendedUsage" : "full"
+    },
+    {
+      "uri" : "http://upload.wikimedia.org/wikipedia/en/a/a7/The_Road_movie_poster.jpg",
+      "recommendedUsage" : "tile",
+      "caption" : "Theatrical release poster"
+    }
+  ],
+  "uri" : "http://mind.lusidity.com/entities/456",
+  "description" : [
+    "The Road is a 2009 post-apocalyptic drama film directed by John Hillcoat and written by Joe Penhall. Based on the Pulitzer Prize-winning 2006 novel of the same name by American author Cormac McCarthy, the film stars Viggo Mortensen and Kodi Smit-McPhee as a father and his son in a post-apocalyptic wasteland. Filming took place in Pennsylvania, Louisiana, and Oregon. The film received a limited release in North American cinemas from November 25, 2009, and was released in UK cinemas on January 4, 2010."
+  ],
+  "type" : [
+    {
+      "images" : [
+        {
+          "recommendedUsage" : "thumbnail",
+          "uri" : "http://openclipart.org/people/rg1024/movie_reel.svg"
+        }
+      ],
+      "uri" : "http://mind.lusidicty.com/types/domains/film/Movie",
+      "name" : "Movie"
+    }
+  ]
+}

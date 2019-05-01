@@ -1,0 +1,11 @@
+#form-workflow{
+    display: none;
+    margin-bottom: 20px;
+}
+.workflow-diagram{
+    position: relative;
+    clear: both;
+    height: 200px;
+    min-height: 200px;
+    overflow: hidden;
+}

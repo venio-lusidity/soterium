@@ -1,0 +1,25 @@
+.tabs{
+    margin: 5px 5px 10px 5px;
+    clear: both;
+    display: block;
+}
+
+.tabs .tab.selected{
+    background-color: transparent;
+    font-weight: bold;
+    border-bottom: solid 3px #31708f;
+}
+
+.tab .badge{
+    position: relative;
+    top: -2px;
+    font-size: 10px;
+    margin: 0 2px 2px 5px;
+    min-width: 20px;
+}
+
+.tabs .tab{
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px;
+}

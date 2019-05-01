@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>RMK Register</title>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <script type="text/javascript" src="/assets/jquery/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/assets/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/lusidity/preloader.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('pageLoaderReady', function () {
+            var s = [
+                '/assets/lusidity/plugins/jquery.treeView.js',
+                '/assets/lusidity/plugins/jquery.treeModal.js',
+                '/pages/accounts/register/js/jquery.accountRegister.js'
+            ];
+            var c = [
+                '/pages/accounts/register/css/register.css'
+            ];
+            pageLoader.init(s, c, '/pages/accounts/register');
+        });
+    </script>
+</head>
+<body>
+<div class="container-fluid page" style="display: none;">
+    <div class="page-content">
+
+        <div class="alert-zone">
+            <div class="alert alert-success alert-block">
+                <button type="button" class="close" data-dismiss="alert"><span class="glyphicon glyphicon-remove"></span></button>
+                <div class="alert-inner"></div>
+            </div>
+        </div>
+        <div class="row main-content">
+            <div class="col-md-12">
+                <div class="page-panel panel-middle">
+                </div>
+            </div>
+        </div>
+        <div class="top-menu">
+            <nav class="navbar navbar-default no-radius">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/enclaves">
+                            <img alt="Brand" src="/assets/img/disa.png" style="height: 42px;">
+                            <div class="nav-title">Risk Management Knowledgebase (RMK)</div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<div id="scriplet"></div>
+</body>
+</html>

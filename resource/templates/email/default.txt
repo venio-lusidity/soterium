@@ -1,0 +1,19 @@
+[imageDisplay]
+[title]
+-------------------------------------------
+This notification regards the following.
+
+[content]
+
+
+
+-------------------------------------------
+
+The following have been notified.
+[who]
+
+Please do not reply to this email.
+
+
+
+

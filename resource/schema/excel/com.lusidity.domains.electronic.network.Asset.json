@@ -1,0 +1,21 @@
+{
+  "lid": { "s_label": "lid"},
+  "title": { "s_label": "Title"},
+  "domainName": { "s_label": "Domain Name"},
+  "dpasId": { "s_label": "DPAS ID"},
+  "hostname": { "s_label": "Hostname"},
+  "serialNumber": { "s_label": "Serial Number"},
+  "uicName": { "s_label": "UIC"},
+  "modelNumber": { "s_label": "ModelNumber"},
+  "make": { "s_label": "Make"},
+  "manufacturer": { "s_label": "Manufacturer"},
+  "operatingSystem": { "s_label": "Operating Systems"},
+  "/electronic/network/network_adapter/networkAdapters": {
+    "macAddress": { "s_label": "MAC Address"},
+    "ipAddress": { "s_label": "IP Address"},
+    "make": { "s_label": "OUI" }
+  },
+  "/system/primitives/uri_value/identifiers": {
+    "value": { "s_label": "Identifiers"}
+  }
+}

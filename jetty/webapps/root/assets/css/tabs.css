@@ -1,0 +1,66 @@
+.tabs{
+    margin: 5px 5px 10px 5px;
+    clear: both;
+    display: block;
+}
+
+.tab-under>li.active>a,.tab-under>li.active>a:hover,.tab-under>li.active>a:focus{
+    border-bottom: medium solid #558abb !important;
+}
+
+.tab-under>li>a:hover{
+    cursor: pointer !important;
+}
+
+.tabs .tab.selected{
+    background-color: transparent;
+    font-weight: bold;
+    border-bottom: medium solid #558abb !important;
+}
+
+.tab .badge{
+    position: relative;
+    top: -2px;
+    font-size: 10px;
+    margin: 0 2px 2px 5px;
+    min-width: 20px;
+}
+
+.tabs .tab{
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.tab-pane.tab-under{
+
+}
+
+.nav-tabs ul{
+    border: none !important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    box-shadow: none !important;
+}
+
+.nav-tabs ul>li{
+    border: none !important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    box-shadow: none !important;
+}
+
+.tab-under>li>a:hover,.tab-under>li.active>a,.tab-under>li.active>a:focus,.tab-under>li.active>a:hover{
+
+}
+
+.no-border>li>a:hover,.no-border>li.active>a,.no-border>li.active>a:focus,.no-border>li.active>a:hover{
+    outline: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    box-shadow: none !important;
+    border-color: transparent;
+}

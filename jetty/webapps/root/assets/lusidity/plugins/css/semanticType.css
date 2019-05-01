@@ -1,0 +1,12 @@
+.semantic-type img.type-image{
+    height: 24px !important;
+}
+
+.semantic-type .type-name{
+    display: inline-block;
+}
+
+.semantic-type {
+    display: table-cell;
+    vertical-align: middle;
+}

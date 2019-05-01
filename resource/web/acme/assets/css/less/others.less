@@ -1,0 +1,96 @@
+/*
+ * Copyright 2018 lusidity inc.
+ *
+ *    Licensed under the Apache License, Version 2.0 (the "License");
+ *    you may not use this file except in compliance with the License.
+ *    You may obtain a copy of the License at
+ *
+ *        http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing, software
+ *    distributed under the License is distributed on an "AS IS" BASIS,
+ *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *    See the License for the specific language governing permissions and
+ *    limitations under the License.
+ *
+ */
+
+/* Alert Boxes
+=================================================================== */
+.alert {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	margin-bottom: 15px;
+	position: relative;
+	padding: 14px 40px 14px 18px;
+	.box-shadow(0px 1px 1px 0px rgba(180, 180, 180, 0.1));
+}
+
+/* Star Rating
+=================================================================== */
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-size: 30px;
+}
+.rating span.star,
+.rating span.star {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+}
+.rating span.star:hover,
+.rating span.star:hover {
+  cursor: pointer;
+}
+.rating span.star:before,
+.rating span.star:before {
+  content: "\f006";
+  padding-right: 5px;
+  color: #999999;
+}
+.rating span.star:hover:before,
+.rating span.star:hover:before,
+.rating span.star:hover ~ span.star:before,
+.rating span.star:hover ~ span.star:before {
+  content: "\f005";
+  color: #e3cf7a;
+}
+
+/* File manager
+=================================================================== */
+.elfinder .elfinder-button {
+	.box-sizing(content-box);
+}
+
+/* Icons
+=================================================================== */
+.glyphicons-icon-list {
+	
+	div {
+		margin: 10px 0;
+		
+		span, strong {
+			font-size: 10px;
+		}
+		
+		strong {
+			margin-top: -5px;
+			display:block;
+		}
+	}
+	
+}
+
+.fontawesome-icon-list {
+	div {
+		margin: 5px 0;
+	}
+	.fa {
+		width: 20px;
+		text-align: center;
+		margin-right: 10px;
+	}
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="BUILD_PROCESS_HEAP_SIZE" value="2000" />
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="client-ssl" />
+        <module name="lusidity-client-ssl" />
+      </profile>
+      <profile name="Annotation profile for lusidity-framework" enabled="true">
+        <sourceOutputDir name="../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="apollo" />
+        <module name="athena" />
+        <module name="core" />
+        <module name="discover" />
+        <module name="framework" />
+        <module name="freebase-importer" />
+        <module name="gsoc-freebase-graph-importer" />
+        <module name="lusidity-acas-system-center" />
+        <module name="lusidity-apollo" />
+        <module name="lusidity-athena" />
+        <module name="lusidity-core" />
+        <module name="lusidity-discover" />
+        <module name="lusidity-domains" />
+        <module name="lusidity-framework" />
+        <module name="lusidity-freebase-importer" />
+        <module name="lusidity-search" />
+        <module name="lusidity-services" />
+        <module name="lusidity-test" />
+        <module name="nrt" />
+        <module name="polo" />
+        <module name="services" />
+        <module name="system-center" />
+        <module name="test" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="apollo" target="1.8" />
+      <module name="athena" target="1.8" />
+      <module name="client-ssl" target="1.8" />
+      <module name="core" target="1.8" />
+      <module name="discover" target="1.8" />
+      <module name="framework" target="1.8" />
+      <module name="parent" target="1.8" />
+      <module name="services" target="1.8" />
+      <module name="test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

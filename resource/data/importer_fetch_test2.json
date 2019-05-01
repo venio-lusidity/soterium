@@ -1,0 +1,30 @@
+{
+  "Name": {
+    "Domain": {
+      "Domain": "DUMAPPVHCS01.DISANET.DISA-U.MIL",
+      "Manufacturer": {
+        "Manufacturer": "Dell Inc.",
+        "Model": {
+          "Model": "PowerEdge R610",
+          "Serial_Number": {
+            "Operating_System_Version": {
+              "DISA_Barcode": {
+                "Last_System_Logon": {
+                  "IP_Addresses": "&#10.234.164.67&#13;&#10;164.234.1.67&#13;&#10;164.234.1.74&#13;&#10;169.254.1.246",
+                  "InstalledSoftware": "64 Bit HP CIO Components Installer     -    version: 4.2.1&#13;&#10;ActivClient CAC x64     -    version: 6.2&#13;&#10;AdmPwd - Local admin password management solution     -    version: 4.0.6.0&#13;&#10;Broadcom Management Programs     -    version: 12.30.11&#13;&#10;Broadcom NetXtreme II Driver Installer     -    version: 14.4.8.4&#13;&#10;Configuration Manager Client     -    version: 5.00.8239.1000&#13;&#10;CVE-2012-1889     -    version: &#13;&#10;CVE-2012-4969     -    version: &#13;&#10;McAfee Agent     -    version: 4.8.3002&#13;&#10;McAfee Asset Baseline Monitor Agent     -    version: 3.5.0&#13;&#10;McAfee DLP Endpoint     -    version: 9.3.500.23&#13;&#10;McAfee DLP HotFix (Compatibility 14.4.0.387)     -    version: 14.4.0.387&#13;&#10;McAfee Host Intrusion Prevention     -    version: 8.00.0402&#13;&#10;McAfee Policy Auditor Agent     -    version: 6.2.0&#13;&#10;McAfee Rogue System Detection Sensor     -    version: 4.7.2&#13;&#10;McAfee VirusScan Enterprise     -    version: 8.8.04001&#13;&#10;Microsoft .NET Framework 4 Client Profile     -    version: 4.0.30319&#13;&#10;Microsoft Policy Platform     -    version: 1.2.3602.0&#13;&#10;Microsoft Silverlight     -    version: 5.1.40728.0&#13;&#10;Microsoft Visual C++ 2005 Redistributable     -    version: 8.0.61001&#13;&#10;Microsoft Visual C++ 2005 Redistributable (x64)     -    version: 8.0.61000&#13;&#10;Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.4148     -    version: 9.0.30729.4148&#13;&#10;Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.6161     -    version: 9.0.30729.6161&#13;&#10;Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.4148     -    version: 9.0.30729.4148&#13;&#10;Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.6161     -    version: 9.0.30729.6161&#13;&#10;Microsoft Visual C++ 2010  x64 Redistributable - 10.0.40219     -    version: 10.0.40219&#13;&#10;Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219     -    version: 10.0.40219&#13;&#10;Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.21005     -    version: 12.0.21005.1&#13;&#10;Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.21005     -    version: 12.0.21005.1&#13;&#10;Microsoft Visual C++ 2013 x64 Additional Runtime - 12.0.21005     -    version: 12.0.21005&#13;&#10;Microsoft Visual C++ 2013 x64 Minimum Runtime - 12.0.21005     -    version: 12.0.21005&#13;&#10;Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.21005     -    version: 12.0.21005&#13;&#10;Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.21005     -    version: 12.0.21005&#13;&#10;Mozilla Firefox 37.0.1 (x86 en-US)     -    version: 37.0.1&#13;&#10;Mozilla Maintenance Service     -    version: 37.0.1&#13;&#10;NetIQ AppManager     -    version: &#13;&#10;NetIQ AppManager agent     -    version: 7.0.25142.0&#13;&#10;NetIQ AppManager for MSCS     -    version: &#13;&#10;PowerVault Modular Disk Storage Manager     -    version: 03.35.x6.37&#13;&#10;Symantec Backup Exec Remote Agent for Windows Systems     -    version: 13.0.5204&#13;&#10;Tumbleweed Desktop Validator     -    version: 4.11&#13;&#10;USAF ACCM     -    version: 2.2.0.59",
+                  "InstalledUpdates": "MS11-019&#13;&#10;MS11-024&#13;&#10;MS11-030&#13;&#10;MS11-037&#13;&#10;MS11-047&#13;&#10;MS11-048&#13;&#10;MS11-059&#13;&#10;MS11-071&#13;&#10;MS11-075&#13;&#10;MS11-085&#13;&#10;MS11-100&#13;&#10;MS12-004&#13;&#10;MS12-006&#13;&#10;MS12-012&#13;&#10;MS12-013&#13;&#10;MS12-020&#13;&#10;MS12-024&#13;&#10;MS12-033&#13;&#10;MS12-035&#13;&#10;MS12-036&#13;&#10;MS12-045&#13;&#10;MS12-054&#13;&#10;MS12-074&#13;&#10;MS12-081&#13;&#10;MS12-082&#13;&#10;MS12-083&#13;&#10;MS13-004&#13;&#10;MS13-007&#13;&#10;MS13-015&#13;&#10;MS13-027&#13;&#10;MS13-036&#13;&#10;MS13-050&#13;&#10;MS13-052&#13;&#10;MS13-081&#13;&#10;MS13-082&#13;&#10;MS13-090&#13;&#10;MS13-095&#13;&#10;MS13-098&#13;&#10;MS13-099&#13;&#10;MS13-101&#13;&#10;MS14-007&#13;&#10;MS14-009&#13;&#10;MS14-026&#13;&#10;MS14-031&#13;&#10;MS14-039&#13;&#10;MS14-045&#13;&#10;MS14-046&#13;&#10;MS14-053&#13;&#10;MS14-057&#13;&#10;MS14-064&#13;&#10;MS14-071&#13;&#10;MS14-072&#13;&#10;MS14-074&#13;&#10;MS14-078&#13;&#10;MS15-003&#13;&#10;MS15-004&#13;&#10;MS15-005&#13;&#10;MS15-007&#13;&#10;MS15-014&#13;&#10;MS15-020&#13;&#10;MS15-024&#13;&#10;MS15-028&#13;&#10;MS15-029&#13;&#10;MS15-034&#13;&#10;MS15-038&#13;&#10;MS15-041&#13;&#10;MS15-048&#13;&#10;MS15-050&#13;&#10;MS15-055&#13;&#10;MS15-060&#13;&#10;MS15-068&#13;&#10;MS15-071&#13;&#10;MS15-072&#13;&#10;MS15-074&#13;&#10;MS15-075&#13;&#10;MS15-080&#13;&#10;MS15-082&#13;&#10;MS15-084&#13;&#10;MS15-085&#13;&#10;MS15-088&#13;&#10;MS15-090&#13;&#10;MS15-096&#13;&#10;MS15-097&#13;&#10;MS15-101&#13;&#10;MS15-102&#13;&#10;MS15-109&#13;&#10;MS15-115&#13;&#10;MS15-117&#13;&#10;MS15-118&#13;&#10;MS15-119&#13;&#10;MS15-121&#13;&#10;MS15-122&#13;&#10;MS15-129",
+                  "Last_System_Logon": "2015-12-14T13:23:33",
+                  "MAC": "00:21:9B:94:16:BC&#13;&#10;00:21:9B:94:16:C0&#13;&#10;02:21:9B:94:16:BC",
+                  "MissingUpdates": "MS15-124&#13;&#10;MS15-128&#13;&#10;MS15-130&#13;&#10;MS15-132&#13;&#10;MS15-133"
+                }
+              },
+              "Operating_System_Version": "Microsoft Windows Server 2008 R2 Datacenter"
+            },
+            "Serial_Number": "HC3JZK1"
+          }
+        }
+      }
+    },
+    "Name": "DUMAPPVHCS01"
+  }
+}

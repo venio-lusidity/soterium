@@ -1,0 +1,38 @@
+{
+  "author": "Tiera Thompson",
+  "releasedOn": "2018-03-16T08:00:00.000-04:00",
+  "title": "Sprint 11.6 release notes",
+  "results": [
+    {
+      "label": "Issues",
+      "content": [
+        {
+          "text": "(FB 742) Updated Release notes now contain case number."
+        },
+        {
+          "text": "(FB 797) Versions are collected from HBSS, finding is not a bug."
+        },
+        {
+          "text": "(FB 806) Resolved an issue where HIPS and ACCM for SunOS would not display all the time. RMK is displayin HIPS and ACCM compliance for SunOs correctly."
+        }
+      ]
+    },
+    {
+      "label": "Features",
+      "content": [
+        {
+          "text": "(FB 628) RMK has updated retention policies for HBSS vulnerability findings. Old vulnerabilities are no longer reported however, they are not deleted."
+        },
+        {
+          "text": "(FB 746) RMK has updated retention policies for ACAS Plugin Failure Results. RMK pulls the latest ACAS API results and cleans up old findings using Failed Findings Validation Job."
+        },
+        {
+          "text": "(FB 807) RMK now displays all HBC Components in the HBC Tab."
+        },
+        {
+          "text": "(FB 828) RMK now uses Failed Findings Validation Job to manage retention."
+        }
+      ]
+    }
+  ]
+}

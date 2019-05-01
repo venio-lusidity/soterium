@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Server Remote Console" type="Application" factoryName="Application" singleton="true">
+    <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <option name="MAIN_CLASS_NAME" value="com.lusidity.athena.console.Program" />
+    <option name="VM_PARAMETERS" value="-Xms2g -Xmx18g" />
+    <option name="PROGRAM_PARAMETERS" value="-config resource/config/server_console_remote.json -server true -clear false" />
+    <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+    <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+    <option name="ENABLE_SWING_INSPECTOR" value="false" />
+    <option name="ENV_VARIABLES" />
+    <option name="PASS_PARENT_ENVS" value="true" />
+    <module name="athena" />
+    <envs />
+    <RunnerSettings RunnerId="JProfiler" />
+    <method />
+  </configuration>
+</component>

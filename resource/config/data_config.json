@@ -1,0 +1,28 @@
+{
+  "clusterName": "apollo-i",
+  "disabled": false,
+  "log_config_dir": "resource/index",
+  "log_config_file": "resource/index/logging.yml",
+  "log_dir": "resource/index/logs",
+  "clientEnabled": false,
+  "transactionCheckEnabled": true,
+  "clientHosts": [
+    "ds-1.soterium-dev.com"
+  ],
+  "clientPort": 9300,
+  "version": "",
+  "clientPortRange": "9300-9400",
+  "httpHost": "ds-1.soterium-dev.com",
+  "httpPort": 9222,
+  "transportPort": 9301,
+  "localHostAddress": "127.0.0.1",
+  "threadPoolSize": 0,
+  "threadsProcessed": 100,
+  "immediatelyAvailable": true,
+  "protocol": "https",
+  "search_guard":{
+     "commands": {
+       "initialize":"cd /mnt/xdata/datastores/elasticsearch-2.4.1 && plugins/search-guard-2/tools/sgadmin.sh -h ds-1.soterium-dev.com -cd plugins/search-guard-2/sgconfig/ -ks config/ES_DS_1.p12 -kspass \"!soterium1\" -ts config/keys/trusted.jks -tspass t7r9B0ux -nhnv -icl"
+     }
+  }
+}

@@ -1,0 +1,33 @@
+"users": {
+    "desc": "",
+    "example": "",
+    "value": [
+      {
+        "provider": "x509",
+        "identifier": "example",
+        "firstName": "",
+        "middleName": "",
+        "lastName": "",
+        "categories": [
+          {
+            "category": "work_email",
+            "value": "somone@somewhere.com"
+          },
+          {
+            "category": "work_phone",
+            "value": "555.555.5555",
+            "ext": "555"
+          }
+        ],
+        "acl": {
+          "groups": [
+            1.0
+          ],
+          "permissions": []
+        }
+      },
+      {"provider": "x509", "identifier": "333333333", "firstName": "John", "middleName": "L", "lastName": "Smith", "categories": [{"category": "work_email", "value": "john.l.smith@fake.com"}], "acl":{"groups":[1.0], "permissions":[]}},
+      {"provider": "x509", "identifier": "4444444444", "firstName": "Bob", "middleName": "L", "lastName": "Evans", "categories": [{"category": "work_email", "value": "bob.l.evans@fake.com"}], "acl":{"groups":[1.0], "permissions":[]}},
+      {"provider": "x509", "identifier": "5555555555", "firstName": "Buck", "middleName": "L", "lastName": "Rogers", "categories": [{"category": "work_email", "value": "buck.l.rogers@fake.com"}], "acl":{"groups":[3.0], "permissions":[]}}
+    ]
+  },

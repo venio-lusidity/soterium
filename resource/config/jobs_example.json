@@ -1,0 +1,27 @@
+{
+  "automated": {
+    "value": false,
+    "desc": "Does this job start up when the server starts?",
+    "example": "true or false"
+  },
+  "delay": {
+    "value": 500,
+    "desc": "The amount of time in milliseconds before starting the listener.",
+    "example": "In milliseconds 1000 = 1 second"
+  },
+  "data": {
+    "value": {"group": "Data"},
+    "desc": "Any additional data that the job requires",
+    "example": "JSON [] or {}"
+  },
+  "idleThreshold": {
+    "value": 500,
+    "desc": "The amount of time in milliseconds to wait before checking if the job should be run.",
+    "example": "In milliseconds 60000 = 1 minute"
+  },
+  "timeOfDay": {
+    "value": "23:59",
+    "desc": "The time of day in which auditing should occur in 24 hour format, 00:00 to 24:00. A value of 0 makes it run at the idleThreshold interval.",
+    "example": "15:30"
+  }
+}

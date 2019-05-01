@@ -1,0 +1,17 @@
+{
+  "data_directory": {
+    "desc": "The directory used to store Apollo Data..",
+    "example": "Use full path.",
+    "value": "/mnt/xdata/temp/apollo_data"
+  },
+  "max_rows": {
+    "desc": "How many JSON objects per file.",
+    "example": "Use full path.",
+    "value": 1000
+  },
+  "index_enabled": {
+    "desc": "Use lucene to index the JSON documents, if not enabled any queries other then get by id will fail.",
+    "example": "true or false",
+    "value": true
+  }
+}

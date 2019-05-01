@@ -1,0 +1,29 @@
+<div id="google-widget">
+</div>
+<script type="text/javascript">
+    (function(){
+        var position;
+        var url = $.jCommon.url.create(window.location.href);
+        if(url.hasParam('q')){
+            function init(){
+                if($.googlePlaces != undefined){
+                    $('#google-widget').googlePlaces({
+                        root: $('.google-places'),
+                        isDefaultMap: true,
+                        query: url.getParameter('q'),
+                        onFailed: function(){
+                            $('#google-widget').remove();
+                        }
+                    });
+                }
+                else{
+                    window.setTimeout(init, 100);
+                }
+            }
+            init();
+        }
+        else{
+            $('#google-widget').remove();
+        }
+    })();
+</script>

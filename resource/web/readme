@@ -1,0 +1,5 @@
+Ensure hosts names are set at /etc/hosts
+    svc.soterium-dev.com. dev.soterium-dev.com ds-1.soterium-dev.com
+If your testing ensure to back your data up as it will be deleted.
+If starting a new ES instance you must run the SearchGuard script below
+    cd /mnt/xdata/datastores/elasticsearch-2.4.1 && plugins/search-guard-2/tools/sgadmin.sh -h ds-1.soterium-dev.com -cd plugins/search-guard-2/sgconfig/ -ks config/keys/ES_DS_1.p12 -kspass \"!soterium1\" -ts config/keys/trusted.jks -tspass t7r9B0ux -nhnv -icl

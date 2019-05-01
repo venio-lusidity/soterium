@@ -1,0 +1,16 @@
+.spring-panel{
+    position: relative;
+}
+.spring-heading{
+
+}
+.spring-title{
+    font-size: 14px;
+    margin-left: 32px;
+}
+.spring-chev{
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    font-size: 14px;
+}

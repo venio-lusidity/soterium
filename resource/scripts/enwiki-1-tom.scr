@@ -1,0 +1,1 @@
+mediawiki -in /run/media/lusidity/sata/data/wiki/enwiki-20141106-pages-articles.xml.bz2 -threads 4 -limit 1000

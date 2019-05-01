@@ -1,0 +1,357 @@
+{
+  "name": "person",
+  "zones": [
+    {
+      "layout": "zone",
+      "zone": ".menu-bar",
+      "styles": ["/assets/lusidity/css/entity.css"],
+      "plugins": [
+        "/assets/lusidity/plugins/jquery.semanticType.js",
+        "/assets/lusidity/plugins/jquery.image.js",
+        "/assets/lusidity/plugins/jquery.nrt.metrics.js",
+        "/assets/lusidity/plugins/jquery.dataList.js",
+        "/assets/lusidity/plugins/jquery.schemaList.js",
+        "/assets/lusidity/plugins/jquery.treeViewCommon.js"
+      ],
+      "schemas": [
+      ]
+    },
+    {
+      "layout": "zone",
+      "zone": ".panel-left",
+      "css": {"padding": "0 5px 0 5px"},
+      "schemas": [
+        {
+          "layout": "html",
+          "type": "div",
+          "schemas": [
+            {
+              "layout": "data",
+              "property": "title",
+              "type": "h5",
+              "css": { "display": "block", "text-align": "center" }
+            }
+          ]
+        },
+        {
+          "layout": "plugin",
+          "property": "/",
+          "type": "div",
+          "cls": "cover-art center",
+          "name": "image",
+          "plugin":{
+            "image": "/assets/img/types/person.png",
+            "cls": "med",
+            "cssFiles": [
+              "/assets/lusidity/plugins/css/image.css"
+            ]
+          }
+        },
+        {
+          "layout": "plugin",
+          "property": "instanceOf",
+          "type": "div",
+          "name": "semanticType",
+          "css": { "display": "block", "text-align": "center" },
+          "plugin":{
+            "image": false,
+            "cssFiles": [
+              "/assets/lusidity/plugins/css/semanticType.css"
+            ]
+          }
+        },
+        {
+          "layout": "html",
+          "type": "div",
+          "schemas": [
+            {
+              "layout": "html",
+              "html": "<div class=\"data-label\">First Name:</div>"
+            },
+            {
+              "layout": "data",
+              "property": "firstName",
+              "type": "div",
+              "maxItems": 1,
+              "cls": "data-value"
+            }
+          ]
+        },
+        {
+          "layout": "html",
+          "type": "div",
+          "schemas": [
+            {
+              "layout": "html",
+              "html": "<div class=\"data-label\">Middle Name:</div>"
+            },
+            {
+              "layout": "data",
+              "property": "middleName",
+              "type": "div",
+              "maxItems": 1,
+              "cls": "data-value"
+            }
+          ]
+        },
+        {
+          "layout": "html",
+          "type": "div",
+          "schemas": [
+            {
+              "layout": "html",
+              "html": "<div class=\"data-label\">Last Name:</div>"
+            },
+            {
+              "layout": "data",
+              "property": "lastName",
+              "type": "div",
+              "maxItems": 1,
+              "cls": "data-value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "zone",
+      "zone": ".panel-middle",
+      "cls": "no-border full-min",
+      "attr": {"data-oh": 7},
+      "schemas": [
+        {
+          "layout": "html",
+          "type": "div",
+          "schemas":[
+            {
+              "layout": "data",
+              "property": "/",
+              "type": "div",
+              "schemas":[
+                {
+                  "property": "/system/primitives/raw_string/descriptions.results",
+                  "schemas":[
+                    {
+                      "layout": "data",
+                      "type": "p",
+                      "property": "value"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "layout": "html",
+              "type": "ul",
+              "cls": "nav nav-tabs",
+              "schemas":[
+                {
+                  "layout": "html",
+                  "type": "li",
+                  "cls": "active",
+                  "schemas":[
+                    {
+                      "layout": "html",
+                      "type": "a",
+                      "text": "Details",
+                      "cls": "no-radius",
+                      "attr": {"data-toggle": "tab", "href": "#tab-1"}
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "li",
+                  "schemas":[
+                    {
+                      "layout": "html",
+                      "type": "a",
+                      "text": "Positions",
+                      "cls": "no-radius",
+                      "attr": {"data-toggle": "tab", "href": "#tab-2"}
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "li",
+                  "schemas":[
+                    {
+                      "layout": "html",
+                      "type": "a",
+                      "text": "Authorizations",
+                      "cls": "no-radius",
+                      "attr": {"data-toggle": "tab", "href": "#tab-3"}
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "li",
+                  "schemas":[
+                    {
+                      "layout": "html",
+                      "type": "a",
+                      "text": "Identities",
+                      "cls": "no-radius",
+                      "attr": {"data-toggle": "tab", "href": "#tab-4"}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "layout": "html",
+              "type": "div",
+              "cls": "tab-content",
+              "schemas":[
+                {
+                  "layout": "html",
+                  "type": "div",
+                  "cls": "tab-pane active",
+                  "attr": {"id": "tab-1"},
+                  "css": { "padding": "10px"},
+                  "schemas":[
+                    {
+                      "layout": "plugin",
+                      "property": "/",
+                      "type": "div",
+                      "name": "schemaList",
+                      "css": {
+                        "display": "block",
+                        "word-break": "break-word"
+                      },
+                      "plugin": {
+                        "glyph": "glyphicons glyphicons-vcard",
+                        "title": "Contact Info",
+                        "url": null,
+                        "property": "/common/base_contact_detail/contactDetails",
+                        "limit": 100,
+                        "blocked": false,
+                        "hasItemCounter": false,
+                        "hasHeader": true,
+                        "view": "contact_info.json"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "div",
+                  "cls": "tab-pane",
+                  "attr": {"id": "tab-2"},
+                  "schemas": [
+                    {
+                      "layout": "plugin",
+                      "property": "/",
+                      "type": "div",
+                      "name": "dataList",
+                      "css": { "display": "block"},
+                      "plugin":{
+                        "fill": true,
+                        "hasHeader": true,
+                        "hasItemCounter": true,
+                        "glyph": "glyphicons glyphicons-riflescope",
+                        "title": "Scoped Positions",
+                        "adjustHeight": 68,
+                        "property": "/",
+                        "limit": 100,
+                        "query": {
+                          "fn": "PrincipalsToPositions"
+                        },
+                        "properties":[
+                          {
+                            "property": "title",
+                            "linked": true
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "div",
+                  "cls": "tab-pane",
+                  "attr": {"id": "tab-3"},
+                  "schemas": [
+                    {
+                      "layout": "plugin",
+                      "property": "/",
+                      "type": "div",
+                      "name": "dataList",
+                      "css": { "display": "block"},
+                      "plugin":{
+                        "fill": true,
+                        "hasHeader": true,
+                        "hasItemCounter": true,
+                        "glyph": "glyphicons glyphicons-bank",
+                        "title": "Authorized Enclaves",
+                        "adjustHeight": 68,
+                        "property": "/",
+                        "limit": 100,
+                        "query": {
+                          "fn": "AuthToPrincipals"
+                        },
+                        "properties":[
+                          {
+                            "property": "title",
+                            "linked": true
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "div",
+                  "cls": "tab-pane",
+                  "attr": {"id": "tab-4"},
+                  "schemas": [
+                    {
+                      "layout": "plugin",
+                      "property": "/",
+                      "type": "div",
+                      "name": "dataList",
+                      "css": { "display": "block"},
+                      "plugin":{
+                        "fill": true,
+                        "hasHeader": true,
+                        "hasItemCounter": true,
+                        "glyph": "glyphicons glyphicons-user",
+                        "title": "Identities related to this Person",
+                        "adjustHeight": 68,
+                        "property": "/",
+                        "limit": 100,
+                        "query": {
+                          "fn": "PrincipalsToIdentities"
+                        },
+                        "properties":[
+                          {
+                            "property": "title",
+                            "linked": false
+                          },
+                          {
+                            "label": "Login Type:",
+                            "property": "loginType",
+                            "linked": false
+                          },
+                          {
+                            "label": "Last Login:",
+                            "property": "fn::toDefaultDate::lastLoggedIn",
+                            "linked": false
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

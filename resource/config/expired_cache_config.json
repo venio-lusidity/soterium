@@ -1,0 +1,38 @@
+{
+  "disabled": false,
+  "host": "127.0.0.1",
+  "interval": 300000,
+  "port": 6379,
+  "password": "",
+  "expiresAt": "03:00",
+  "memory": {
+    "size": "3g"
+  },
+  "logEnabled": false,
+  "memoryManagerEnabled": true,
+  "server": {
+    "properties": {
+    }
+  },
+  "size": 10000000,
+  "unitOfTime": "hours",
+  "ttl": 24,
+  "cacheableObjects": [
+    {
+      "cls": "/cache/test_cache",
+      "size": 100000
+    },
+    {
+      "cls": "/location/location"
+    },
+    {
+      "cls": "/organization/organization"
+    },
+    {
+      "cls": "/electronic/reports/vulnerability_breakdown_report"
+    },
+    {
+      "cls": "/electronic/reports/IavmBreakdownReport"
+    }
+  ]
+}

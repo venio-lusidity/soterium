@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max Scrolling</title>
+    <script type="text/javascript" src="/assets/jquery/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/assets/jquery/jquery-ui.min.js"></script>
+</head>
+<body>
+<div id="scroller" style="height: 500px;max-height: 500px;">
+</div>
+<script>
+    var node = $('#scroller');
+    var len = 100000;
+    var rows = document.createElement('div');
+    for(var i=0;i<len;i++){
+        var rw = document.createElement('div');
+        rw.setAttribute('id', 'tr_'+i);
+        rw.style.minHeight = '28px';
+        rw.style.height = '28px';
+        rw.style.maxHeight = '28px';
+        rows.appendChild(rw);
+    }
+    node[0].appendChild(rows);
+</script>
+</body>
+</html>

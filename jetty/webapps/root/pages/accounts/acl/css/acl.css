@@ -1,0 +1,11 @@
+.tabbable, .tab-pane, .tab-content{
+    height: 100% !important;
+}
+
+.tree-node, .panel-contain{
+    height: 100% !important;
+}
+.icon-size {
+    padding-left:5px !important;
+    padding-right:5px !important;
+}

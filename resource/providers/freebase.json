@@ -1,0 +1,114 @@
+{
+    "provider": {
+        "name": "Freebase",
+        "source": "http://www.freebase.com",
+        "authoritativeSpecifications": [
+            {
+                "type": "/object/entity",
+                "pattern": "(?:http|https)://(?:www\\.)?freebase.com(/m/\\w+)(?:[/?].*)*",
+                "namespace": "freebase.com/m",
+                "uriFormat": "http://freebase.com/%s"
+            }
+        ],
+        "limit": 5,
+        "rateLimit": 100,
+        "api": {
+            "user": "",
+            "key": "AIzaSyA6rBFOPq0SDTkbIKO0xjv9ZQjDVjM2vvU",
+            "params": "key=AIzaSyA6rBFOPq0SDTkbIKO0xjv9ZQjDVjM2vvU"
+        },
+        "search": {
+            "uri": "https://www.googleapis.com/freebase/v1/search",
+            "params": {
+                "query": "[queryPhrase]",
+                "filter": "(any type:/common/topic)",
+                "limit": "[limit]",
+                "mql_output": {"id":null,"\/common\/topic\/social_media_presence":[],"\/common\/topic\/notable_types":[],"\/type\/object\/type":[],"name":null,"optional":"optional","\/common\/topic\/official_website":[],"mid":null,"key":[{"limit":1000,"optional":"optional","value":null,"namespace":null}],"\/common\/topic\/image":[{}]}
+            },
+            "headers": {
+            },
+            "resultsAt": "result",
+            "transformerAt": "/object/entity"
+        },
+        "get": {
+            "description":{
+
+            },
+            "image": {
+
+            }
+        },
+        "actions": [
+        ],
+        "transformers": {
+            "/object/entity": {
+                "type": "/object/entity",
+                "description":{
+                    "property": null,
+                    "target": {
+                        "property": "/common/topic/description"
+                    },
+                    "schema": null,
+                    "getAt": "description"
+                },
+                "id": {
+                    "property": "key",
+                    "target":{
+                        "property": "/type/object/key"
+                    },
+                    "schema": {
+                        "property": null,
+                        "schema":{
+                            "rationalize" : true,
+                            "validate": "namespace",
+                            "property": "value"
+                        }
+                    },
+                    "getAt": null
+                },
+                "image": {
+                    "property": "/common/topic/image",
+                    "target":{
+                        "property": "/common/topic/image"
+                    },
+                    "schema": null,
+                    "getAt": "image"
+                },
+                "pid": {
+                    "property": "mid",
+                    "target":{
+                        "property": "/type/object/key"
+                    },
+                    "schema": {
+                        "canonicalize": true
+                    },
+                    "getAt": null
+                },
+                "title": {
+                    "property": "name",
+                    "target":{
+                        "property": "/type/object/name"
+                    },
+                    "schema": null,
+                    "getAt": null
+                },
+                "types": {
+                    "property": "/type/object/type",
+                    "target":{
+                        "property": "/type/object/type"
+                    },
+                    "schema": null,
+                    "getAt": null
+                },
+                "notableTypes": {
+                    "property": "/common/topic/notable_types",
+                    "target":{
+                        "property": "/type/object/type"
+                    },
+                    "schema": null,
+                    "getAt": null
+                }
+            } 
+        }
+    }
+}

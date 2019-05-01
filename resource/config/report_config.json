@@ -1,0 +1,9 @@
+{
+  "com.lusidity.jobs.vulnerability.common.AggregateIavms":{
+    "cached": {
+      "desc": "Cache the results every 24 hours.",
+      "example": "true or false (false for low memory systems, reports may take longer to process)",
+      "value": true
+    }
+  }
+}

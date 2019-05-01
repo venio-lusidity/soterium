@@ -1,0 +1,92 @@
+@media (min-width: 1px) and (max-width: 767px) {
+    .discover{
+        width: 242px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .discover{
+        width: 242px !important;
+    }
+}
+
+.elusidate-bg.alert{
+    width: 100%;
+}
+
+
+.elusidate-bg{
+    display: block;
+    margin-top: 12px;
+    margin-left: -10px;
+}
+
+.elusidate{
+    position: relative;
+}
+
+.discover{
+    display: table-cell;
+    width: 480px;
+    min-width: 320px;
+    max-width: 542px;
+}
+
+.filtered-search {
+    display: block;
+    position: relative;
+}
+
+.filtered-search .autosuggest {
+    margin-left: 20px !important;
+}
+input[type=text],input[type=email]{
+    height: 30px;
+}
+
+.input-remove{
+    display: inline-block;
+    position: relative;
+}
+
+.search-clear, .input-clear, .search-mic{
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    height: 20px;
+    width: 26px;
+    padding-top: 6px;
+    white-space: nowrap;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.filtered-search .search-clear{
+    left: 0px;
+    right: 100px;
+}
+.input-remove{
+    display: inline-block;
+    position: relative;
+    margin-top: 5px;
+}
+
+.input-clear{
+    right:2px;
+}
+
+.search-button{
+    position: relative;
+    height: 28px;
+    top: -5px;
+    margin-left: 5px;
+}
+
+.dropdown-menu li.active, .dropdown-menu li:hover{
+    color: #fff;
+    background-color: #428bca;
+}
+
+.dropdown-menu li > div{
+    margin: 2px 5px 2px 10px;
+}

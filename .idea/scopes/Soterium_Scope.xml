@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Soterium Scope" pattern="file[apollo]:*/||file[athena]:*/||file[client-ssl]:*/||file[core]:*/||file[discover]:*/||file[framework]:*/||file[parent]:*/||file[resource]:*/||file[services]:*/||file[test]:*/" />
+</component>

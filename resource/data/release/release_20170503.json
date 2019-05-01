@@ -1,0 +1,82 @@
+{
+  "author": "Thomas Paris",
+  "releasedOn": "2017-05-03T08:00:00.000-04:00",
+  "title": "Sprint 4.0 release notes",
+  "results": [
+    {
+      "label": "Bug Fixes",
+      "content": [
+        {
+          "text": "IPv6 fe80, link-local, has been added to the exclude list as it was filling up the application log and is not needed (FB 496)."
+        },
+        {
+          "text": "Software compliance data was being incorrectly displayed in the UI - the cause was incorrect handling of software alias names (FB 216)."
+        },
+        {
+          "text": "Asset Compliance Auditor Job was not working- The array of Software Edges and Software was not being passed to methods (FB 475, 476, 216, 480)."
+        },
+        {
+          "text": "Vulnerability now uses the base score color code and not the calculated score (FB 493)."
+        },
+        {
+          "text": "IAVM search was not returning expected linked vertices (FB 500)."
+        },
+        {
+          "text": "Web UI null value showing as an accented value has been fixed (FB 499)."
+        },
+        {
+          "text": "Critical category is now equal to a base score of 10 (FB 481, 493, 497)."
+        },
+        {
+          "text": "Fixed bug in the user account activity job that was preventing notifications and disabling of accounts (FB 504)."
+        }
+      ]
+    },
+    {
+      "label": "New Features",
+      "content": [
+        {
+          "text": "Added modal disclaimer to enclaves page with a way to no longer view it. (FB 472)"
+        },
+        {
+          "text": "In the UI, when viewing data for a STIG on the STIG page, The STIG Release(s) and STIG Group (vlun id) is now shown when viewing a STIG Rule (FB 475, 476, 216)."
+        },
+        {
+          "text": "UI added STIG Release and related Group IDs to vulnerabilities lists (FB 475, 476, 216)."
+        },
+        {
+          "text": "STIG Rules as linked to an asset now displays the related STIG Release(s) and STIG Group(s) (FB 477)."
+        },
+        {
+          "text": "Vulnerability Breakdown Report - In the details section, if the vulnerabilities are STIGs, they are grouped by STIG Release, using bootstrap accordion (FB 478)."
+        },
+        {
+          "text": "Vulnerability Breakdown Report and IAVM Breakdown Report- HTML for the details is not created until category is clicked in the summary. Previous HTML details data is removed when another category is clicked (FB 478)."
+        },
+        {
+          "text": "Search box now has a \"busy\" indicator (FB 495)."
+        },
+        {
+          "text": "Software is now searchable and returns a list of related assets (FB 495)."
+        },
+        {
+          "text": "Updated FRAGO 5 compliance to include RSD (FB 454)."
+        },
+        {
+          "text": "Contact information can be edited from a user's profile page (FB 503)."
+        },
+        {
+          "text": "When viewing enclaves the user can apply a group or groups and then save that view for that specific enclave.  They do this by clicking the cog at the top right of the panel and then clicking save. (FB 200)."
+        }
+      ]
+    },
+    {
+      "label": "Other",
+      "content": [
+        {
+          "text": "RMK Asset Matching logic is now the RMK Run Book (FB 172)."
+        }
+      ]
+    }
+  ]
+}

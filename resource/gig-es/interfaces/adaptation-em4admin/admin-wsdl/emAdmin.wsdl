@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="MessagingManagerService" targetNamespace="http://messaging.ges.mil/2011/4.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://messaging.ges.mil/2011/4.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+<xs:schema xmlns:ns1="http://www.w3.org/2005/08/addressing" xmlns:tns="http://messaging.ges.mil/2011/4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://messaging.ges.mil/2011/4.0" version="1.0">
+
+  <xs:import namespace="http://www.w3.org/2005/08/addressing" schemaLocation="http://www.w3.org/2006/03/addressing/ws-addr.xsd"/>
+
+  <xs:element name="Operation" type="tns:Operation"/>
+
+  <xs:element name="TopicDialectURI" type="tns:TopicDialectURI"/>
+
+  <xs:element name="createTopics" type="tns:createTopics"/>
+
+  <xs:element name="createTopicsResponse" type="tns:createTopicsResponse"/>
+
+  <xs:element name="destroyTopic" type="tns:destroyTopic"/>
+
+  <xs:element name="destroyTopicResponse" type="tns:destroyTopicResponse"/>
+
+  <xs:element name="getManagableSubscriptionIDs" type="tns:getManagableSubscriptionIDs"/>
+
+  <xs:element name="getManagableSubscriptionIDsResponse" type="tns:getManagableSubscriptionIDsResponse"/>
+
+  <xs:element name="getMyPullPointEndpoints" type="tns:getMyPullPointEndpoints"/>
+
+  <xs:element name="getMyPullPointEndpointsResponse" type="tns:getMyPullPointEndpointsResponse"/>
+
+  <xs:element name="getMySubscriptionIDs" type="tns:getMySubscriptionIDs"/>
+
+  <xs:element name="getMySubscriptionIDsResponse" type="tns:getMySubscriptionIDsResponse"/>
+
+  <xs:element name="getSubscriptionDetails" type="tns:getSubscriptionDetails"/>
+
+  <xs:element name="getSubscriptionDetailsResponse" type="tns:getSubscriptionDetailsResponse"/>
+
+  <xs:element name="getTopicDetails" type="tns:getTopicDetails"/>
+
+  <xs:element name="getTopicDetailsResponse" type="tns:getTopicDetailsResponse"/>
+
+  <xs:element name="isAuthorized" type="tns:isAuthorized"/>
+
+  <xs:element name="isAuthorizedResponse" type="tns:isAuthorizedResponse"/>
+
+  <xs:element name="operations" type="tns:Operations"/>
+
+  <xs:element name="outboundSecurity" type="tns:OutboundSecurity"/>
+
+  <xs:element name="rename" type="tns:rename"/>
+
+  <xs:element name="renameResponse" type="tns:renameResponse"/>
+
+  <xs:element name="scope" type="tns:Scope"/>
+
+  <xs:element name="searchTopics" type="tns:searchTopics"/>
+
+  <xs:element name="searchTopicsResponse" type="tns:searchTopicsResponse"/>
+
+  <xs:element name="subscription" type="tns:Subscription"/>
+
+  <xs:element name="topic" type="tns:Topic"/>
+
+  <xs:element name="topicExpression" type="tns:TopicExpression"/>
+
+  <xs:element name="updateTopics" type="tns:updateTopics"/>
+
+  <xs:element name="updateTopicsResponse" type="tns:updateTopicsResponse"/>
+
+  <xs:complexType name="getManagableSubscriptionIDs">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getManagableSubscriptionIDsResponse">
+    <xs:sequence>
+      <xs:element name="uuids">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="uuid" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateTopics">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="topic" type="tns:Topic"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Topic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ownerName" type="xs:string"/>
+      <xs:element minOccurs="0" name="topicExpression" type="tns:TopicExpression"/>
+      <xs:element name="outboundSecurity" type="tns:OutboundSecurity"/>
+      <xs:element minOccurs="0" name="securitySet">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="securityInfo" nillable="true" type="tns:SecurityInfo"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="virtual" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TopicExpression">
+    <xs:sequence>
+      <xs:element name="expression" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="dialect" type="tns:TopicDialectURI"/>
+  </xs:complexType>
+
+  <xs:complexType name="SecurityInfo">
+    <xs:sequence>
+      <xs:element name="label" type="xs:string"/>
+      <xs:element name="scope" type="tns:Scope"/>
+      <xs:element name="operation" type="tns:Operation"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="InheritedSecurityInfo">
+    <xs:complexContent>
+      <xs:extension base="tns:SecurityInfo">
+        <xs:sequence>
+          <xs:element name="inheritedFrom" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="updateTopicsResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="destroyTopic">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="topicExpression" type="tns:TopicExpression"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="destroyTopicResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getMySubscriptionIDs">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getMySubscriptionIDsResponse">
+    <xs:sequence>
+      <xs:element name="uuids">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="uuid" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchTopics">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="topicCriteria" type="tns:topicCriteria"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType abstract="true" name="topicCriteria">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="OperationsCriteria">
+    <xs:complexContent>
+      <xs:extension base="tns:topicCriteria">
+        <xs:sequence>
+          <xs:element name="allowedOperations" type="tns:Operations"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Operations">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="operationMappings">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="validOperations" type="tns:Operation"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TopicNameCriteria">
+    <xs:complexContent>
+      <xs:extension base="tns:topicCriteria">
+        <xs:sequence>
+          <xs:element name="topicName" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="searchTopicsResponse">
+    <xs:sequence>
+      <xs:element name="topicExpressions">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="topicExpression" type="tns:TopicExpression"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMyPullPointEndpoints">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getMyPullPointEndpointsResponse">
+    <xs:sequence>
+      <xs:element name="pullPoints">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="pullPoint" type="ns1:EndpointReferenceType"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTopicDetails">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="topicExpression" type="tns:TopicExpression"/>
+      <xs:element name="computeEffectiveSecurity" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getTopicDetailsResponse">
+    <xs:sequence>
+      <xs:element name="topics">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="topic" type="tns:Topic"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="rename">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fromTopicExpression" type="tns:TopicExpression"/>
+      <xs:element minOccurs="0" name="toTopicExpression" type="tns:TopicExpression"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="renameResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="createTopics">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="topic" type="tns:Topic"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="createTopicsResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="isAuthorized">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="expression" type="tns:TopicExpression"/>
+      <xs:element minOccurs="0" name="operation" type="tns:Operation"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="isAuthorizedResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getSubscriptionDetails">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="uuid" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getSubscriptionDetailsResponse">
+    <xs:sequence>
+      <xs:element name="subscriptions">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="subscription" type="tns:Subscription"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Subscription">
+    <xs:sequence>
+      <xs:element name="expiration" type="xs:long"/>
+      <xs:element name="topicExpression" type="tns:TopicExpression"/>
+      <xs:element name="durable" type="xs:boolean"/>
+      <xs:element name="batch" type="xs:long"/>
+      <xs:element minOccurs="0" name="endTo" type="ns1:EndpointReferenceType"/>
+      <xs:element minOccurs="0" name="asyncTo" type="ns1:EndpointReferenceType"/>
+      <xs:element name="outboundFormat" type="xs:string"/>
+      <xs:element name="owner" type="xs:string"/>
+      <xs:element default="false" minOccurs="0" name="federated" type="xs:boolean"/>
+    </xs:sequence>
+    <xs:attribute name="uuid" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:simpleType name="TopicDialectURI">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="http://docs.oasis-open.org/wsn/t-1/TopicExpression/Simple"/>
+      <xs:enumeration value="http://docs.oasis-open.org/wsn/t-1/TopicExpression/Concrete"/>
+      <xs:enumeration value="http://docs.oasis-open.org/wsn/t-1/TopicExpression/Full"/>
+      <xs:enumeration value="urn:seros:messaging:2.2:topic:dialect:seros"/>
+      <xs:enumeration value="urn:nces:messaging:1.2:topic:dialect"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="OutboundSecurity">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="controlA"/>
+      <xs:enumeration value="controlB"/>
+      <xs:enumeration value="controlD"/>
+      <xs:enumeration value="controlE"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Scope">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="self"/>
+      <xs:enumeration value="children"/>
+      <xs:enumeration value="descendants"/>
+      <xs:enumeration value="children_and_self"/>
+      <xs:enumeration value="all"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Operation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="all"/>
+      <xs:enumeration value="manage"/>
+      <xs:enumeration value="subscribe"/>
+      <xs:enumeration value="publish"/>
+      <xs:enumeration value="receive"/>
+      <xs:enumeration value="create"/>
+      <xs:enumeration value="delete"/>
+      <xs:enumeration value="update"/>
+      <xs:enumeration value="readonly"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="action">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="read"/>
+      <xs:enumeration value="write"/>
+      <xs:enumeration value="manage"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getSubscriptionDetailsResponse">
+    <wsdl:part name="parameters" element="tns:getSubscriptionDetailsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="renameResponse">
+    <wsdl:part name="parameters" element="tns:renameResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="destroyTopicResponse">
+    <wsdl:part name="parameters" element="tns:destroyTopicResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateTopics">
+    <wsdl:part name="parameters" element="tns:updateTopics">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMyPullPointEndpointsResponse">
+    <wsdl:part name="parameters" element="tns:getMyPullPointEndpointsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getManagableSubscriptionIDsResponse">
+    <wsdl:part name="parameters" element="tns:getManagableSubscriptionIDsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchTopicsResponse">
+    <wsdl:part name="parameters" element="tns:searchTopicsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createTopicsResponse">
+    <wsdl:part name="parameters" element="tns:createTopicsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSubscriptionDetails">
+    <wsdl:part name="parameters" element="tns:getSubscriptionDetails">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAuthorizedResponse">
+    <wsdl:part name="parameters" element="tns:isAuthorizedResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="destroyTopic">
+    <wsdl:part name="parameters" element="tns:destroyTopic">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMySubscriptionIDs">
+    <wsdl:part name="parameters" element="tns:getMySubscriptionIDs">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateTopicsResponse">
+    <wsdl:part name="parameters" element="tns:updateTopicsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMyPullPointEndpoints">
+    <wsdl:part name="parameters" element="tns:getMyPullPointEndpoints">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createTopics">
+    <wsdl:part name="parameters" element="tns:createTopics">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAuthorized">
+    <wsdl:part name="parameters" element="tns:isAuthorized">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTopicDetails">
+    <wsdl:part name="parameters" element="tns:getTopicDetails">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTopicDetailsResponse">
+    <wsdl:part name="parameters" element="tns:getTopicDetailsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getManagableSubscriptionIDs">
+    <wsdl:part name="parameters" element="tns:getManagableSubscriptionIDs">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="rename">
+    <wsdl:part name="parameters" element="tns:rename">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMySubscriptionIDsResponse">
+    <wsdl:part name="parameters" element="tns:getMySubscriptionIDsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchTopics">
+    <wsdl:part name="parameters" element="tns:searchTopics">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="MessagingManager">
+    <wsdl:operation name="getManagableSubscriptionIDs">
+      <wsdl:input name="getManagableSubscriptionIDs" message="tns:getManagableSubscriptionIDs">
+    </wsdl:input>
+      <wsdl:output name="getManagableSubscriptionIDsResponse" message="tns:getManagableSubscriptionIDsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTopics">
+      <wsdl:input name="updateTopics" message="tns:updateTopics">
+    </wsdl:input>
+      <wsdl:output name="updateTopicsResponse" message="tns:updateTopicsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="destroyTopic">
+      <wsdl:input name="destroyTopic" message="tns:destroyTopic">
+    </wsdl:input>
+      <wsdl:output name="destroyTopicResponse" message="tns:destroyTopicResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMySubscriptionIDs">
+      <wsdl:input name="getMySubscriptionIDs" message="tns:getMySubscriptionIDs">
+    </wsdl:input>
+      <wsdl:output name="getMySubscriptionIDsResponse" message="tns:getMySubscriptionIDsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchTopics">
+      <wsdl:input name="searchTopics" message="tns:searchTopics">
+    </wsdl:input>
+      <wsdl:output name="searchTopicsResponse" message="tns:searchTopicsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMyPullPointEndpoints">
+      <wsdl:input name="getMyPullPointEndpoints" message="tns:getMyPullPointEndpoints">
+    </wsdl:input>
+      <wsdl:output name="getMyPullPointEndpointsResponse" message="tns:getMyPullPointEndpointsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTopicDetails">
+      <wsdl:input name="getTopicDetails" message="tns:getTopicDetails">
+    </wsdl:input>
+      <wsdl:output name="getTopicDetailsResponse" message="tns:getTopicDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rename">
+      <wsdl:input name="rename" message="tns:rename">
+    </wsdl:input>
+      <wsdl:output name="renameResponse" message="tns:renameResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createTopics">
+      <wsdl:input name="createTopics" message="tns:createTopics">
+    </wsdl:input>
+      <wsdl:output name="createTopicsResponse" message="tns:createTopicsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isAuthorized">
+      <wsdl:input name="isAuthorized" message="tns:isAuthorized">
+    </wsdl:input>
+      <wsdl:output name="isAuthorizedResponse" message="tns:isAuthorizedResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubscriptionDetails">
+      <wsdl:input name="getSubscriptionDetails" message="tns:getSubscriptionDetails">
+    </wsdl:input>
+      <wsdl:output name="getSubscriptionDetailsResponse" message="tns:getSubscriptionDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MessagingManagerServiceSoapBinding" type="tns:MessagingManager">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getManagableSubscriptionIDs">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getManagableSubscriptionIDs">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getManagableSubscriptionIDsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="destroyTopic">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="destroyTopic">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="destroyTopicResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTopics">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateTopics">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateTopicsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMySubscriptionIDs">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getMySubscriptionIDs">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getMySubscriptionIDsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchTopics">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="searchTopics">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="searchTopicsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMyPullPointEndpoints">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getMyPullPointEndpoints">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getMyPullPointEndpointsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTopicDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTopicDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTopicDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createTopics">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createTopics">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createTopicsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rename">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="rename">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="renameResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isAuthorized">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="isAuthorized">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isAuthorizedResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubscriptionDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getSubscriptionDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getSubscriptionDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MessagingManagerService">
+    <wsdl:port name="MessagingManagerPort" binding="tns:MessagingManagerServiceSoapBinding">
+      <soap:address location="http://localhost:9090/MessagingManagerPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

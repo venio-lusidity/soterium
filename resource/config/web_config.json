@@ -1,0 +1,121 @@
+{
+  "webPath": {
+    "desc": "Fully qualified path to static content.",
+    "example": "file://.../html_or_other_content",
+    "value": "file:///mnt/xdata/work/projects/soterium/resource/web/"
+  },
+  "disabled": {
+    "desc": "Is the web server disabled?",
+    "example": "true or false",
+    "value": false
+  },
+  "cache":{
+    "expiresAt": {
+      "desc": "Time of day that the cache should expire. An empty value disables the cache.",
+      "example": "24:10",
+      "value": "04:00"
+    }
+  },
+  "logLevel":{
+    "desc": "RESTLet API log level.",
+    "example": "SEVERE, WARNING, INFO, FINE, OFF.",
+    "value": "FINE"
+  },
+  "restletLogLevel":{
+    "desc": "RESTLet API log level.",
+    "example": "SEVERE, WARNING, INFO, FINE, OFF.",
+    "value": "FINE"
+  },
+  "keystore": {
+    "desc": "Server certificate for the web server to use.",
+    "example": "Relative path.",
+    "value": "resource/keys/SOTERIUM_REST.p12"
+  },
+  "keystorePwd": {
+    "desc": "Server certificate password",
+    "example": "",
+    "value": "atlLHA73pe/bq94C6tJb2A=="
+  },
+  "trusted": {
+    "desc": "Trusted certificate path.",
+    "example": "Relative path.",
+    "value": "resource/keys/trusted.jks"
+  },
+  "trustedPwd": {
+    "desc": "Trusted certificate password",
+    "example": "",
+    "value": "pEqMWmZ8ql9waix4ilDTeQ=="
+  },
+  "allowedCharacterEncodings": {
+    "desc": "",
+    "example": "",
+    "value": [
+      "UTF-8",
+      "UTF-16"
+    ]
+  },
+  "allowedURIs": {
+    "desc": "URI's authorized to use the REST services",
+    "example": "IP or host name",
+    "value": [
+      "svc.soterium-dev.com:8443",
+      "svc.soterium-dev.com",
+      "dev.soterium-dev.com",
+      "rpc.soterium-dev.com"
+    ]
+  },
+  "authMode": {
+    "desc": "The authentication mode used for authorization.",
+    "example": "x509 or none",
+    "value": "x509"
+  },
+  "allowedClientCertificateTypes": {
+    "desc": "Certificate types authorized for authentication. Unless certs are replaced lusidity and venio must stay for developmen.",
+    "example": "t",
+    "value": [
+      "lusidity",
+      "venio",
+      "DoD",
+      "DECA",
+      "DFAS",
+      "USAF",
+      "USCG",
+      "USMC",
+      "USN",
+      "U.S. Government"
+    ]
+  },
+  "port": {
+    "desc": "The local port the REST services will listen on.",
+    "example": "",
+    "value": 8443
+  },
+  "protocol": {
+    "desc": "The http protocol used, should always be https.",
+    "example": "http or https",
+    "value": "https"
+  },
+  "enableLogging": {
+    "desc": "Log Restlet errors.",
+    "example": "true or false",
+    "value": false
+  },
+  "debugMode": {
+    "desc": "Enable web server debug mode.",
+    "example": "true or false",
+    "value": false
+  },
+  "headers": {
+    "desc": "A delimited list of headers to add to all responses.  Be careful adding header values, Restlet does not fully support this.",
+    "example": "key::value",
+    "do_not_use":[
+      "X-Frame-Options::deny",
+      "Strict-Transport-Security::Max-Age=600000",
+      "Cache-Control::Max-Age=600000",
+      "Pragma::no-cache",
+      "Accept::text/*"
+    ],
+    "value": [
+    ]
+  }
+}

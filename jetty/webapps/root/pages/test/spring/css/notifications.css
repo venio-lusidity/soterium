@@ -1,0 +1,8 @@
+.notification{
+    padding: 5px 5px;
+}
+.notification:hover{
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}

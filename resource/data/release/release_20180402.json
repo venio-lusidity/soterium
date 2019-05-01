@@ -1,0 +1,110 @@
+{
+  "author": "Tiera Thompson",
+  "releasedOn": "2018-04-02T08:00:00.000-04:00",
+  "title": "Sprint 12.0 release notes",
+  "results": [
+    {
+      "label": "issues",
+      "content": [
+        {
+          "text": "(FB  942 ) Resolved an issue where the Login Disclaimer wasn't displayed properly. The Login  Disclaimer page now reflects the original design."
+        },
+        {
+          "text": "(FB  943 ) Resolved an issue where the Search Results Page for the operating system did not display related assets. RMK now displays a list or related assets  on the Operating System Search Results page."
+        },
+        {
+          "text": "(FB  934 ) Resolved an issue where sorting vulnerabilities was unresponsive. RMK now sorts vulnerabilities after 1 click."
+        },
+        {
+          "text": "(FB  931 ) Resolved an issue where the asset details sub table would not collapse. RMK now collapses the Asset Details sub table. "
+        },
+        {
+          "text": "(FB  935 ) Resolved an issue where Assets did not display properly. RMK now utilizes the assets last seen date for reference if the last auth scan or last unauth scan dates are not reported."
+        },
+        {
+          "text": "(FB  890 ) Resolved an issue where columns could not e filtered. RMK now filter based on the Asset column."
+        },
+        {
+          "text": "(FB  888 ) Resolved an issue where the Asset Page did not show all findings History. RMK now shows the finding history on the Asset Page."
+        },
+        {
+          "text": "(FB  926 ) Resolved an issue where the info Results column did not sum. RMK now sums the info results column properly."
+        },
+        {
+          "text": "(FB  916 ) Resolved an issue of flashing and repainting on the screen. RMK now displays properly."
+        },
+        {
+          "text": "(FB  909 ) Resolved an issue where downloaded reports contained incomplete data. RMK downloads are now working."
+        },
+        {
+          "text": "(FB  914 ) Resolved an issue where an IAVM download link wasn't working. The RMK download link now works."
+        },
+        {
+          "text": "(FB  915 ) Resolved an issue where old failed IAVM findings where displayed. RMK now only displays IAVM failures that are less than 30 days old."
+        },
+        {
+          "text": "(FB  919 ) Resolved an issue where the Owned by link goes to the Managed by page. The link now points to the Owned by Page."
+        },
+        {
+          "text": "(FB  913 ) Resolved an issue where the downloads did not work on the enclave page. RMK downloads now work."
+        },
+        {
+          "text": "(FB  910 ) Resolved an issue where extra white space was displayed after filtering severity. RMK now displays appropriate white space."
+        },
+        {
+          "text": "(FB  932 ) Resolved an issue where the incorrect email displayed for the approval notification. RMK now displays the correct email."
+        },
+        {
+          "text": "(FB  937 ) Resolved an issue where the Disabled account email wording was insufficient. The email has now been updated."
+        },
+        {
+          "text": "(FB  933 ) Resolved an issue where previous queries were not cleared. RMK now clears previous queries."
+        },
+        {
+          "text": "(FB  930 ) Resolved an issue where a full table would not load after a sub table collapse. RMK now loads the full table."
+        },
+        {
+          "text": "(FB  938 ) Resolved an issue where the Top Findings Table wouldn't resize if the window resized. The Top Findings Table is now responsible to window size."
+        },
+        {
+          "text": "(FB  923 ) Resolved an issue where downloading a CSV would freeze the webpage. RMK now downloads CSV files without freezing."
+        },
+        {
+          "text": "(FB  902 ) Resolved an issue where the STIG importer history would not update. RMK now updates the STIG importer history. "
+        },
+        {
+          "text": "(FB  907 ) Resolved an issue where a sub table scrollbar was missing. RMK now displays all scrollbars."
+        },
+        {
+          "text": "(FB  912 ) Resolved an issue where a sub table would not unfilter after the parent was scrolled. RMK now filters appropriately."
+        },
+        {
+          "text": "(FB  922 ) Resolved an in issue where search would not find organizations. RMK now locates organizations."
+        }
+      ]
+    },
+    {
+      "label": "Features",
+      "content": [
+        {
+          "text": "(FB  944 ) RMK now sorts Severity columns in descending order by default."
+        },
+        {
+          "text": "(FB  939 ) RMK now offers 'General User' as a user type."
+        },
+        {
+          "text": "(FB  807 ) RMK now displays all HBC Components in the HBC Tab."
+        },
+        {
+          "text": "(FB  817 ) RMK now disables Mid-Field Searches."
+        },
+        {
+          "text": "(FB  911 ) RMK now allows wild card searches."
+        },
+        {
+          "text": "(FB  921 ) RMK no updated the organization schema."
+        }
+      ]
+    }
+  ]
+}

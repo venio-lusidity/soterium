@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Downloads</title>
+    <link rel="shortcut icon" href="fav.png" type="image/png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="assets/fonts/sofiapro_regular_macroman/stylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/fonts/sofiapro_lightitalic_macroman/stylesheet.css"/>
+    <link rel="stylesheet" href="assets/css/style.css?v=1"/>
+    <link rel="stylesheet" href="assets/css/index.css?v=1"/>
+    <link rel="stylesheet" href="assets/css/color.css?v=1"/>
+    <script type="text/javascript" src="assets/jquery/jquery.js"></script>
+    <style>
+        #draggable, #draggable2, #draggable3 { border: solid 1px #000; width: 100px; height: 100px; padding: 0.5em; float: left; margin: 0 10px 10px 0; }
+    </style>
+</head>
+<body>
+<div class="container-fluid page" >
+     <h4>Welcome to Soterium Downloads</h4>
+      <ul id="results">
+      </ul>
+</div>
+<script type="text/javascript">
+    var list = $('#results');
+    function no() {
+        var li = $(document.createElement('li')).html("No files found");
+        list.append(li);
+    }
+    $.ajax({
+        url: '/svc/downloads',
+        success: function (data) {
+            if(data){
+                if(data.length>0) {
+                    $.each(data, function () {
+                        var item = this;
+                        var li = $(document.createElement('li'));
+                        var a = $(document.createElement('a')).attr('href', item.href).attr('target', '_blank').html(item.name + ' modified: ' + item.modified);
+                        li.append(a);
+                        list.append(li);
+                    });
+                }
+                else{
+                    no();
+                }
+            }
+            else{
+                no();
+            }
+        },
+        error: function (jqXHR, status, errror) {
+           no();
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "indices": {
+    "com.lusidity.domains.technology.security.IAVM": {
+      "multi_match": false,
+      "field": "title",
+      "multi_fields": [
+        "title",
+        "executiveSummary"
+      ],
+      "type":"best_fields",
+      "operator": "and"
+    },
+    "com.lusidity.domains.technology.security.vulnerabilities.stig.release.group.rule": {
+      "multi_match": false,
+      "field": "title",
+      "multi_fields": [
+        "title",
+        "vulnId"
+      ],
+      "type":"best_fields",
+      "operator": "and"
+    },
+    "com.lusidity.domains.technology.security.vulnerabilities.acas.SecurityCenterPlugin": {
+      "multi_match": false,
+      "field": "title",
+      "multi_fields": [
+        "title",
+        "pluginName",
+        "synopsis"
+      ],
+      "type":"best_fields",
+      "operator": "and"
+    }
+  }
+}

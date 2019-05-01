@@ -1,0 +1,242 @@
+{
+  "name": "STIG Group",
+  "zones": [
+    {
+      "layout": "zone",
+      "zone": ".menu-bar",
+      "styles": [
+        "/assets/lusidity/css/entity.css"
+      ],
+      "plugins": [
+        "/assets/lusidity/plugins/jquery.semanticType.js",
+        "/assets/lusidity/plugins/jquery.image.js",
+        "/assets/lusidity/plugins/jquery.nrt.metrics.js",
+        "/assets/lusidity/plugins/jquery.dataList.js",
+        "/assets/lusidity/plugins/jquery.treeViewCommon.js"
+      ],
+      "schemas": [
+      ]
+    },
+    {
+      "layout": "zone",
+      "zone": ".panel-left",
+      "css": {
+        "padding": "0 5px 0 5px"
+      },
+      "schemas": [
+        {
+          "layout": "html",
+          "type": "div",
+          "schemas": [
+            {
+              "layout": "data",
+              "property": "groupId",
+              "type": "h5",
+              "css": {
+                "display": "block",
+                "text-align": "center"
+              }
+            }
+          ]
+        },
+        {
+          "layout": "plugin",
+          "property": "/",
+          "type": "div",
+          "cls": "cover-art center",
+          "name": "image",
+          "plugin": {
+            "image": "/assets/img/types/group.png",
+            "cls": "med",
+            "cssFiles": [
+              "/assets/lusidity/plugins/css/image.css"
+            ]
+          }
+        },
+        {
+          "layout": "plugin",
+          "property": "instanceOf",
+          "type": "div",
+          "name": "semanticType",
+          "css": {
+            "display": "block",
+            "text-align": "center"
+          },
+          "plugin": {
+            "image": false,
+            "cssFiles": [
+              "/assets/lusidity/plugins/css/semanticType.css"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "layout": "zone",
+      "zone": ".panel-middle",
+      "cls": "no-border full-min",
+      "attr": {
+        "data-oh": 7
+      },
+      "schemas": [
+        {
+          "layout": "html",
+          "type": "div",
+          "schemas": [
+            {
+              "layout": "html",
+              "type": "ul",
+              "cls": "nav nav-tabs",
+              "schemas": [
+                {
+                  "layout": "html",
+                  "type": "li",
+                  "cls": "active",
+                  "schemas": [
+                    {
+                      "layout": "html",
+                      "type": "a",
+                      "text": "Details",
+                      "cls": "no-radius",
+                      "attr": {
+                        "data-toggle": "tab",
+                        "href": "#tab-1"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "li",
+                  "schemas": [
+                    {
+                      "layout": "html",
+                      "type": "a",
+                      "text": "STIG Rules",
+                      "cls": "no-radius",
+                      "attr": {
+                        "data-toggle": "tab",
+                        "href": "#tab-2"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "layout": "html",
+              "type": "div",
+              "cls": "tab-content",
+              "schemas": [
+                {
+                  "layout": "html",
+                  "type": "div",
+                  "cls": "tab-pane active",
+                  "attr": {
+                    "id": "tab-1"
+                  },
+                  "css": {
+                    "padding": "10px"
+                  },
+                  "schemas": [
+                    {
+                      "layout": "html",
+                      "schemas": [
+                        {
+                          "layout": "html",
+                          "type": "div",
+                          "css": {
+                            "padding": "10px"
+                          },
+                          "schemas": [
+                            {
+                              "layout": "html",
+                              "type": "div",
+                              "schemas": [
+                                {
+                                  "layout": "html",
+                                  "html": "<div class=\"data-label\">Title:</div>"
+                                },
+                                {
+                                  "layout": "data",
+                                  "property": "title",
+                                  "type": "div",
+                                  "cls": "data-value"
+                                }
+                              ]
+                            },
+                            {
+                              "layout": "html",
+                              "type": "div",
+                              "schemas": [
+                                {
+                                  "layout": "html",
+                                  "html": "<div class=\"data-label\">Group Id:</div>"
+                                },
+                                {
+                                  "layout": "data",
+                                  "property": "groupId",
+                                  "type": "div",
+                                  "cls": "data-value"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "div",
+                  "cls": "tab-pane",
+                  "attr": {
+                    "id": "tab-2"
+                  },
+                  "css": {
+                    "padding": "10px"
+                  },
+                  "schemas": [
+                    {
+                      "layout": "html",
+                      "type": "div",
+                      "schemas": [
+                        {
+                          "layout": "plugin",
+                          "property": "/",
+                          "type": "div",
+                          "name": "dataList",
+                          "css": {
+                            "display": "block"
+                          },
+                          "plugin": {
+                            "fill": true,
+                            "adjustHeight": 18,
+                            "glyph": "glyphicons glyphicons-list-alt",
+                            "title": "STIG Rules",
+                            "property": "/technology/security/vulnerabilities/stig/release/group/rule/stig_rule/rules",
+                            "limit": 25,
+                            "properties": [
+                              {
+                                "property": "vulnId",
+                                "linked": "true"
+                              },
+                              {
+                                "property": "title"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

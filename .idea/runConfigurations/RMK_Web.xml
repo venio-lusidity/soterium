@@ -1,0 +1,6 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="RMK Web" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="https://127.0.0.1:9443/">
+    <mapping url="http://http:" local-file="$PROJECT_DIR$/jetty/webapps/root" />
+    <method />
+  </configuration>
+</component>

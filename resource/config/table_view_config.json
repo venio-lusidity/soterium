@@ -1,0 +1,38 @@
+{
+  "memory_cache_enabled":{
+    "desc": "Enable in memory cache of stored table views",
+    "example": "true or false",
+    "value": false
+  },
+  "disabled": {
+    "desc": "Enable or disable the use of table views.",
+    "example": "true or false",
+    "value": false
+  },
+  "directory_path":{
+    "desc": "The path to store the serialized objects.",
+    "example": "/path/to/store/serialized/objects",
+    "value": "/opt/lusidity/temp/objects"
+  },
+  "max_view_size": {
+    "desc": "The max amount of objects a view can return.",
+    "example": "",
+    "value": 100000
+  },
+  "views": {
+    "desc": "The names of fully qualified classes that extend TableView and the interval for refreshing the data.",
+    "example": "",
+    "value": [
+      {
+        "interval": 1,
+        "cls":  "com.lusidity.rmk.data.EnclavesDetailsView",
+        "disabled": false
+      },
+      {
+        "interval": 1,
+        "cls":  "com.lusidity.rmk.data.EnclavesDetailsViewFull",
+        "disabled": true
+      }
+    ]
+  }
+}

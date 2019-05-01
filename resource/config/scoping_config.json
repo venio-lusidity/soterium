@@ -1,0 +1,56 @@
+{
+  "enabled": {
+    "desc": "Turn scoping on or off.",
+    "example": "true or false",
+    "value": true
+  },
+  "vertexAuthEnabled": {
+    "desc": "Turn vertex level authorization on or off.",
+    "example": "true or false",
+    "value": true
+  },
+  "powerGroups": {
+    "desc": "An array of groups that can override scoping in some situations.",
+    "example": "[]",
+    "value": ["power user"]
+  },
+  "privileged":{
+    "desc": "An array of groups that can have elevated permissions depending on placement in the code.",
+    "example": "[]",
+    "value": ["account managers"]
+  },
+  "accountManagers": {
+    "desc": "An array of groups that manage user accounts.",
+    "example": "[]",
+    "value": ["account managers"]
+  },
+  "scoped": {
+    "desc": "Classes that implement scoping.",
+    "example": "",
+    "value": [
+      {
+        "cls": {
+          "desc": "A class that implements scoping.",
+          "example": "",
+          "value": "com.lusidity.domains.electronic.BaseInfrastructure"
+        }
+      }
+    ]
+  },
+  "directories":{
+    "desc": "Directory locations that are relevant to user permissions based files.",
+    "example": "Fully qualified path to the directories.",
+    "value":[
+      {
+        "path": "/mnt/xdata/work/projects/rmk/resource/web/files/hierarchy", "category": "cbac"
+      }
+    ]
+  },
+  "cachable": {
+    "desc": "If there is a purpose built scoping cache for this class, is it enabled?",
+    "example": "The key is the class the value is true or false for enabling the cache.  It can be a super class.",
+    "value": {
+      "com.lusidity.domains.electronic.system.BaseEnclave": false
+    }
+  }
+}

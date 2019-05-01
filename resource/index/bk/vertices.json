@@ -1,0 +1,929 @@
+{"common": {
+  "mapping": {
+    "settings": {
+      "index": {
+        "analysis": {
+          "analyzer": {
+            "startsWith": {
+              "tokenizer": "keyword",
+              "filter": [
+                "icu_normalizer",
+                "asciifolding",
+                "lowercase"
+              ]
+            },
+            "folding": {
+              "tokenizer": "standard",
+              "filter": [
+                "icu_normalizer",
+                "asciifolding",
+                "lowercase"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "mappings": {
+      "type_boolean": {
+        "properties": {
+          "vertexType": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "lid": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "createdWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "modifiedWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "value": {
+            "type": "boolean",
+            "analyzer": "standard"
+          }
+        }
+      },
+      "type_long": {
+        "properties": {
+          "vertexType": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "lid": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "createdWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "modifiedWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "value": {
+            "type": "long",
+            "analyzer": "standard"
+          }
+        }
+      },
+      "type_datetime": {
+        "properties": {
+          "createdWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "modifiedWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "vertexType": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "lid": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "value": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "year": {
+            "type": "integer",
+            "analyzer": "standard"
+          },
+          "monthOfYear": {
+            "type": "integer",
+            "analyzer": "standard"
+          },
+          "dayOfMonth": {
+            "type": "integer",
+            "analyzer": "standard"
+          },
+          "hourOfDay": {
+            "type": "integer",
+            "analyzer": "standard"
+          },
+          "minuteOfHour": {
+            "type": "integer",
+            "analyzer": "standard"
+          },
+          "secondsOfMinute": {
+            "type": "integer",
+            "analyzer": "standard"
+          },
+          "millisecondsOfSeconds": {
+            "type": "integer",
+            "analyzer": "standard"
+          },
+          "timeZoneId": {
+            "type": "string",
+            "analyzer": "standard"
+          }
+        }
+      },
+      "type_double": {
+        "properties": {
+          "createdWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "modifiedWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "vertexType": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "lid": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "value": {
+            "type": "double",
+            "analyzer": "standard"
+          }
+        }
+      },
+      "element_type": {
+        "properties": {
+          "createdWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "modifiedWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "vertexType": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "lid": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "value": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          }
+        }
+      },
+      "type_enumeration": {
+        "properties": {
+          "createdWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "modifiedWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "vertexType": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "lid": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "value": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          }
+        }
+      },
+      "type_float": {
+        "properties": {
+          "createdWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "modifiedWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "vertexType": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "lid": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "value": {
+            "type": "float",
+            "analyzer": "standard"
+          }
+        }
+      },
+      "type_freebaseId": {
+        "properties": {
+          "createdWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "modifiedWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "languageCode": {
+            "type": "string",
+            "analyzer": "standard"
+          },
+          "vertexType": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "lid": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "value": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          }
+        }
+      },
+      "type_int": {
+        "properties": {
+          "createdWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "modifiedWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "vertexType": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "lid": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "value": {
+            "type": "integer",
+            "analyzer": "standard"
+          }
+        }
+      },
+      "type_rawstring": {
+        "properties": {
+          "createdWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "modifiedWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "languageCode": {
+            "type": "string",
+            "analyzer": "standard"
+          },
+          "vertexType": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "lid": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "value": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              }
+            }
+          }
+        }
+      },
+      "type_text": {
+        "properties": {
+          "createdWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "modifiedWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "languageCode": {
+            "type": "string",
+            "analyzer": "standard"
+          },
+          "vertexType": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "lid": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "value": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              }
+            }
+          }
+        }
+      },
+      "type_text_term": {
+        "properties": {
+          "createdWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "modifiedWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "languageCode": {
+            "type": "string",
+            "analyzer": "standard"
+          },
+          "vertexType": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "lid": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "value": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          }
+        }
+      },
+      "type_uri": {
+        "properties": {
+          "createdWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "modifiedWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "vertexType": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "lid": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "label": {
+            "type": "string",
+            "analyzer": "standard"
+          },
+          "value": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          }
+        }
+      },
+      "object_entity_tag": {
+        "properties": {
+          "createdWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "modifiedWhen": {
+            "type": "long",
+            "analyzer": "standard"
+          },
+          "vertexType": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "lid": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "elementType": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          },
+          "value": {
+            "type": "string",
+            "analyzer": "standard",
+            "fields": {
+              "raw": {
+                "type": "string",
+                "index": "not_analyzed"
+              },
+              "folded": {
+                "type": "string",
+                "analyzer": "folding"
+              },
+              "starts_with": {
+                "type": "string",
+                "analyzer": "startsWith"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+},
+  "allowedTypes": [
+    "com.lusidity.data.ApolloVertex"
+  ],
+  "availableImmediately": true
+}

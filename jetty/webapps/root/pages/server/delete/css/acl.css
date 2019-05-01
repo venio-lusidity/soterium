@@ -1,0 +1,7 @@
+.tabbable, .tab-pane, .tab-content{
+    height: 100% !important;
+}
+
+.tree-node, .panel-contain{
+    height: 100% !important;
+}

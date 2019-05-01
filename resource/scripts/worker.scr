@@ -1,0 +1,2 @@
+assistant -worker ImportFileWorker -start -delay 300 -idleThreshold 90
+

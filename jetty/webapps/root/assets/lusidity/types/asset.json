@@ -1,0 +1,1109 @@
+{
+  "name": "Asset",
+  "zones": [
+    {
+      "layout": "zone",
+      "zone": ".menu-bar",
+      "styles": [
+        "/assets/lusidity/css/entity.css",
+        "/assets/lusidity/css/asset.css",
+        "/assets/lusidity/plugins/css/treeView.css",
+        "/assets/lusidity/plugins/css/tableView_v2.css"
+      ],
+      "plugins": [
+        "/assets/lusidity/plugins/pSearchFilter.js",
+        "/assets/lusidity/plugins/pAssetEventMsg.js",
+        "/assets/lusidity/plugins/pAssetEvent.js",
+        "/assets/lusidity/plugins/pGrid_v2.js",
+        "/assets/lusidity/plugins/pGridViewer.js",
+        "/assets/lusidity/plugins/pVulnHistory.js",
+        "/assets/lusidity/plugins/pVulnerabilities_v2.js",
+        "/assets/lusidity/plugins/jquery.osIcon.js",
+        "/assets/lusidity/plugins/jquery.semanticType.js",
+        "/assets/lusidity/plugins/jquery.image.js",
+        "/assets/lusidity/plugins/jquery.nrt.metrics.js",
+        "/assets/lusidity/plugins/jquery.treeViewCommon.js",
+        "/assets/lusidity/plugins/jquery.assetMenuBar.js",
+        "/assets/lusidity/plugins/jquery.dataList.js",
+        "/assets/lusidity/plugins/jquery.networkAdapters.js",
+        "/assets/lusidity/plugins/jquery.softwareCompliant_v2.js",
+        "/assets/lusidity/plugins/jquery.vertexResolver.js",
+        "/assets/lusidity/plugins/jquery.importerMatchedOn.js",
+        "/assets/lusidity/plugins/pSummary.js",
+        "/assets/lusidity/plugins/pLabelValue.js",
+        "/assets/lusidity/plugins/pSoftware.js"
+      ],
+      "schemas": [
+        {
+          "layout": "plugin",
+          "property": "/",
+          "once": true,
+          "name": "assetMenuBar",
+          "plugin":{
+            "enabled": true
+          }
+        }
+      ]
+    },
+    {
+      "layout": "zone",
+      "zone": ".panel-left",
+      "schemas": [
+        {
+          "layout": "html",
+          "type": "div",
+          "schemas": [
+            {
+              "layout": "data",
+              "property": "title",
+              "type": "h4",
+              "css": { "display": "block", "text-align": "center" }
+            }
+          ]
+        },
+        {
+          "layout": "plugin",
+          "property": "/",
+          "type": "div",
+          "name": "osIcon",
+          "plugin":{
+            "display": "tile",
+            "fontSize": "84px",
+            "cssFiles": [
+            ]
+          }
+        },
+        {
+          "layout": "plugin",
+          "property": "instanceOf",
+          "type": "div",
+          "name": "semanticType",
+          "css": { "display": "block", "text-align": "center", "margin-top": "10px" },
+          "plugin":{
+            "image": false,
+            "cssFiles": [
+              "/assets/lusidity/plugins/css/semanticType.css"
+            ]
+          }
+        },
+        {
+          "layout": "html",
+          "type": "div",
+          "css": {
+            "padding": "0 5px 0 5px"
+          },
+          "schemas": [
+            {
+              "layout": "html",
+              "type": "div",
+              "schemas": [
+                {
+                  "layout": "html",
+                  "html": "<div class=\"data-label\">Deprecated:</div>",
+                  "conditions": [
+                    {
+                      "valueOf": "deprecated",
+                      "valueType": "boolean",
+                      "compareTo": false,
+                      "comparators": [
+                        "eq"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "html": "<div class=\"data-label critical-font\">Deprecated:</div>",
+                  "conditions": [
+                    {
+                      "valueOf": "deprecated",
+                      "valueType": "boolean",
+                      "compareTo": true,
+                      "comparators": [
+                        "eq"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "layout": "data",
+                  "property": "deprecated",
+                  "type": "div",
+                  "cls": "data-value critical-font",
+                  "css": {
+                    "text-transform": "capitalize"
+                  },
+                  "conditions": [
+                    {
+                      "valueOf": "deprecated",
+                      "valueType": "boolean",
+                      "compareTo": true,
+                      "comparators": [
+                        "eq"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "layout": "data",
+                  "property": "deprecated",
+                  "type": "div",
+                  "cls": "data-value",
+                  "css": {
+                    "text-transform": "capitalize"
+                  },
+                  "conditions": [
+                    {
+                      "valueOf": "deprecated",
+                      "valueType": "boolean",
+                      "compareTo": false,
+                      "comparators": [
+                        "eq"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layout": "plugin",
+          "property": "/",
+          "type": "div",
+          "name": "pLabelValue",
+          "css": { "display": "block"},
+          "plugin":{
+            "label": "System Information",
+            "query": {
+              "fn": "deviceToEnclave",
+              "limit": 1
+            },
+            "properties":[
+              {
+                "property": "ditprId",
+                "linked": true,
+                "delinkIfDeprecated": true,
+                "needsAuth": true
+              },
+              {
+                "property": "title",
+                "linked": true,
+                "delinkIfDeprecated": true,
+                "needsAuth":true
+              }
+            ]
+          }
+        },
+        {
+          "layout": "plugin",
+          "property": "/",
+          "type": "div",
+          "name": "pLabelValue",
+          "css": { "display": "block"},
+          "plugin":{
+            "label": "Owned By",
+            "property": "/organization/organization/ownedBy",
+            "limit": 10,
+            "properties":[
+              {
+                "property": "title",
+                "linked": true,
+                "params": {"et_view": "owned"},
+                "delinkIfDeprecated": true,
+                "needsAuth":true
+              }
+            ]
+          }
+        },
+        {
+          "layout": "plugin",
+          "property": "/",
+          "type": "div",
+          "name": "pLabelValue",
+          "css": { "display": "block"},
+          "plugin":{
+            "label": "Managed By",
+            "property": "/organization/organization/managedBy",
+            "limit": 10,
+            "properties":[
+              {
+                "property": "title",
+                "linked": true,
+                "delinkIfDeprecated": true,
+                "needsAuth":true
+              }
+            ]
+          }
+        },
+        {
+          "layout": "plugin",
+          "property": "/",
+          "type": "div",
+          "name": "pLabelValue",
+          "css": { "display": "block"},
+          "plugin":{
+            "label": "Location",
+            "property": "/location/location/places",
+            "limit": 10,
+            "properties":[
+              {
+                "property": "title",
+                "linked": true,
+                "delinkIfDeprecated": true,
+                "needsAuth":true
+              }
+            ]
+          }
+        },
+        {
+          "layout": "html",
+          "type": "div",
+          "css": {"padding": "0 5px 0 5px"},
+          "schemas": [
+            {
+              "layout": "html",
+              "type": "div",
+              "schemas": [
+                {
+                  "layout": "html",
+                  "html": "<div class=\"data-label\">Host:</div>"
+                },
+                {
+                  "layout": "data",
+                  "property": "hostname",
+                  "type": "div",
+                  "cls": "data-value"
+                }
+              ]
+            },
+            {
+              "layout": "html",
+              "type": "div",
+              "schemas": [
+                {
+                  "layout": "html",
+                  "html": "<div class=\"data-label\">Domain:</div>"
+                },
+                {
+                  "layout": "data",
+                  "property": "domainName",
+                  "type": "div",
+                  "cls": "data-value"
+                }
+              ]
+            },
+            {
+              "layout": "html",
+              "type": "div",
+              "schemas": [
+                {
+                  "layout": "html",
+                  "html": "<div class=\"data-label\">Manufacturer:</div>"
+                },
+                {
+                  "layout": "data",
+                  "property": "manufacturer",
+                  "type": "div",
+                  "cls": "data-value"
+                }
+              ]
+            },
+            {
+              "layout": "html",
+              "type": "div",
+              "schemas": [
+                {
+                  "layout": "html",
+                  "html": "<div class=\"data-label\">Make:</div>"
+                },
+                {
+                  "layout": "data",
+                  "property": "make",
+                  "type": "div",
+                  "cls": "data-value"
+                }
+              ]
+            },
+            {
+              "layout": "html",
+              "type": "div",
+              "schemas": [
+                {
+                  "layout": "html",
+                  "html": "<div class=\"data-label\">Model:</div>"
+                },
+                {
+                  "layout": "data",
+                  "property": "modelNumber",
+                  "type": "div",
+                  "cls": "data-value"
+                }
+              ]
+            },
+            {
+              "layout": "html",
+              "type": "div",
+              "schemas": [
+                {
+                  "layout": "html",
+                  "html": "<div class=\"data-label\">Serial Number:</div>"
+                },
+                {
+                  "layout": "data",
+                  "property": "serialNumber",
+                  "type": "div",
+                  "cls": "data-value"
+                }
+              ]
+            },
+            {
+              "layout": "html",
+              "type": "div",
+              "schemas": [
+                {
+                  "layout": "html",
+                  "html": "<div class=\"data-label\">Barcode:</div>"
+                },
+                {
+                  "layout": "data",
+                  "property": "barCode",
+                  "type": "div",
+                  "cls": "data-value"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layout": "html",
+          "type": "div",
+          "css": {"margin-left": "5px"},
+          "schemas": [
+            {
+              "layout": "html",
+              "html": "<div class=\"data-label\">Created When:</div>"
+            },
+            {
+              "layout": "data",
+              "property": "createdWhen",
+              "dataType": "date",
+              "format": "j\\-M\\-Y\\, g\\:i a",
+              "type": "div",
+              "maxItems": 1,
+              "cls": "data-value"
+            }
+          ]
+        },
+        {
+          "layout": "plugin",
+          "property": "/",
+          "type": "div",
+          "name": "pLabelValue",
+          "css": { "display": "block"},
+          "plugin":{
+            "label": "Central Processing Units",
+            "property": "/electronic/central_processing_unit/cpu",
+            "limit": 10,
+            "properties":[
+              {
+                "lblCls": "data-label",
+                "label": "Make:",
+                "property": "make"
+              },
+              {
+                "lblCls": "data-label",
+                "label": "Model Number:",
+                "property": "modelNumber"
+              },
+              {
+                "lblCls": "data-label",
+                "label": "Serial Number:",
+                "property": "serialNumber"
+              },
+              {
+                "lblCls": "data-label",
+                "label": "Speed:",
+                "property": "speed"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "layout": "zone",
+      "zone": ".panel-middle",
+      "cls": "no-border",
+      "css": {"overflow": "hidden"},
+      "schemas": [
+        {
+          "layout": "html",
+          "type": "div",
+          "cls": "full-min",
+          "attr": {"data-oh": 7},
+          "schemas":[
+            {
+              "layout": "data",
+              "property": "/",
+              "type": "div",
+              "schemas":[
+                {
+                  "property": "/system/primitives/raw_string/descriptions.results",
+                  "schemas":[
+                    {
+                      "layout": "data",
+                      "type": "p",
+                      "property": "value"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "layout": "html",
+              "type": "ul",
+              "cls": "nav nav-tabs",
+              "schemas":[
+                {
+                  "layout": "html",
+                  "type": "li",
+                  "cls": "active",
+                  "schemas":[
+                    {
+                      "layout": "html",
+                      "type": "a",
+                      "text": "Summary",
+                      "cls": "no-radius",
+                      "attr": {"data-toggle": "tab", "href": "#tab-summary"}
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "li",
+                  "schemas":[
+                    {
+                      "layout": "html",
+                      "type": "a",
+                      "text": "History",
+                      "cls": "no-radius",
+                      "attr": {"data-toggle": "tab", "href": "#tab-history"}
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "li",
+                  "schemas":[
+                    {
+                      "layout": "html",
+                      "type": "a",
+                      "text": "Findings History",
+                      "cls": "no-radius",
+                      "attr": {"data-toggle": "tab", "href": "#tab-findings-history", "id": "tab-findings-history-tab"}
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "li",
+                  "schemas":[
+                    {
+                      "layout": "html",
+                      "type": "a",
+                      "text": "Software",
+                      "cls": "no-radius",
+                      "attr": {"data-toggle": "tab", "href": "#tab-software", "id": "tab-software-tab"}
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "li",
+                  "schemas":[
+                    {
+                      "layout": "html",
+                      "type": "a",
+                      "text": "Identifiers",
+                      "cls": "no-radius",
+                      "attr": {"data-toggle": "tab", "href": "#tab-identifiers"}
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "li",
+                  "schemas":[
+                    {
+                      "layout": "html",
+                      "type": "a",
+                      "text": "Network",
+                      "cls": "no-radius",
+                      "attr": {"data-toggle": "tab", "href": "#tab-network"}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "layout": "html",
+              "type": "div",
+              "cls": "tab-content",
+              "css": {"height": "calc(100% - 43px)", "overflowX": "hidden", "overflowY": "auto"},
+              "schemas":[
+                {
+                  "layout": "html",
+                  "type": "div",
+                  "cls": "tab-pane active no-padding",
+                  "css": {"height": "100%"},
+                  "attr": {"id": "tab-summary"},
+                  "schemas":[
+                    {
+                      "layout": "html",
+                      "type": "div",
+                      "cls": "row",
+                      "css": {"height": "inherit", "padding": "2px"},
+                      "conditions": [
+                        {
+                          "valueOf": "deprecated",
+                          "valueType": "boolean",
+                          "compareTo": true,
+                          "comparators": [
+                            "eq"
+                          ]
+                        }
+                      ],
+                      "schemas":[
+                        {
+                          "layout": "html",
+                          "type": "div",
+                          "cls": "col-md-12 no-margin no-padding",
+                          "css": {
+                            "height": "inherit",
+                            "position": "relative",
+                            "top": "-5px"
+                          },
+                          "schemas": [
+                            {
+                              "layout": "plugin",
+                              "name": "pAssetEventMsg",
+                              "plugin": {
+                                "type": "h4",
+                                "cls": "letterpress",
+                                "css": {
+                                  "margin": "20px 10px 10px 10px"
+                                },
+                                "del_msg": true
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "layout": "html",
+                      "type": "div",
+                      "cls": "row bordered",
+                      "css": {"height": "100%"},
+                      "conditions": [
+                        {
+                          "valueOf": "deprecated",
+                          "valueType": "boolean",
+                          "compareTo": false,
+                          "comparators": [
+                            "eq"
+                          ]
+                        }
+                      ],
+                      "schemas":[
+                        {
+                          "layout": "html",
+                          "type": "div",
+                          "cls": "col-md-4 col-findings",
+                          "schemas": [
+                            {
+                              "layout": "plugin",
+                              "property": "/",
+                              "type": "div",
+                              "name": "pSummary",
+                              "css": { "display": "block"},
+                              "plugin":{
+                                "fill": true,
+                                "panel": true,
+                                "cascade": false,
+                                "panels": {
+                                  "breadcrumb": false,
+                                  "title": false,
+                                  "findings": true,
+                                  "topFindings": false,
+                                  "risk": false
+                                },
+                                "calcHeights": false
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "layout": "html",
+                          "type": "div",
+                          "cls": "col-md-8 no-margin",
+                          "css": {
+                            "height": "inherit", "padding": "0 2px 0 2px"
+                          },
+                          "schemas": [
+                            {
+                              "layout": "html",
+                              "type": "div",
+                              "cls": "bordered",
+                              "css": {"height": "300px", "maxHeight": "300px", "margin": "5px 20px 0 0"},
+                              "schemas": [
+                                {
+                                  "layout": "html",
+                                  "type": "div",
+                                  "cls": "tab-pane",
+                                  "attr": {"id": "tab-compliance"},
+                                  "schemas":[
+                                    {
+                                      "layout": "plugin",
+                                      "property": "/",
+                                      "type": "div",
+                                      "name": "softwareCompliant",
+                                      "css": { "display": "block"},
+                                      "plugin":{
+                                        "glyph": "glyphicons-check",
+                                        "title": "Software Compliance Policies",
+                                        "property": "/technology/software_compliance_policy/compliance",
+                                        "limit": 100,
+                                        "properties":[
+                                          {
+                                            "property": "title",
+                                            "linked": true
+                                          },
+                                          {
+                                            "label": "CPE:",
+                                            "property": "cpe"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "layout": "html",
+                              "type": "div",
+                              "cls": "row pSummary-row",
+                              "css": {"width": "100%", "margin-top": "5px" },
+                              "schemas": [
+                                {
+                                  "layout": "html",
+                                  "type": "div",
+                                  "cls": "col-md-6",
+                                  "css": {
+                                    "position": "relative",
+                                    "margin": "0 0 5px 0"
+                                  },
+                                  "schemas": [
+                                    {
+                                      "layout": "html",
+                                      "type": "div",
+                                      "cls": "sum-top-findings ",
+                                      "css": {"clear": "both"},
+                                      "schemas": [
+                                        {
+                                          "layout": "plugin",
+                                          "property": "/",
+                                          "type": "div",
+                                          "name": "pSummary",
+                                          "plugin":{
+                                            "fill": true,
+                                            "panel": true,
+                                            "cascade": false,
+                                            "panels": {
+                                              "breadcrumb": false,
+                                              "title": false,
+                                              "findings": false,
+                                              "topFindings": true,
+                                              "risk": false
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "layout": "html",
+                                  "type": "div",
+                                  "cls": "col-md-6",
+                                  "css": {
+                                    "position": "relative",
+                                    "margin": "0 0 5px 0"
+                                  },
+                                  "schemas": [
+                                    {
+                                      "layout": "html",
+                                      "type": "div",
+                                      "cls": "sum-risk",
+                                      "css": {"width": "320px", "max-width": "320px"},
+                                      "schemas": [
+                                        {
+                                          "layout": "plugin",
+                                          "property": "/",
+                                          "type": "div",
+                                          "name": "pSummary",
+                                          "plugin":{
+                                            "fill": true,
+                                            "panel": true,
+                                            "cascade": false,
+                                            "panels": {
+                                              "breadcrumb": false,
+                                              "title": false,
+                                              "findings": false,
+                                              "topFindings": false,
+                                              "risk": true
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "div",
+                  "cls": "tab-pane",
+                  "css": {"height": "100%"},
+                  "attr": {"id": "tab-history"},
+                  "schemas":[
+                    {
+                      "layout": "plugin",
+                      "property": "/",
+                      "type": "div",
+                      "name": "pAssetEvent",
+                      "initOnClick": "tab-history-tab",
+                      "plugin": {
+                      }
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "div",
+                  "cls": "tab-pane",
+                  "css": {"height": "100%"},
+                  "attr": {"id": "tab-findings-history"},
+                  "schemas":[
+                    {
+                      "layout": "plugin",
+                      "property": "/",
+                      "type": "div",
+                      "name": "pVulnHistory",
+                      "fill": true,
+                      "css": {
+                        "display": "block"
+                      },
+                      "plugin": {
+                        "glyph": "glyphicons glyphicons-info-sign",
+                        "title": "Findings History",
+                        "limit": 100,
+                        "adjustHeight": 0,
+                        "hInherit": true,
+                        "hasTitle": true,
+                        "offset": {
+                          "parent": 0,
+                          "table": 0,
+                          "onResize": -10
+                        },
+                        "initOnClick": "tab-findings-history-tab"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "div",
+                  "cls": "tab-pane",
+                  "css": {"height": "100%"},
+                  "attr": {"id": "tab-software"},
+                  "schemas":[
+                    {
+                      "layout": "plugin",
+                      "property": "/",
+                      "type": "div",
+                      "name": "pSoftware",
+                      "fill": true,
+                      "css": {
+                        "display": "block"
+                      },
+                      "plugin": {
+                        "glyph": "glyphicons glyphicons-floppy-disk",
+                        "title": "Software",
+                        "limit": 100,
+                        "adjustHeight": 0,
+                        "hInherit": true,
+                        "hasTitle": true,
+                        "offset": {
+                          "parent": 0,
+                          "table": 0,
+                          "onResize": -10
+                        },
+                        "initOnClick": "tab-software-tab"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "div",
+                  "cls": "tab-pane",
+                  "css": {"height": "100%"},
+                  "attr": {"id": "tab-identifiers"},
+                  "schemas":[
+                    {
+                      "layout": "html",
+                      "type": "div",
+                      "cls": "tab-pane active container-fluid",
+                      "css": {"height": "100%"},
+                      "attr": {"id": "tab-summary"},
+                      "schemas":[
+                        {
+                          "layout": "html",
+                          "type": "div",
+                          "cls": "row no-padding no-gutter",
+                          "css": {"height": "inherit"},
+                          "schemas":[
+                            {
+                              "layout": "html",
+                              "type": "div",
+                              "cls": "col-md-6",
+                              "css": {"height": "inherit","paddingRight": "5px"},
+                              "schemas": [
+                                {
+                                  "layout": "plugin",
+                                  "property": "/",
+                                  "type": "div",
+                                  "cls": "bordered",
+                                  "name": "dataList",
+                                  "css": { "display": "block", "minWeight": "582px","height": "582px","maxHeight": "582px","overflow": "hidden auto"},
+                                  "plugin":{
+                                    "hasItemCounter": false,
+                                    "glyph": "glyphicons glyphicons-keys",
+                                    "title": "Identifiers",
+                                    "property": "/system/primitives/uri_value/identifiers",
+                                    "fill": true,
+                                    "adjustHeight": 10,
+                                    "adjustBodyHeight": 10,
+                                    "limit": 50,
+                                    "sort": {"createdWhen":"desc"},
+                                    "blocked": true,
+                                    "properties":[
+                                      {
+                                        "label": "From",
+                                        "property": "fn::classToName::label"
+                                      },
+                                      {
+                                        "label": "Identifier",
+                                        "property": "value"
+                                      },
+                                      {
+                                        "label": "Created When",
+                                        "property": "createdWhen",
+                                        "dataType": "dateShort"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "layout": "html",
+                              "type": "div",
+                              "cls": "col-md-6",
+                              "css": {"height": "inherit","paddingLeft": "5px"},
+                              "schemas": [
+                                {
+                                  "layout": "plugin",
+                                  "property": "/",
+                                  "type": "div",
+                                  "cls": "bordered",
+                                  "name": "dataList",
+                                  "css": { "display": "block", "word-break":"break-word", "minWeight": "582px","height": "582px","maxHeight": "582px","overflow": "hidden auto"},
+                                  "plugin":{
+                                    "hasItemCounter": false,
+                                    "glyph": "glyphicons glyphicons-keys",
+                                    "title": "Other Identifiers",
+                                    "property": "/system/primitives/uri_value/volatileIdentifiers",
+                                    "limit": 50,
+                                    "sort": {"createdWhen":"desc"},
+                                    "blocked": true,
+                                    "adjustHeight": 10,
+                                    "adjustBodyHeight": 10,
+                                    "fill": true,
+                                    "properties":[
+                                      {
+                                        "label": "From",
+                                        "property": "label"
+                                      },
+                                      {
+                                        "label": "Identifier",
+                                        "property": "value"
+                                      },
+                                      {
+                                        "label": "Created When",
+                                        "property": "createdWhen",
+                                        "dataType": "dateShort"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "layout": "html",
+                  "type": "div",
+                  "cls": "tab-pane",
+                  "css": {"height": "100%"},
+                  "attr": {"id": "tab-network"},
+                  "schemas":[
+                    {
+                      "layout": "html",
+                      "type": "div",
+                      "cls": "tab-pane active container-fluid",
+                      "css": {"height": "100%"},
+                      "attr": {"id": "tab-summary"},
+                      "schemas":[
+                        {
+                          "layout": "html",
+                          "type": "div",
+                          "cls": "row no-padding no-gutter",
+                          "css": {"height": "inherit"},
+                          "schemas":[
+                            {
+                              "layout": "html",
+                              "type": "div",
+                              "cls": "col-md-4",
+                              "css": {"height": "inherit","paddingRight": "5px"},
+                              "schemas": [
+                                {
+                                  "layout": "html",
+                                  "type": "div",
+                                  "schemas": [
+                                    {
+                                      "layout": "plugin",
+                                      "property": "/",
+                                      "type": "div",
+                                      "name": "networkAdapters",
+                                      "cls": "bordered",
+                                      "css": { "display": "block", "minWeight": "582px","height": "582px","maxHeight": "582px","overflow": "hidden auto"},
+                                      "plugin":{
+                                        "hasItemCounter": false,
+                                        "glyph": "glyphicons glyphicons-engineering-networks",
+                                        "title": "Network Adapters",
+                                        "property": "/electronic/network/network_adapter/networkAdapters",
+                                        "limit": 10,
+                                        "blocked": true,
+                                        "sort": {"createdWhen":"desc"},
+                                        "boldFirst": true,
+                                        "tip":"Network Adapters with valid IP and/or MAC addresses used for Asset disambiguation",
+                                        "properties":[
+                                          {
+                                            "label": "MAC Address",
+                                            "property": "macAddress"
+                                          },
+                                          {
+                                            "label": "IP Address",
+                                            "property": "ipAddress"
+                                          },
+                                          {
+                                            "label": "Created When",
+                                            "property": "createdWhen",
+                                            "dataType": "date",
+                                            "format": "j\\-M\\-Y\\, g\\:i a"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "layout": "html",
+                              "type": "div",
+                              "cls": "col-md-4",
+                              "css": {"height": "inherit","paddingLeft": "5px"},
+                              "schemas": [
+                                {
+                                  "layout": "html",
+                                  "type": "div",
+                                  "schemas": [
+                                    {
+                                      "layout": "plugin",
+                                      "property": "/",
+                                      "type": "div",
+                                      "name": "networkAdapters",
+                                      "cls": "bordered",
+                                      "css": { "display": "block", "minWeight": "582px","height": "582px","maxHeight": "582px","overflow": "hidden auto"},
+                                      "plugin":{
+                                        "hasItemCounter": false,
+                                        "glyph": "glyphicons glyphicons-engineering-networks",
+                                        "title": "Unusable Network Adapters",
+                                        "property": "/electronic/network/invalid_net_adapter/invalidNetAdapters",
+                                        "limit": 10,
+                                        "blocked": true,
+                                        "sort": {"createdWhen":"desc"},
+                                        "boldFirst": true,
+                                        "tip": "Unusable Network Adapters consist of IP and/or MAC addresses\nthat cannot be used for identification purposes due to their unreliability",
+                                        "properties":[
+                                          {
+                                            "label": "MAC Address",
+                                            "property": "macAddress"
+                                          },
+                                          {
+                                            "label": "IP Address",
+                                            "property": "ipAddress"
+                                          },
+                                          {
+                                            "label": "Created When",
+                                            "property": "createdWhen",
+                                            "dataType": "date",
+                                            "format": "j\\-M\\-Y\\, g\\:i a"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

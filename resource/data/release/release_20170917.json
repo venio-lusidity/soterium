@@ -1,0 +1,30 @@
+{
+  "author": "Thomas Paris",
+  "releasedOn": "2017-09-17T08:00:00.000-04:00",
+  "title": "Sprint 8.0 release notes",
+  "results": [
+    {
+      "label": "User Interface Changes",
+      "content": [
+        {"text": "Dashboard now displays a summary view of data just like the view on the enclave’s page.  If a user does not have a favorite set for the dashboard the first scoped organization for that user is used and set as a favorite."},
+        {"text": "A user’s favorites are set by the organization or organizations the user is directly scoped to."},
+        {"text": "Enclaves page node selection type is now DITPR, Managed By and Owned By."},
+        {"text": "Enclaves page now displays a summary of aggregated data about the assets whether directly associated with or inherited by DITPR or Organization with further filtering of Managed By or Owned By."},
+        {"text": "Enclaves summary zone has a breadcrumb of how you navigated to what you are looking at."},
+        {"text": "Enclaves summary zone has a title matching the selection and is clickable to view more information."},
+        {"text": "The aggregated data is linked where possible and clicking the links will show you more detailed information."},
+        {"text": "Enclaves page summary zone also shows are bar graph displaying the top findings, up to 10, from the inherited assets."},
+        {"text": "Enclaves page summary zone shows a risk score card which is calculated by aggregating the data from the inherited assets."},
+        {"text": "Enclaves page summary zone also shows a summary card for the immediate children of the Organization selected, by either Managed By or Owned By."},
+        {"text": "The enclave page will show a not authorized message for parent Organizations that a user is not authorized to view while still allowing them to traverse the tree."}
+      ]
+    },
+    {
+      "label": "FogBugs",
+      "content": [
+        {"text": "(FB 538) IAVM View Hierarchy"},
+        {"text": "(FB 547) Enclave View Organizational Hierarchy"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+﻿#drop-area {
+	text-align: left;
+    /*border: 2px dashed #ddd;
+	width: 960px;
+	margin-bottom: 2em;*/
+}
+		
+#drop-area .drop-instructions {
+    /*text-align:center;
+	display: block;
+	height: 30px;*/
+}
+		
+#drop-area .drop-over {
+	/*display: none;
+	font-size: 25px;
+	height: 30px;*/
+}
+				
+#drop-area.over {
+	background: #ffffa2;
+}
+		
+#drop-area.over .drop-instructions {
+	display: none;
+}
+
+#drop-area.over .drop-over {
+	/*display: block;
+	font-size: 25px;*/
+}
+		
+		
+#file-list {
+	list-style: none;
+	margin: 0;
+    padding: 0;
+}
+	
+#file-list li {
+	border-bottom: 1px solid #000;
+	margin-bottom: 5px;
+}
+
+
+#file-list li.no-items {
+	border-bottom: none;
+}
+		
+#file-list div {
+	margin-bottom: 0;
+}
+		
+#file-list li img {
+	max-width: 400px;
+}
+		
+#file-list .progress-bar-container {
+	width: 400px;
+	height: 10px;
+	border: 1px solid #555;
+	margin-bottom: 20px;
+}
+		
+#file-list .progress-bar-container.uploaded {
+	height: auto;
+	border: none;
+}
+		
+#file-list .progress-bar {
+	width: 0;
+	height: 10px;
+	font-weight: bold;
+	background: #6787e3;
+}
+		
+#file-list .progress-bar-container.uploaded .progress-bar{
+	display: inline-block;
+	width: auto;
+	color: #6db508;
+	background: transparent;
+}

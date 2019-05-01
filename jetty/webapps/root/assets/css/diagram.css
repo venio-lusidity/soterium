@@ -1,0 +1,47 @@
+
+.node {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 60px;
+    height: 60px;
+    background: #f6f6f6;
+    border: 2px solid #4F4F4F;
+    box-shadow: 0 0 5px #888;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    -webkit-backface-visibility: hidden;
+}
+
+.enclave{
+    background-color: #d9edf7 !important;
+    border-color: #bce8f1 !important;
+}
+
+.node.circle {
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    line-height: 52px;
+}
+
+.node.square h4 {
+    margin: 5px;
+}
+
+canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.node.dot {
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+

@@ -1,0 +1,105 @@
+{
+  "name": "Entity",
+  "zones": [
+    {
+      "layout": "zone",
+      "zone": ".menu-bar",
+      "styles": ["/assets/lusidity/css/entity.css"],
+      "plugins": [
+        "/assets/lusidity/plugins/jquery.semanticType.js",
+        "/assets/lusidity/plugins/jquery.image.js",
+        "/assets/lusidity/plugins/jquery.notification.js"
+      ],
+      "schemas": [
+      ]
+    },
+    {
+      "layout": "zone",
+      "zone": ".panel-left",
+      "css": {"padding": "0 5px 0 5px"},
+      "schemas": [
+        {
+          "layout": "html",
+          "type": "div",
+          "schemas": [
+            {
+              "layout": "data",
+              "property": "title",
+              "type": "h5",
+              "css": { "display": "block", "text-align": "center" }
+            }
+          ]
+        },
+        {
+          "layout": "plugin",
+          "property": "/",
+          "type": "div",
+          "cls": "cover-art center",
+          "name": "image",
+          "plugin":{
+            "image": "/assets/glyphicons/png/glyphicons-334-bell@3x.png",
+            "cls": "med",
+            "cssFiles": [
+              "/assets/lusidity/plugins/css/image.css"
+            ]
+          }
+        },
+        {
+          "layout": "plugin",
+          "property": "instanceOf",
+          "type": "div",
+          "name": "semanticType",
+          "css": { "display": "block", "text-align": "center" },
+          "plugin":{
+            "image": false,
+            "cssFiles": [
+              "/assets/lusidity/plugins/css/semanticType.css"
+            ]
+          }
+        },
+        {
+          "layout": "html",
+          "type": "div",
+          "css": {"margin-top": "5px"},
+          "schemas": [
+            {
+              "layout": "html",
+              "html": "<div class=\"data-label\">Sent on:</div>"
+            },
+            {
+              "layout": "data",
+              "property": "createdWhen",
+              "dataType": "date",
+              "format": "j\\-M\\-Y\\, g\\:i a",
+              "type": "div",
+              "maxItems": 1,
+              "cls": "data-value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "zone",
+      "zone": ".panel-middle",
+      "cls": "no-border full-min",
+      "attr": {"data-oh": 7},
+      "schemas": [
+        {
+          "layout": "html",
+          "type": "div",
+          "schemas":[
+            {
+              "layout": "plugin",
+              "property": "/",
+              "type": "div",
+              "name": "notification",
+              "plugin":{
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

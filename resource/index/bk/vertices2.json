@@ -1,0 +1,34 @@
+{
+  "common": {
+  "mapping": {
+    "settings": {
+      "index": {
+        "analysis": {
+          "analyzer": {
+            "startsWith": {
+              "tokenizer": "keyword",
+              "filter": [
+                "icu_normalizer",
+                "asciifolding",
+                "lowercase"
+              ]
+            },
+            "folding": {
+              "tokenizer": "standard",
+              "filter": [
+                "icu_normalizer",
+                "asciifolding",
+                "lowercase"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+},
+  "allowedTypes": [
+    "com.lusidity.data.ApolloVertex"
+  ],
+  "availableImmediately": true
+}

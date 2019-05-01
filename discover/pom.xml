@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>lusidity-parent</artifactId>
+        <groupId>com.lusidity</groupId>
+        <version>2.0</version>
+        <relativePath>../parent/pom.xml</relativePath>
+    </parent>
+    <packaging>jar</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>lusidity-discover</artifactId>
+    <build>
+        <directory>../target</directory>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>com.lusidity</groupId>
+            <artifactId>lusidity-framework</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.lusidity</groupId>
+            <artifactId>lusidity-core</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.lusidity</groupId>
+            <artifactId>lusidity-apollo</artifactId>
+            <version>2.0</version>
+        </dependency>
+    </dependencies>
+</project>

@@ -1,0 +1,1 @@
+mediawiki -in /data/wikipedia/en/20141106/enwiki-20141106-pages-articles.xml -threads 8 -limit 5000

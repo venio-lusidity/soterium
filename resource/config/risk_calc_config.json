@@ -1,0 +1,87 @@
+{
+  "networkSecurityDomain": {
+    "desc": "The type of network domain.",
+    "example": " public_internet, unclassified, secret, specat, top_secret, sci",
+    "value": "unclassified"
+  },
+  "enabled": {
+    "desc": "If enabled modifiers will be used when calculating otherwise the calculations will be a raw CVSS score.",
+    "example": "true or false",
+    "value": true
+  },
+  "protection": {
+    "desc": "Software that can prevent exploits",
+    "properties": {
+      "name": "The words used in the name are used individual but the title of the software being compared must have all of the words.",
+      "roleType": "antivirus, intrusion, or other",
+      "activityType": "active, passive or both",
+      "version": "minimum version of the software",
+      "maintained": "The software may require something like a dat file, if it does set to true otherwise false.",
+      "age": "How old in days is this maintaining file allowed to be before being considered ineffective. Zero means no age requirement."
+    },
+    "example": "",
+    "value": [
+      {
+        "name": "mcafee agent",
+        "roleType": "antivirus",
+        "policies":[{
+          "os":{
+            "name": "Windows",
+            "version": "1.0.0.0",
+            "role":"client"
+          },
+          "score": 0.0775,
+          "age":{
+            "min": 30,
+            "max": 90
+          },
+          "version": "1.0.0.0"
+        }],
+        "activityType": "both",
+        "maintained": true
+      },
+      {
+        "name": "mcafee intrusion",
+        "roleType": "intrusion",
+        "policies":[{
+          "os":{
+              "name": "Windows",
+              "version": "1.0.0.0",
+              "role":"client"
+          },
+          "score": 0.0775,
+          "age":{
+            "min": 30,
+            "max": 90
+          },
+          "version": "1.0.0.0"
+        }],
+        "activityType": "passive",
+        "version": "1.0.0.0",
+        "maintained": false
+      }
+    ]
+  },
+  "confidentiality_default": {
+    "desc": "A default value that maps to confidentiality.",
+    "example": "",
+    "value": "sensitive"
+  },
+  "confidentiality": {
+    "public": 0.708,
+    "sensitive": 0.0,
+    "classified": 0.0
+  },
+  "modifiers": {
+    "desc": "Risk assessment modifiers",
+    "example": "cls: com.lusidity.math.vulnerability.modifiers.ExploitProtectionModifier",
+    "value": [
+      {
+        "cls": "com.lusidity.math.vulnerability.modifiers.DefaultModifier"
+      },
+      {
+        "cls": "com.lusidity.math.vulnerability.modifiers.NetworkSecurityDomainModifier"
+      }
+    ]
+  }
+}

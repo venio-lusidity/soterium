@@ -1,0 +1,26 @@
+{
+  "enabled": {
+    "desc": "Turn scoping on or off.",
+    "example": "true or false",
+    "value": true
+  },
+  "interval": {
+    "desc": "How often to check in minutes, default is 1.",
+    "example": "A number.",
+    "value": 1
+  },
+  "events": {
+    "desc": "The list of events this server responds to, true for enabled false for disabled and a list of servers to notify.",
+    "example": "",
+    "handlers": {
+      "com.lusidity.server.events.EventAssetHierarchyMaterializedView": {
+        "enabled": true,
+        "recipients": ["athena-1"]
+      },
+      "com.lusidity.server.events.EventCoamsHandler": {
+        "enabled": true,
+        "recipients": ["athena-1"]
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+<states>
+    <state type="state" value="AL">Alabama</state>
+    <state type="state" value="AK">Alaska</state>
+    <state type="state" value="AZ">Arizona</state>
+    <state type="state" value="AR">Arkansas</state>
+    <state type="state" value="CA">California</state>
+    <state type="state" value="CO">Colorado</state>
+    <state type="state" value="CT">Connecticut</state>
+    <state type="state" value="DE">Delaware</state>
+    <state type="state" value="DC">District Of Columbia</state>
+    <state type="state" value="FL">Florida</state>
+    <state type="state" value="GA">Georgia</state>
+    <state type="state" value="HI">Hawaii</state>
+    <state type="state" value="ID">Idaho</state>
+    <state type="state" value="IL">Illinois</state>
+    <state type="state" value="IN">Indiana</state>
+    <state type="state" value="IA">Iowa</state>
+    <state type="state" value="KS">Kansas</state>
+    <state type="state" value="KY">Kentucky</state>
+    <state type="state" value="LA">Louisiana</state>
+    <state type="state" value="ME">Maine</state>
+    <state type="state" value="MD">Maryland</state>
+    <state type="state" value="MA">Massachusetts</state>
+    <state type="state" value="MI">Michigan</state>
+    <state type="state" value="MN">Minnesota</state>
+    <state type="state" value="MS">Mississippi</state>
+    <state type="state" value="MO">Missouri</state>
+    <state type="state" value="MT">Montana</state>
+    <state type="state" value="NE">Nebraska</state>
+    <state type="state" value="NV">Nevada</state>
+    <state type="state" value="NH">New Hampshire</state>
+    <state type="state" value="NJ">New Jersey</state>
+    <state type="state" value="NM">New Mexico</state>
+    <state type="state" value="NY">New York</state>
+    <state type="state" value="NC">North Carolina</state>
+    <state type="state" value="ND">North Dakota</state>
+    <state type="state" value="OH">Ohio</state>
+    <state type="state" value="OK">Oklahoma</state>
+    <state type="state" value="OR">Oregon</state>
+    <state type="state" value="PA">Pennsylvania</state>
+    <state type="state" value="RI">Rhode Island</state>
+    <state type="state" value="SC">South Carolina</state>
+    <state type="state" value="SD">South Dakota</state>
+    <state type="state" value="TN">Tennessee</state>
+    <state type="state" value="TX">Texas</state>
+    <state type="state" value="UT">Utah</state>
+    <state type="state" value="VT">Vermont</state>
+    <state type="state" value="VA">Virginia</state>
+    <state type="state" value="WA">Washington</state>
+    <state type="state" value="WV">West Virginia</state>
+    <state type="state" value="WI">Wisconsin</state>
+    <state type="state" value="WY">Wyoming</state>
+    <state type="territory" value="AS">American Samoa</state>
+    <state type="territory" value="GU">Guam</state>
+    <state type="territory" value="MP">Northern Mariana Islands</state>
+    <state type="territory" value="PR">Puerto Rico</state>
+    <state type="territory" value="UM">United States Minor Outlying Islands</state>
+    <state type="territory" value="VI">Virgin Islands</state>
+</states>	
