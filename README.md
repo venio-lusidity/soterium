@@ -22,7 +22,7 @@ Virtually all COTS or open-source database engines require additional components
     * KeyDataCollection<T>:  Same as KeyData<T> except that it supports a collection of objects.  
     * ElementEdges: Collection of edges linking domain types.
     * Note that the KeyData objects and the ElementEdges are only loaded on demand not when the Class is constructed.  The increase in performance is exponential with the more objects being worked with as it does not load unused properties.  An example would be retrieving data requested by the UI and only the JSON is needed to be returned with no further messaging of the data.  
-* ElementEdges: Understands the context it is in and can retrieve the linked objects with no further code needed other than definig the annotation AtSchemaProperty.  Can be and should be extended if the known collection size grows exponentially.  An example would be VulnerabilityEdges.
+* ElementEdges: Understands the context it is in and can retrieve the linked objects with no further code needed other than defining the annotation AtSchemaProperty.  Can be and should be extended if the known collection size grows exponentially.  An example would be VulnerabilityEdges.
 * Edge:  Defines the relationship between two vertices.  Can be extended if extra data about the two objects is needed.  An example would be VulnerabilityEdge.fetchPassed().getValue().
 * ETL:  Extract, Transform and Load 
 * Inference Engine:  Leveraging the components of Soterium an RMK purpose built to cleanup suspect CPE data. 
