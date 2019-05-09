@@ -127,7 +127,7 @@ public class PKICredentials implements UserCredentials {
                     }
                     else if(!StringX.isBlank(this.apiKey)){
                         UserActivity
-                            .logActivity(this.getPrincipal(), LogEntry.OperationTypes.login, String.format(msg, String.format("API Key: %s", this.apiKey), current.toString()), success);
+                            .logActivity(this.getPrincipal(), LogEntry.OperationTypes.login, String.format("API Key: %s", this.apiKey), success);
                     }
                 }
             }
