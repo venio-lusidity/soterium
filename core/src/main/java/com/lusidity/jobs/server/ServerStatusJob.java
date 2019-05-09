@@ -21,6 +21,7 @@ import com.lusidity.AuthorizationResponse;
 import com.lusidity.ClientConfiguration;
 import com.lusidity.Environment;
 import com.lusidity.RegisterResponse;
+import com.lusidity.configuration.ServerEventConfiguration;
 import com.lusidity.configuration.SoteriumConfiguration;
 import com.lusidity.data.interfaces.BaseServerConfiguration;
 import com.lusidity.domains.data.ProcessStatus;
@@ -37,6 +38,7 @@ import java.util.Collection;
 
 public class ServerStatusJob extends BaseJob
 {
+	private DateTime processedAt = null;
 
 	private static Collection<URI> offline=new ArrayList<>();
 
@@ -50,10 +52,7 @@ public class ServerStatusJob extends BaseJob
 	@Override
 	public boolean start(Object... args)
 	{
-		DateTime check = DateTime.now();
-
-		if((null==this.getLastRun()) || (this.getLastRun().plusMinutes(SoteriumConfiguration.getInstance().getTimeCheckServers()).isBefore(check)))
-		{
+		if((null==this.processedAt) || DateTime.now().minusMinutes(SoteriumConfiguration.getInstance().getTimeCheckServers()).isAfter(this.processedAt)){
 			Collection<AthenaServer> servers = SoteriumConfiguration.getInstance().getAthenaServers();
 
 			try
@@ -105,6 +104,7 @@ public class ServerStatusJob extends BaseJob
 						}
 					}
 				}
+				this.processedAt = DateTime.now();
 			}
 			catch (Exception ex){
 				AthenaServer.getServers().clear();

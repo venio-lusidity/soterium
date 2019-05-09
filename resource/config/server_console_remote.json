@@ -55,7 +55,7 @@
   "applicationName":{
     "desc": "The name of the application using Soterium.  This name will be used in things like UI notifications and/or emails.",
     "example": "none",
-    "value": "Risk Management Knowledgebase (RMK)"
+    "value": "Soterium"
   },
   "emailLogLevel": {
     "desc": "Set the minimum logging level to send email notifications. NA SEVERE WARNING INFO CONFIG FINE FINER FINEST",

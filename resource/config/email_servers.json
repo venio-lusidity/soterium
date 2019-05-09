@@ -16,31 +16,31 @@
         "body": "A new account has been created for [who] and is awaiting approval."
       },
       "register":{
-        "subject": "Risk Management Knowledgebase (RMK) Account Request Initiated",
+        "subject": "Account Request Initiated",
         "body": "file:///templates/email/register_requested.txt"
       },
       "account_approved":{
-        "subject": "Risk Management Knowledgebase (RMK): Account Request Approved",
+        "subject": "Account Request Approved",
         "body": "file:///templates/email/account_approved.txt"
       },
       "account_reactivation":{
-        "subject": "Risk Management Knowledgebase (RMK): Account Reactivation Request Approved",
+        "subject": "Account Reactivation Request Approved",
         "body": "file:///templates/email/account_reactiviation.txt"
       },
       "account_expired":{
-        "subject": "Risk Management Knowledgebase (RMK): Account Disabled Due to Inactivity",
+        "subject": "Account Disabled Due to Inactivity",
         "body": "file:///templates/email/account_expired.txt"
       },
       "account_expiring": {
-        "subject": "Risk Management Knowledgebase (RMK): Account Expiration (Inactivity) Notice",
+        "subject": "Account Expiration (Inactivity) Notice",
         "body": "file:///templates/email/account_expiring.txt"
       },
       "account_denied": {
-        "subject": "Risk Management Knowledgebase (RMK): Account Denied Notice",
+        "subject": "Account Denied Notice",
         "body": "file:///templates/email/account_denied.txt"
       },
       "account_disapproved": {
-        "subject": "Risk Management Knowledgebase (RMK): Account Disabled Notice",
+        "subject": "Account Disabled Notice",
         "body": "file:///templates/email/account_disabled.txt"
       }
     }

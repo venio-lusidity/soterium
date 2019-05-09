@@ -1,13 +1,9 @@
-Thank you for your request for an RMK User Account. Your account has been activated and you now have access into the RMK application. As a reminder, please ensure you are using Google Chrome as your Internet browser to access https://rmk.disa.mil.
+Thank you for your request for an Soterium User Account. Your account has been activated and you now have access into the Soterium application. As a reminder, please ensure you are using Google Chrome as your Internet browser to access Soterium.
 
-There are also a couple of specific features that will help you with your RMK familiarization. One in particular is the RMK User Guide. Please note that once you are in the RMK application, just below the top dark banner, on the right side, there are a series of icons. One of these are titled, “User Guide” (towards the center). Referencing this PDF document should help you become quickly acquainted with RMK and its many functions, capabilities, and views. This PDF is updated regularly as new features come out.
+Lastly, there is a 30-day account activity limit. What this means is that if you do not access Soterium at least once every 30-days, your account will automatically be deactivated (not deleted). While there are reminders sent to you by Soterium before this occurs, please do not rely on this. If your account should be deactivated, please reach out to the Soterium.  After a short review of the situation, your account can be reactivated without any additional paperwork requirements.
 
-Please remember the DISA Form-787 form you completed during your registration process. The DISA Form-787 ensures you are aware that all the information gleaned from this site is sensitive and should not be shared outside those with a need-to-know. Please note that you will only be allowed to view the systems for which you requested, and for which is applicable to your job, duty, and authorization as per your DD-Form-2875, approved by your Supervisor.
-
-Lastly, there is a 30-day account activity limit. What this means is that if you do not access RMK at least once every 30-days, your account will automatically be deactivated (not deleted). While there are reminders sent to you by RMK before this occurs, please do not rely on this. If your account should be deactivated, please reach out to the RMK Team at disa.meade.re.mbx.rmk@mail.mil.  After a short review of the situation, your account can be reactivated without any additional paperwork requirements.
-
-We look forward to providing you a very insightful and informative perspective of your DISA-applicable systems and assets. Should you have any questions or concerns, please note that in that same banner area on the far-right side, there is a “Feedback” icon that goes out to the entire RMK Admin Team. Please let us know if you have any questions or suggestions that are not covered in the User Guide.
+We look forward to providing you a very insightful and informative perspective. Should you have any questions or concerns, please note that in that same banner area on the far-right side, there is a “Feedback” icon that goes out to the entire Soterium Admin Team. Please let us know if you have any questions or suggestions that are not covered in the User Guide.
 
 Most Sincerely,
 
-The RMK Team
+The Soterium Team

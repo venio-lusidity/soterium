@@ -12,7 +12,7 @@
                     "example": "In milliseconds 1000 = 1 second"
                },
                "data": {
-                    "value": {"group": "RMK"},
+                    "value": {"group": "Soterium"},
                     "desc": "Any additional data that the job requires",
                     "example": "JSON [] or {}"
                },
@@ -39,7 +39,7 @@
                     "example": "In milliseconds 1000 = 1 second"
                },
                "data": {
-                    "value": {"group": "RMK"},
+                    "value": {"group": "Soterium"},
                     "desc": "Any additional data that the job requires",
                     "example": "JSON [] or {}"
                },
@@ -100,7 +100,7 @@
                     "example": "In milliseconds 1000 = 1 second"
                },
                "data": {
-                    "value": {"group": "RMK"},
+                    "value": {"group": "Soterium"},
                     "desc": "Any additional data that the job requires",
                     "example": "JSON [] or {}"
                },
@@ -601,7 +601,7 @@
                     "example": "In milliseconds 1000 = 1 second"
                },
                "data": {
-                    "value": {"group": "RMK"},
+                    "value": {"group": "Soterium"},
                     "desc": "Any additional data that the job requires",
                     "example": "JSON [] or {}"
                },
@@ -1093,7 +1093,7 @@
                     "example": "In milliseconds 1000 = 1 second"
                },
                "data": {
-                    "value": {"group": "RMK"},
+                    "value": {"group": "Soterium"},
                     "desc": "Any additional data that the job requires",
                     "example": "JSON [] or {}"
                },
@@ -1147,7 +1147,7 @@
                     "example": "In milliseconds 1000 = 1 second"
                },
                "data": {
-                    "value": {"group": "RMK"},
+                    "value": {"group": "Soterium"},
                     "desc": "Any additional data that the job requires",
                     "example": "JSON [] or {}"
                },

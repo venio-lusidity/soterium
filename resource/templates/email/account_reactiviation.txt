@@ -1,14 +1,7 @@
-Your account has been reactivated and you now have access to the RMK application. You have 35-days from today to log in before your account will be disabled again.  As a reminder, please ensure you are using Google Chrome as your Internet browser when accessing the RMK website.
+Your account has been reactivated and you now have access to the Soterium application. You have 35-days from today to log in before your account will be disabled again.  As a reminder, please ensure you are using Google Chrome as your Internet browser when accessing the Soterium website.
 
-There is a 35-day account inactivity limit. If you do not access RMK at least once every 35-days, your account will automatically be deactivated (not deleted). While there are reminders sent to you by RMK before this occurs, please do not rely on this.
-
-Please remember the DISA Form-787 form you completed during your registration process. The DISA Form-787 ensures you are aware that all the information gleaned from this site is sensitive and should not be shared outside those with a need-to-know. Please note that you will only be allowed to view the systems for which you requested, and for which is applicable to your job, duty, and authorization as per your DD-Form-2875, approved by your Supervisor.
-
-If you have any questions, or suggestions on how we can improve RMK, please email the RMK team at the email address below.
-
-RMK email:  disa.meade.re.mbx.rmk@mail.mil
-RMK website:  https://rmk.disa.mil
+There is a 35-day account inactivity limit. If you do not access Soterium at least once every 35-days, your account will automatically be deactivated (not deleted). While there are reminders sent to you by Soterium before this occurs, please do not rely on this.
 
 Thank You,
 
-The RMK Team
+The Soterium Team

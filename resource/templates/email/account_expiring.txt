@@ -1,11 +1,5 @@
-You are receiving this email because you have not logged into RMK recently.  Your account will be disabled in [DAYS] days.  If you wish to keep your account active, please access the RMK website and log in using your email certificate prior to your account being disabled.
-
-If you have any questions, or suggestions on how we can improve RMK, please email the RMK team at the email address below.
-
-RMK email:  disa.meade.re.mbx.rmk@mail.mil
-RMK website:  https://rmk.disa.mil
-
+You are receiving this email because you have not logged into Soterium recently.  Your account will be disabled in [DAYS] days.  If you wish to keep your account active, please access the Soterium website and log in using your email certificate prior to your account being disabled.
 
 Thank You,
 
-The RMK Team
+The Soterium Team
