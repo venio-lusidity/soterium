@@ -25,46 +25,42 @@ import com.lusidity.framework.exceptions.ApplicationException;
 import com.lusidity.framework.java.ClassX;
 import com.lusidity.framework.system.FileX;
 import com.lusidity.framework.text.StringX;
-import org.ehcache.Cache;
-import org.ehcache.CacheManager;
-import org.ehcache.config.builders.CacheConfigurationBuilder;
-import org.ehcache.config.builders.CacheManagerBuilder;
-import org.ehcache.config.builders.ResourcePoolsBuilder;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 
-public class EnCache extends BaseCache
+/**
+ * Max thread use 16 at a time.
+ */
+public class EnhancedCache extends BaseCache
 {
-	private volatile CacheManager cacheManager=null;
-	private volatile Cache<String, DataVertex> cache=null;
+	@SuppressWarnings("CollectionDeclaredAsConcreteClass")
+	private volatile ConcurrentHashMap<String, DataVertex> cache = null;
+	@SuppressWarnings("FieldAccessedSynchronizedAndUnsynchronized")
 	private Collection<String> misses=null;
-	private volatile boolean sample = false;
-
+	@SuppressWarnings("FieldAccessedSynchronizedAndUnsynchronized")
+	private boolean sample = false;
 
 	// Constructors
-	public EnCache()
+	public EnhancedCache()
 	{
 		super();
 	}
 
-// Overrides
+	// Overrides
 	@Override
-	public void init()
+	public synchronized void init()
 	{
 		if (null!=this.getConfig())
 		{
 			this.setDisabled(!this.getConfig().isEnabled());
-			this.cacheManager=CacheManagerBuilder.newCacheManagerBuilder()
-			                                     .withCache("appCache",
-				                                     CacheConfigurationBuilder.newCacheConfigurationBuilder(String.class, DataVertex.class,
-					                                     ResourcePoolsBuilder.heap(this.getConfig().getMaxSize())
-				                                     ).build()
-			                                     ).build(true);
-			this.cache=this.cacheManager.getCache("appCache", String.class, DataVertex.class);
+
+			int maxSize = this.getConfig().getMaxSize();
+			this.cache = new ConcurrentHashMap<>(maxSize);
 			this.sample = this.getConfig().sample();
 			this.setOpened(true);
 		}
@@ -74,8 +70,7 @@ public class EnCache extends BaseCache
 	public void close()
 		throws IOException
 	{
-		this.cacheManager.close();
-		this.cacheManager=null;
+		this.cache.clear();
 		super.close();
 	}
 
@@ -88,12 +83,7 @@ public class EnCache extends BaseCache
 	@Override
 	public long getTotal()
 	{
-		long result=super.getTotal();
-		if (result<0)
-		{
-			result=this.cache.spliterator().getExactSizeIfKnown();
-		}
-		return result;
+		return this.cache.size();
 	}
 
 	@Override
@@ -201,6 +191,7 @@ public class EnCache extends BaseCache
 		if (!this.isDisabled() && this.isOpened() && (null!=store) && this.isCacheable(store))
 		{
 			this.putSync(store, partitionType, key, entry);
+			this.setTotal(this.cache.size());
 		}
 	}
 
@@ -211,46 +202,39 @@ public class EnCache extends BaseCache
 		this.put(store, partitionType, entry.fetchId().getValue(), entry);
 	}
 
-	private synchronized void putSync(Class<? extends DataVertex> store, Class<? extends DataVertex> partitionType, String key, DataVertex entry)
+	private void putSync(Class<? extends DataVertex> store, Class<? extends DataVertex> partitionType, String key, DataVertex entry)
 	{
 		try
 		{
+			this.remove(store, partitionType, entry);
 			String finalKey=BaseCache.getCompositeKey(store, partitionType, key);
-			// could have been added while waiting.
-			if(!this.cache.containsKey(finalKey))
+			if(this.sample){
+				String fileName = String.format("enhanced_cache_sample_%s.csv", this.getClass().getSimpleName());
+				FileX.appendLine(new File(Environment.getInstance().getConfig().getTempDir(), fileName),
+					String.format("%s,%s", store.getSimpleName(), finalKey));
+			}
+			this.cache.put(finalKey, entry);
+			if (ClassX.isKindOf(entry, BaseDomain.class))
 			{
-				this.remove(store, partitionType, entry);
-				this.cache.put(finalKey, entry);
-				this.incrementTotal(1);
-				if (this.sample)
+				BaseDomain vertex=(BaseDomain) entry;
+				for (UriValue value : vertex.fetchIdentifiers())
 				{
-					String fileName=String.format("enhanced_cache_sample_%s.csv", this.getClass().getSimpleName());
-					FileX.appendLine(new File(Environment.getInstance().getConfig().getTempDir(), fileName),
-						String.format("%s,%s", store.getSimpleName(), finalKey)
-					);
-				}
-				if (ClassX.isKindOf(entry, BaseDomain.class))
-				{
-					BaseDomain vertex=(BaseDomain) entry;
-					for (UriValue value : vertex.fetchIdentifiers())
+					String lid=value.fetchValue().getValue().toString();
+					if ((StringX.startsWithIgnoreCase(lid, "lid:") || StringX.startsWithIgnoreCase(lid, "cpe:"))
+					    && !StringX.containsIgnoreCase(lid, "_importer/"))
 					{
-						String lid=value.fetchValue().getValue().toString();
-						if ((StringX.startsWithIgnoreCase(lid, "lid:") || StringX.startsWithIgnoreCase(lid, "cpe:")) && !StringX.containsIgnoreCase(lid, "_importer/"))
-						{
-							lid=BaseCache.getCompositeKey(store, partitionType, lid);
-							this.incrementTotal(1);
-							this.cache.put(lid, entry);
-						}
+						lid=BaseCache.getCompositeKey(store, partitionType, lid);
+						this.cache.put(lid, entry);
 					}
-					for (UriValue value : vertex.fetchVolatileIdentifiers())
+				}
+				for (UriValue value : vertex.fetchVolatileIdentifiers())
+				{
+					String lid=value.fetchValue().getValue().toString();
+					if (StringX.startsWithIgnoreCase(lid, "lid:")
+					    && !StringX.containsIgnoreCase(lid, "_importer/"))
 					{
-						String lid=value.fetchValue().getValue().toString();
-						if (StringX.startsWithIgnoreCase(lid, "lid:") && !StringX.containsIgnoreCase(lid, "_importer/"))
-						{
-							lid=BaseCache.getCompositeKey(store, partitionType, lid);
-							this.incrementTotal(1);
-							this.cache.put(lid, entry);
-						}
+						lid=BaseCache.getCompositeKey(store, partitionType, lid);
+						this.cache.put(lid, entry);
 					}
 				}
 			}
@@ -261,7 +245,7 @@ public class EnCache extends BaseCache
 	}
 
 	@Override
-	public synchronized void remove(Class<? extends DataVertex> store, Class<? extends DataVertex> partitionType, DataVertex entry)
+	public void remove(Class<? extends DataVertex> store, Class<? extends DataVertex> partitionType, DataVertex entry)
 		throws ApplicationException
 	{
 		try
@@ -272,7 +256,6 @@ public class EnCache extends BaseCache
 				if (this.cache.containsKey(finalKey))
 				{
 					this.cache.remove(finalKey);
-					this.incrementTotal(-1);
 				}
 				if (ClassX.isKindOf(entry, BaseDomain.class))
 				{
@@ -283,11 +266,7 @@ public class EnCache extends BaseCache
 						if (StringX.startsWithIgnoreCase(key, "lid:") || StringX.startsWithIgnoreCase(key, "cpe:"))
 						{
 							key=BaseCache.getCompositeKey(store, partitionType, key);
-							if (this.cache.containsKey(key))
-							{
-								this.cache.remove(key);
-								this.incrementTotal(-1);
-							}
+							this.cache.remove(key);
 						}
 					}
 					for (UriValue value : vertex.fetchVolatileIdentifiers())
@@ -296,14 +275,11 @@ public class EnCache extends BaseCache
 						if (StringX.startsWithIgnoreCase(key, "lid:"))
 						{
 							key=BaseCache.getCompositeKey(store, partitionType, key);
-							if (this.cache.containsKey(key))
-							{
-								this.cache.remove(key);
-								this.incrementTotal(-1);
-							}
+							this.cache.remove(key);
 						}
 					}
 				}
+				this.setTotal(this.cache.size());
 			}
 		}
 		catch (Exception ignored)
@@ -325,6 +301,7 @@ public class EnCache extends BaseCache
 					this.cache.remove(finalKey);
 					this.incrementTotal(-1);
 				}
+				this.setTotal(this.cache.size());
 			}
 		}
 		catch (Exception ignored)
@@ -336,11 +313,6 @@ public class EnCache extends BaseCache
 	public void resetCache()
 	{
 		this.misses=null;
-		if (null!=this.cacheManager)
-		{
-			this.cacheManager.close();
-			this.cacheManager=null;
-		}
 		this.resetCacheAttempts();
 		this.restart();
 	}
