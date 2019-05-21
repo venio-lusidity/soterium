@@ -1,11 +1,11 @@
 com/lusidity/KeyStoreManager.class
-com/lusidity/SoteriumClient.class
 com/lusidity/UtilsX.class
-com/lusidity/AuthorizationResponse.class
+com/lusidity/SoteriumClient.class
 com/lusidity/ClientConfiguration$1.class
-com/lusidity/RegisterResponse.class
+com/lusidity/AuthorizationResponse.class
 com/lusidity/ClientConfiguration$2.class
 com/lusidity/BaseResponse.class
+com/lusidity/RegisterResponse.class
 com/lusidity/SoteriumResponse.class
 com/lusidity/ClientConfiguration.class
 com/lusidity/RmkImporterPostResponse.class

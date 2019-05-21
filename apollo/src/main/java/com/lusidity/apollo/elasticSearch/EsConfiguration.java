@@ -92,9 +92,14 @@ public class EsConfiguration extends BaseServerConfiguration
 		return result;
 	}
 
-	protected String getCommand(String command)
+	public String getCommand(String command)
 	{
-		return this.getData().getString("search_guard", "commands", command);
+		return this.getConfigData().getString("search_guard", "commands", command);
+	}
+
+	public boolean initializeSSl()
+	{
+		return this.getConfigData().getBoolean(false, "initializeSSl");
 	}
 
 	// Getters and setters

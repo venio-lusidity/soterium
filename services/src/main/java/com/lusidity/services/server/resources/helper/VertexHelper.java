@@ -21,7 +21,6 @@ package com.lusidity.services.server.resources.helper;
 import com.lusidity.Environment;
 import com.lusidity.annotations.AtSchemaProperty;
 import com.lusidity.collections.ElementAttributes;
-import com.lusidity.data.ApolloVertex;
 import com.lusidity.data.ClassHelper;
 import com.lusidity.data.DataVertex;
 import com.lusidity.data.field.KeyData;
@@ -135,11 +134,11 @@ public class VertexHelper {
                 }
             }
             else{
-                throw new ApplicationException("The vertexType, %s, is not writable.", key);
+                Environment.getInstance().getReportHandler().info("The vertexType, %s, is not writable.", key);
             }
         }
         else{
-            throw new ApplicationException("The vertexType, %s, is an unknown Class.", key);
+            Environment.getInstance().getReportHandler().info("The vertexType, %s, is an unknown Class.", key);
         }
         return result;
     }
@@ -161,7 +160,7 @@ public class VertexHelper {
 
     private void processEdges(DataVertex vertex, JsonData data) throws ApplicationException {
         for(String key: data.keys()){
-            if(StringX.startsWith(key, "/") && !StringX.equals(key, ApolloVertex.VERTEX_URI)){
+            if(StringX.startsWith(key, "/") && !StringX.equals(key, DataVertex.VERTEX_URI)){
                 Object o = data.getObjectFromPath(key);
                 if(o instanceof JsonData){
                     JsonData items = new JsonData(o);

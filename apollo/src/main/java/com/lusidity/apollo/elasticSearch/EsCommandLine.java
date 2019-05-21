@@ -30,7 +30,7 @@ public class EsCommandLine
 		initialize
 	}
 
-	private static boolean result=false;
+	private boolean result=false;
 	private final String command;
 
 	protected EsCommandLine(EsCommandLine.Commands command)
@@ -39,19 +39,18 @@ public class EsCommandLine
 		this.command=EsConfiguration.getInstance().getCommand(command.toString());
 	}
 
-	protected boolean execute()
+	protected EsCommandLine.CommandItem execute()
 		throws IOException
 	{
-		String output=EsCommandLine.executeCommand(this.command);
-		System.out.println(output);
-		return EsCommandLine.result;
+		return this.executeCommand(this.command);
 	}
 
 	@SuppressWarnings("NestedAssignment")
-	private static String executeCommand(String cmd)
+	private EsCommandLine.CommandItem executeCommand(String cmd)
 		throws IOException
 	{
-		StringBuilder out=new StringBuilder();
+		StringBuilder response=new StringBuilder();
+		boolean success = false;
 
 		Process process=Runtime.getRuntime().exec(cmd);
 		try (BufferedReader reader=new BufferedReader(new InputStreamReader(process.getInputStream())))
@@ -59,15 +58,36 @@ public class EsCommandLine
 			String line="";
 			while ((line=reader.readLine())!=null)
 			{
-				out.append(line).append("\n");
+				response.append(line).append("\n");
 			}
-			EsCommandLine.result=true;
+			success=true;
 		}
 		catch (Exception ex)
 		{
 			ReportHandler.getInstance().severe(ex);
-			System.out.println(ex.getMessage());
 		}
-		return out.toString();
+		return new EsCommandLine.CommandItem(success, ((response.length()>0) ? response.toString() : "no response"));
+	}
+
+	public class CommandItem
+	{
+		private final boolean success;
+		private final String response;
+
+		public CommandItem(boolean success, String response){
+			super();
+			this.success = success;
+			this.response = response;
+		}
+
+		public boolean isSuccess()
+		{
+			return this.success;
+		}
+
+		public String getResponse()
+		{
+			return this.response;
+		}
 	}
 }

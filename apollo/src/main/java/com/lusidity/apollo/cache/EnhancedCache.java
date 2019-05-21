@@ -37,7 +37,7 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class EnCache extends BaseCache
+public class EnhancedCache extends BaseCache
 {
 	private volatile CacheManager cacheManager=null;
 	private volatile Cache<String, DataVertex> cache=null;
@@ -46,7 +46,7 @@ public class EnCache extends BaseCache
 
 
 	// Constructors
-	public EnCache()
+	public EnhancedCache()
 	{
 		super();
 	}
@@ -216,48 +216,42 @@ public class EnCache extends BaseCache
 		try
 		{
 			String finalKey=BaseCache.getCompositeKey(store, partitionType, key);
-			// could have been added while waiting.
-			if(!this.cache.containsKey(finalKey))
+			this.remove(store, partitionType, entry);
+			this.cache.put(finalKey, entry);
+			this.incrementTotal(1);
+			if (this.sample)
 			{
-				this.remove(store, partitionType, entry);
-				this.cache.put(finalKey, entry);
-				this.incrementTotal(1);
-				if (this.sample)
+				String fileName=String.format("enhanced_cache_sample_%s.csv", this.getClass().getSimpleName());
+				FileX.appendLine(new File(Environment.getInstance().getConfig().getTempDir(), fileName),
+					String.format("%s,%s", store.getSimpleName(), finalKey)
+				);
+			}
+			if (ClassX.isKindOf(entry, BaseDomain.class))
+			{
+				BaseDomain vertex=(BaseDomain) entry;
+				for (UriValue value : vertex.fetchIdentifiers())
 				{
-					String fileName=String.format("enhanced_cache_sample_%s.csv", this.getClass().getSimpleName());
-					FileX.appendLine(new File(Environment.getInstance().getConfig().getTempDir(), fileName),
-						String.format("%s,%s", store.getSimpleName(), finalKey)
-					);
-				}
-				if (ClassX.isKindOf(entry, BaseDomain.class))
-				{
-					BaseDomain vertex=(BaseDomain) entry;
-					for (UriValue value : vertex.fetchIdentifiers())
+					String lid=value.fetchValue().getValue().toString();
+					if ((StringX.startsWithIgnoreCase(lid, "lid:") || StringX.startsWithIgnoreCase(lid, "cpe:")) && !StringX.containsIgnoreCase(lid, "_importer/"))
 					{
-						String lid=value.fetchValue().getValue().toString();
-						if ((StringX.startsWithIgnoreCase(lid, "lid:") || StringX.startsWithIgnoreCase(lid, "cpe:")) && !StringX.containsIgnoreCase(lid, "_importer/"))
-						{
-							lid=BaseCache.getCompositeKey(store, partitionType, lid);
-							this.incrementTotal(1);
-							this.cache.put(lid, entry);
-						}
+						lid=BaseCache.getCompositeKey(store, partitionType, lid);
+						this.incrementTotal(1);
+						this.cache.put(lid, entry);
 					}
-					for (UriValue value : vertex.fetchVolatileIdentifiers())
+				}
+				for (UriValue value : vertex.fetchVolatileIdentifiers())
+				{
+					String lid=value.fetchValue().getValue().toString();
+					if (StringX.startsWithIgnoreCase(lid, "lid:") && !StringX.containsIgnoreCase(lid, "_importer/"))
 					{
-						String lid=value.fetchValue().getValue().toString();
-						if (StringX.startsWithIgnoreCase(lid, "lid:") && !StringX.containsIgnoreCase(lid, "_importer/"))
-						{
-							lid=BaseCache.getCompositeKey(store, partitionType, lid);
-							this.incrementTotal(1);
-							this.cache.put(lid, entry);
-						}
+						lid=BaseCache.getCompositeKey(store, partitionType, lid);
+						this.incrementTotal(1);
+						this.cache.put(lid, entry);
 					}
 				}
 			}
 		}
-		catch (Exception ignored)
-		{
-		}
+		catch (Exception ignored){}
 	}
 
 	@Override

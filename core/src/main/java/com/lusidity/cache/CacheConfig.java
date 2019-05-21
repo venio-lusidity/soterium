@@ -219,6 +219,14 @@ public class CacheConfig extends BaseServerConfiguration
 	}
 
 	/**
+	 * @return true or false;
+	 */
+	public boolean sample()
+	{
+		return this.getCacheData().getBoolean(false,"sample");
+	}
+
+	/**
 	 * Combined with "getUnitOfTime" it determines when a cache item can be disposed of.
 	 *
 	 * @return A number that represents a measurement of time.

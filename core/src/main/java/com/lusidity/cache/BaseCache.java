@@ -225,16 +225,26 @@ public abstract class BaseCache implements ICache
 
 	public static String getCompositeKey(Class<? extends DataVertex> store, Class<? extends DataVertex> partition, String key)
 	{
+		/*
+		// The being passed should be a unique identifier
+		// adding more text just makes the cache larger than it needs to be.
+		// delete this once tested
 		String result;
-		if (!Objects.equals(store, partition))
+		if (Objects.equals(store, partition))
 		{
-			result=String.format("%s_%s_%s", ClassHelper.getIndexKey(store), ClassHelper.getIndexKey(partition), StringX.replace(key, " ", "_"));
+			result=String.format("%s_%s",
+				StringX.insertStringAtCapitol(store.getClass().getSimpleName(), "_"),
+				StringX.replace(key, " ", "_"));
 		}
 		else
 		{
-			result=String.format("%s_%s", ClassHelper.getIndexKey(store), StringX.replace(key, " ", "_"));
+			result=String.format("%s_%s_%s",
+				StringX.insertStringAtCapitol(store.getClass().getSimpleName(), "_"),
+				StringX.insertStringAtCapitol(partition.getClass().getSimpleName(), "_"),
+				StringX.replace(key, " ", "_"));
 		}
-		return result;
+		*/
+		return key;
 	}
 
 	@Override
@@ -321,6 +331,10 @@ public abstract class BaseCache implements ICache
 		{
 			this.recount();
 		}
+	}
+
+	public synchronized void setTotal(long total){
+		this.total = total;
 	}
 
 	public long getHits()

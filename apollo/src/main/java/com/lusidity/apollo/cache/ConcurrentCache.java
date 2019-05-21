@@ -36,7 +36,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * Max thread use 16 at a time.
  */
-public class EnhancedCache extends BaseCache
+public class ConcurrentCache extends BaseCache
 {
 	@SuppressWarnings("CollectionDeclaredAsConcreteClass")
 	private volatile ConcurrentHashMap<String, DataVertex> cache = null;
@@ -46,7 +46,7 @@ public class EnhancedCache extends BaseCache
 	private boolean sample = false;
 
 	// Constructors
-	public EnhancedCache()
+	public ConcurrentCache()
 	{
 		super();
 	}

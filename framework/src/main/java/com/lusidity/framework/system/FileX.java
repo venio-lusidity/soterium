@@ -100,7 +100,7 @@ public class FileX {
         }
     }
 
-    public static void appendLine(File file, String content)
+    public static synchronized void appendLine(File file, String content)
     {
         if(!file.getParentFile().exists()){
             file.getParentFile().mkdirs();

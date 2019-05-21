@@ -19,6 +19,7 @@
   "threadPoolSize": 0,
   "threadsProcessed": 100,
   "immediatelyAvailable": true,
+  "initializeSSl": false,
   "protocol": "https",
   "search_guard":{
      "commands": {

@@ -79,6 +79,7 @@ public class EsIndexStore implements IIndexStore
 				this.config=(EsConfiguration) param;
 				rh.info("EsConfiguration json: %s", this.config.getData().toString());
 				rh.info("EsIndexStore awaiting connection");
+				this.initSSL();
 				this.waitForConnection();
 				rh.info("EsIndexStore connection aquired");
 				if (Environment.getInstance().getConfig().clearStores())
@@ -88,6 +89,9 @@ public class EsIndexStore implements IIndexStore
 					if (!deleted)
 					{
 						rh.severe("The index stores were not cleared.");
+					}
+					else{
+						this.initSSL();
 					}
 				}
 				if (!this.verifyREST())
@@ -115,9 +119,20 @@ public class EsIndexStore implements IIndexStore
 			}
 		}
 
-		boolean opened=this.isOpened();
-		rh.info("EsIndexStore is %s", opened ? "opened" : "closed");
-		return opened;
+		rh.info("EsIndexStore is %s", this.isOpened() ? "opened" : "closed");
+		return this.isOpened();
+	}
+
+	private void initSSL()
+		throws Exception
+	{
+		if(this.config.initializeSSl()){
+			EsCommandLine esCmd = new EsCommandLine(EsCommandLine.Commands.initialize);
+			EsCommandLine.CommandItem cmdItem = esCmd.execute();
+			if(!cmdItem.isSuccess()){
+				throw new ApplicationException("ElasticSearch SearchGuard is configured properly.");
+			}
+		}
 	}
 
 	@Override
