@@ -1,2 +1,0 @@
-
-mssql -port 1433 -ip 192.168.1.124 -dbName VMSX -user lusidity -pwd t7r9B0ux! -store com.lusidity.rmk.importer.vms.VMSSQLImporter -maxThreads 2

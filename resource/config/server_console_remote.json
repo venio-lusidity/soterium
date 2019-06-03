@@ -212,7 +212,7 @@
   "notesDir": {
     "desc": "The relative or absolute path used for Release Notes.",
     "example": "/mnt/myDrive/notes or relative from application",
-    "value": "/mnt/xdata/work/projects/rmk/resource/data/release"
+    "value": "/mnt/xdata/work/projects/[your app directory]/resource/data/release"
   },
   "interval": {
     "desc": "",

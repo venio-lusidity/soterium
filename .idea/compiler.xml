@@ -10,7 +10,7 @@
         <module name="client-ssl" />
         <module name="lusidity-client-ssl" />
       </profile>
-      <profile name="Annotation profile for lusidity-framework" enabled="true">
+      <profile name="Annotation profile for lusidity-athena" enabled="true">
         <sourceOutputDir name="../target/generated-sources/annotations" />
         <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />

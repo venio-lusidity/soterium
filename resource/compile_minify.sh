@@ -42,7 +42,7 @@ package ../apollo
 #package ../mssql has been removed not used and has deprecated methods compilation errors.
 package ../discover
 package ../services
-package ../rmk
+package ../[your app module name]
 package ../acas-system-center
 package ../athena
 

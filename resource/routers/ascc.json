@@ -1,32 +1,10 @@
 [
   {
-    "cls": "com.lusidity.rmk.importer.acss.BladeLogicComplianceImporter",
+    "cls": "[fully qualified importer class name]",
     "path": "dataset::metadata::item",
     "property": "name",
     "value": "Rules Compliant",
     "names":[
-      "ascc",
-      "compliance"
-    ]
-  },
-  {
-    "cls": "com.lusidity.rmk.importer.acss.BladeLogicCveImporter",
-    "path": "dataset::metadata::item",
-    "property": "name",
-    "value": "Patch Status",
-    "names":[
-      "ascc",
-      "patch"
-    ]
-  },
-  {
-    "cls": "com.lusidity.rmk.importer.acss.BladeLogicSoftwareImporter",
-    "path": "dataset::metadata::item",
-    "property": "name",
-    "value": "Software Full Name",
-    "names":[
-      "ascc",
-      "software"
     ]
   }
 ]

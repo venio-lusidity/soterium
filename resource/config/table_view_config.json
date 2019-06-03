@@ -25,13 +25,8 @@
     "value": [
       {
         "interval": 1,
-        "cls":  "com.lusidity.rmk.data.EnclavesDetailsView",
+        "cls":  "fully qualified class",
         "disabled": false
-      },
-      {
-        "interval": 1,
-        "cls":  "com.lusidity.rmk.data.EnclavesDetailsViewFull",
-        "disabled": true
       }
     ]
   }

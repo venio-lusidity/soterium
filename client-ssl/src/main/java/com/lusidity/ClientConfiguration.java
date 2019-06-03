@@ -49,7 +49,7 @@ public class ClientConfiguration {
                 "principalUri",
                 "baseServerUrl",
                 "endpointGetAuthenticate",
-                "endpointPostRmkImporterFile",
+                "endpointPostAppImporterFile",
                 "endpointPostRegister"
         };
     }
@@ -139,8 +139,8 @@ public class ClientConfiguration {
         return this.data.getString("endpointGetAuthenticate");
     }
 
-    protected String getEndpointPostRmkImporterFile() {
-        return this.data.getString("endpointPostRmkImporterFile");
+    protected String getEndpointPostAppImporterFile() {
+        return this.data.getString("endpointPostAppImporterFile");
     }
 
     protected String getEndpointPostRegister(){

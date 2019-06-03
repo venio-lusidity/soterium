@@ -42,7 +42,7 @@
     "example": "Fully qualified path to the directories.",
     "value":[
       {
-        "path": "/mnt/xdata/work/projects/rmk/resource/web/files/hierarchy", "category": "cbac"
+        "path": "/mnt/xdata/work/projects/[your app name]/resource/web/files/hierarchy", "category": "cbac"
       }
     ]
   },

@@ -14,7 +14,7 @@ public class ClientTest {
     public void importer() throws Exception {
         ClientConfiguration config = ClientConfiguration.create(ClientTest.configPath);
         File file = new File(UtilsX.getParentDirectory(), ClientTest.filePath);
-        RmkImporterPostResponse ipr = RmkImporterPostResponse.post(config, file, RmkImporterPostResponse.DITRP);
+        ImporterPostResponse ipr = ImporterPostResponse.post(config, file, "[an importer fully qualified class name]");
         Assert.assertNotNull("The ImporterPostResponse should not be null.", ipr);
         Assert.assertTrue("The title should not be empty", !StringX.isBlank(ipr.getTitle()));
     }

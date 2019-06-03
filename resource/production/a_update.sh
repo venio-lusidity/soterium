@@ -14,7 +14,7 @@ isRoot
 
 cd $ATHENA_DIR
 echo $PWD
-sh rmk-init-d.sh stop
+sh app-init-d.sh stop
 wget --no-check-certificate https://dev.lusidity.com/files/bin.zip -O $ATHENA_DIR/bin.zip
 echo "Downloading validation file"
 wget --no-check-certificate https://dev.lusidity.com/files/checksum-bin.md5 -O $ATHENA_DIR/checksum-bin.md5
@@ -29,7 +29,7 @@ if md5sum -c $ATHENA_DIR/checksum-bin.md5; then
     echo
     if [[ $REPLY =~ ^[Yy]$ ]]
     then
-        sh rmk-init-d.sh start
+        sh app-init-d.sh start
     fi
 else
     echo "File is not valid"
