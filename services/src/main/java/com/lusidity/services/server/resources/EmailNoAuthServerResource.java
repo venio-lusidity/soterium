@@ -28,7 +28,7 @@ import com.lusidity.services.security.annotations.AtAuthorization;
 import org.restlet.data.Status;
 import org.restlet.representation.Representation;
 
-@AtWebResource(pathTemplate = "/svc/email/no_auth", methods = "post", description = "Send an email.",
+@AtWebResource(pathTemplate = "/svc/email/no_auth", matchingMode = AtWebResource.MODE_FIRST_MATCH, methods = "post", description = "Send an email.",
         bodyFormat = "{\"sender\":\"senders email address\"," +
                 "\"recipients\": [\"An array of email addresses to send to.\"]," +
                 "\"carbonCopy\": \"(Optional) Expects true or false no quotes.  Send a copy to the sender.\"," +

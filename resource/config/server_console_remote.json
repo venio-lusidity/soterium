@@ -1,4 +1,11 @@
 {
+  "fileImportMessagesClasses":{
+    "desc": "A list of fully qualified class names used while creating import messages.",
+    "example": "true or false, default if missing is true",
+    "value": [
+      "com.lusidity.rmk.importer.hbss.HbssStigImporter"
+    ]
+  },
   "deltaUpdateEnabled":{
     "desc": "Does the datastore support delta updates.",
     "example": "true or false, default if missing is true",

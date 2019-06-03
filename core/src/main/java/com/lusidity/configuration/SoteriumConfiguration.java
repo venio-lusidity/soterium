@@ -29,6 +29,7 @@ import java.lang.reflect.Constructor;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 public class SoteriumConfiguration extends BaseSoteriumConfiguration
 {
@@ -165,5 +166,19 @@ public class SoteriumConfiguration extends BaseSoteriumConfiguration
 	public Integer getTimeCheckServers()
 	{
 		return this.getData().getInteger(1, "timeCheckServers", "value");
+	}
+
+	public List<String> getFileImportMessagesClasses()
+	{
+		List<String> results = new ArrayList<>();
+		JsonData items = this.getData().getFromPath("fileImportMessagesClasses", "value");
+		if((null!=items) && items.isJSONArray()){
+			for(Object o: items){
+				if(o instanceof String){
+					results.add(o.toString());
+				}
+			}
+		}
+		return results;
 	}
 }

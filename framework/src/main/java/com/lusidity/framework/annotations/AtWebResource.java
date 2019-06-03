@@ -32,7 +32,7 @@ public @interface AtWebResource
     public static final int MODE_CUSTOM = 6;
 
     String pathTemplate();
-    int matchingMode();
+    int matchingMode() default -1;
     boolean indexed() default true;
 
     String methods();

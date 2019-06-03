@@ -19,6 +19,7 @@ package com.lusidity.domains.system.assistant.message;
 
 
 import com.lusidity.Environment;
+import com.lusidity.configuration.SoteriumConfiguration;
 import com.lusidity.data.field.KeyData;
 import com.lusidity.data.field.KeyDataCollection;
 import com.lusidity.data.field.KeyDataTransformed;
@@ -36,6 +37,7 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.UUID;
 
 @AtSchemaClass(name="FileInfo Import Message", discoverable=false, description="A message about a file used to import data.", writable=true)
@@ -179,7 +181,11 @@ public class FileImportMessage extends AssistantMessage
 				KeyDataTransformed transformed = handler.handleSetterBefore(types, null);
 
 				Collection<String> separates = new ArrayList<>();
-				separates.add("com.lusidity.rmk.importer.hbss.HbssStigImporter");
+				List<String> msgs =SoteriumConfiguration.getInstance().getFileImportMessagesClasses();
+
+				for(String msg: msgs){
+					separates.add(msg);
+				}
 
 				Collection<MessageObject> messageObjects = new ArrayList<>();
 
