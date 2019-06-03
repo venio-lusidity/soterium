@@ -51,7 +51,7 @@ class ApiKeyCommand
 	public void execute(Console console, CommandLine commandLine)
 		throws Exception
 	{
-		// apiKey -principal /domains/people_person/a10c5eea653247878caa389570cce3fd -provider x509 -value rmk.disa.mil
+		// apiKey -principal /domains/people_person/a10c5eea653247878caa389570cce3fd -provider x509 -value www.your-domain.com
 
 		String principalId = commandLine.getOptionValue(ApiKeyCommand.PRINCIPAL_OPTION);
 		String provider = commandLine.getOptionValue(ApiKeyCommand.PROVIDER_OPTION);

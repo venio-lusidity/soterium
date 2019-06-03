@@ -37,7 +37,7 @@ import org.restlet.representation.Representation;
 import java.util.ArrayList;
 import java.util.Collection;
 
-@AtWebResource(pathTemplate = "/svc/discover", methods = "get",
+@AtWebResource(pathTemplate = "/svc/discover", methods = "get", matchingMode = AtWebResource.MODE_FIRST_MATCH,
         requiredParams = "phrase (String)", optionalParams = "limit(Integer),size(Integer)",
         description = "Perform a search against the discovery engine.")
 @AtAuthorization()
