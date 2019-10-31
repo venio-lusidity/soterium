@@ -7,7 +7,7 @@
     <artifactId>lusidity-parent</artifactId>
     <packaging>pom</packaging>
     <properties>
-        <restlet.version>2.3.9</restlet.version>
+        <restlet.version>2.3.12</restlet.version>
         <slf4jVersion>1.7.14</slf4jVersion>
         <odb.version>2.1.9</odb.version>
         <target.directory>../target</target.directory>
